@@ -1,5 +1,4 @@
-# Sistema de Mensajería P2P con PySide y WebSockets (v2.0)
-## Versión mejorada con sugerencias aplicadas
+# Sistema de Mensajería P2P con PySide y WebSockets
 
 ---
 
@@ -74,10 +73,10 @@ Modelo en capas con separación clara de responsabilidades:
 
 ### Principios clave
 
-- ✅ La interfaz **NO maneja la red directamente**
-- ✅ El controlador es el único punto de sincronización
-- ✅ La red corre en asyncio (thread-safe con qasync)
-- ✅ Todo debe ser no-bloqueante
+-  La interfaz **NO maneja la red directamente**
+-  El controlador es el único punto de sincronización
+-  La red corre en asyncio (thread-safe con qasync)
+-  Todo debe ser no-bloqueante
 
 ---
 
@@ -605,30 +604,30 @@ p2p-chat/
 ## 14. Funcionalidades MVP mejoradas
 
 ### Fase 1: Core
-- ✅ Crear usuario (username + puerto)  
-- ✅ Iniciar servidor WebSocket  
-- ✅ Validar conexión (IP:puerto)
-- ✅ Conectarse a otro peer
-- ✅ Protocolo HELLO/HELLO_ACK
-- ✅ Visualizar peers conectados con estado
+-  Crear usuario (username + puerto)  
+-  Iniciar servidor WebSocket  
+-  Validar conexión (IP:puerto)
+-  Conectarse a otro peer
+-  Protocolo HELLO/HELLO_ACK
+-  Visualizar peers conectados con estado
 
 ### Fase 2: Mensajería
-- ✅ Enviar mensajes
-- ✅ Recibir mensajes
-- ✅ Confirmación de entrega (ACK)
-- ✅ Mostrar estado del mensaje (⚪ enviado, ✓ entregado, ✓✓ leído)
+-  Enviar mensajes
+-  Recibir mensajes
+-  Confirmación de entrega (ACK)
+-  Mostrar estado del mensaje (⚪ enviado, ✓ entregado, ✓✓ leído)
 
 ### Fase 3: Robustez
-- ✅ Heartbeat y detección de desconexión
-- ✅ Re-intentos automáticos
-- ✅ Historial en SQLite
-- ✅ Logging de actividad
+-  Heartbeat y detección de desconexión
+-  Re-intentos automáticos
+-  Historial en SQLite
+-  Logging de actividad
 
 ### Fase 4: Polish (Opcional)
-- ✅ Múltiples chats simultáneos
-- ✅ Notificaciones
-- ✅ Buscar en historial
-- ✅ Exportar chat
+-  Múltiples chats simultáneos
+-  Notificaciones
+-  Buscar en historial
+-  Exportar chat
 
 ---
 
@@ -659,18 +658,18 @@ p2p-chat/
 
 ## 16. Características clave del sistema final
 
-- ✅ Arquitectura distribuida P2P robusta
-- ✅ Sin servidor central
-- ✅ Interfaz gráfica minimalista con feedback visual
-- ✅ Comunicación en tiempo real con confirmación
-- ✅ Uso de tecnologías modernas (PySide6 + WebSockets + qasync)
-- ✅ Histórico persistente en SQLite
-- ✅ Manejo robusto de errores y desconexiones
-- ✅ Re-intentos automáticos
-- ✅ Detección de peers inactivos con heartbeat
-- ✅ Validación de entrada
-- ✅ Logging y debugging
-- ✅ Escalable a múltiples conexiones simultáneas
+-  Arquitectura distribuida P2P robusta
+-  Sin servidor central
+-  Interfaz gráfica minimalista con feedback visual
+-  Comunicación en tiempo real con confirmación
+-  Uso de tecnologías modernas (PySide6 + WebSockets + qasync)
+-  Histórico persistente en SQLite
+-  Manejo robusto de errores y desconexiones
+-  Re-intentos automáticos
+-  Detección de peers inactivos con heartbeat
+-  Validación de entrada
+-  Logging y debugging
+-  Escalable a múltiples conexiones simultáneas
 
 ---
 
