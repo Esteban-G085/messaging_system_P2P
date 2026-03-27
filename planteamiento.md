@@ -19,9 +19,9 @@ La aplicación contará con una interfaz gráfica minimalista, enfocada en facil
 ## 2. Tecnologías del sistema
 
 ### Interfaz gráfica
-- PySide6 (Qt para Python)
+- PySide6 
 
-### Concurrencia (CRÍTICO)
+### Concurrencia 
 - `qasync` - Integra asyncio con Qt event loop
 - `asyncio` - Manejo asincrónico
 
@@ -71,16 +71,16 @@ Modelo en capas con separación clara de responsabilidades:
 └─────────────────────────────────┘
 ```
 
-### Principios clave
+### Principios 
 
 -  La interfaz **NO maneja la red directamente**
 -  El controlador es el único punto de sincronización
 -  La red corre en asyncio (thread-safe con qasync)
--  Todo debe ser no-bloqueante
+-  ser no-bloqueante
 
 ---
 
-## 4. Modelo P2P mejorado
+## 4. Modelo P2P 
 
 Cada nodo del sistema:
 
@@ -100,7 +100,7 @@ IDLE → CONNECTING → CONNECTED ↔ AUTHENTICATING ↔ READY
                  DISCONNECTING → IDLE
 ```
 
-### Flujo general mejorado
+### Flujo general 
 
 1. Usuario inicia la aplicación
 2. Define username y puerto local
@@ -174,23 +174,8 @@ def validar_conexion(ip: str, puerto: int) -> bool:
     return True
 ```
 
-### Ejemplo en interfaz mejorado
 
-```
-─────────────────────────────────
-Conectar a peer
-─────────────────────────────────
-IP:        [ 192.168.1.10    ]
-Puerto:    [     5000        ]
-           [ Conectar ]
-
-Estado:    ⚫ Desconectado
-─────────────────────────────────
-```
-
----
-
-## 7. Protocolo de comunicación mejorado
+## 7. Protocolo de comunicación 
 
 Todos los mensajes se envían en formato JSON. Incluye:
 - Tipo de mensaje
@@ -371,7 +356,7 @@ Peer A              Peer B
 
 ---
 
-## 9. Diseño de la interfaz mejorado
+## 9. Diseño de la interfaz 
 
 ### Estilo visual
 
@@ -384,7 +369,7 @@ Peer A              Peer B
 
 ---
 
-### Layout mejorado
+### Layout 
 
 ```
 ╔═════════════════════════════════════════╗
@@ -410,19 +395,6 @@ Peer A              Peer B
 ║ Estado: ● Escuchando en 192.168.1.5:5001║
 ╚═════════════════════════════════════════╝
 ```
-
-### Indicadores de estado
-
-| Indicador | Significado | Color |
-|-----------|-------------|-------|
-| **●** | Conectado | Verde (#00FF88) |
-| **○** | Desconectado | Gris (#666666) |
-| **⟳** | Conectando... | Naranja (#FFB800) |
-| **✗** | Error | Rojo (#FF6B6B) |
-| **✓** | Mensaje entregado | Verde (#00FF88) |
-| **✓✓** | Mensaje leído | Azul (#4A90E2) |
-
----
 
 ## 10. Manejo de concurrencia
 
@@ -471,7 +443,7 @@ async def conectar_a_peer():
 
 ---
 
-## 11. Persistencia mejorada (SQLite)
+## 11. Persistencia  (SQLite)
 
 ### Tablas de base de datos
 
@@ -514,10 +486,10 @@ CREATE TABLE connection_log (
 
 ### Características
 
-- ✅ Historial de mensajes persistente
-- ✅ Registro de conexiones
-- ✅ Peers favoritos
-- ✅ Recuperar estado ante reinicio
+- Historial de mensajes persistente
+- Registro de conexiones
+- Peers favoritos
+- Recuperar estado ante reinicio
 
 ---
 
@@ -548,7 +520,7 @@ Notificar usuario
 
 ---
 
-## 13. Estructura del proyecto mejorada
+## 13. Estructura del proyecto 
 
 ```
 p2p-chat/
@@ -561,13 +533,11 @@ p2p-chat/
 │   └── settings.py          # Configuración global
 │
 ├── models/
-│   ├── __init__.py
 │   ├── peer.py              # Modelo Peer
 │   ├── message.py           # Modelo Message
 │   └── connection_state.py  # Estados de conexión (Enum)
 │
 ├── ui/
-│   ├── __init__.py
 │   ├── main_window.py       # Ventana principal
 │   ├── styles.py            # Estilos CSS
 │   └── widgets/
@@ -576,11 +546,9 @@ p2p-chat/
 │       └── connection_panel.py  # Panel de conexión
 │
 ├── controller/
-│   ├── __init__.py
 │   └── app_controller.py    # Controlador principal
 │
 ├── network/
-│   ├── __init__.py
 │   ├── protocol.py          # Protocolo JSON
 │   ├── node.py              # Nodo P2P (orquestador)
 │   ├── server.py            # Servidor WebSocket
@@ -588,12 +556,10 @@ p2p-chat/
 │   └── message_handler.py   # Procesamiento de mensajes
 │
 ├── database/
-│   ├── __init__.py
 │   ├── db_manager.py        # Gestor SQLite
 │   └── schema.sql           # Esquema de BD
 │
 └── utils/
-    ├── __init__.py
     ├── logger.py            # Logging
     ├── validators.py        # Validación (IP, puerto, etc)
     └── helpers.py           # Funciones auxiliares
@@ -601,7 +567,7 @@ p2p-chat/
 
 ---
 
-## 14. Funcionalidades MVP mejoradas
+## 14. Funcionalidades 
 
 ### Fase 1: Core
 -  Crear usuario (username + puerto)  
@@ -623,11 +589,12 @@ p2p-chat/
 -  Historial en SQLite
 -  Logging de actividad
 
-### Fase 4: Polish (Opcional)
+### Fase 4: Polish (futuro)
 -  Múltiples chats simultáneos
 -  Notificaciones
 -  Buscar en historial
 -  Exportar chat
+-  seguridad (encriptación, autenticación)
 
 ---
 
@@ -641,12 +608,12 @@ p2p-chat/
 
 ### ¿Encriptación?
 **NO en MVP**. La red es local (LAN) y académica.
-- En producción: agregar `wss://` (WebSocket Secure) + SSL/TLS
+- En futuro: agregar `wss://` (WebSocket Secure) + SSL/TLS
 - Certificados autofirmados para desarrollo
 
 ### ¿Autenticación?
 **Básica en MVP**: solo username y peer_id.
-- En producción: agregar contraseña con hash (bcrypt)
+- En futuro: agregar contraseña con hash (bcrypt)
 - Sistema de permisos si es necesario
 
 ### ¿Timeout de conexión?
@@ -658,7 +625,7 @@ p2p-chat/
 
 ## 16. Características clave del sistema final
 
--  Arquitectura distribuida P2P robusta
+-  Arquitectura distribuida P2P
 -  Sin servidor central
 -  Interfaz gráfica minimalista con feedback visual
 -  Comunicación en tiempo real con confirmación
@@ -698,6 +665,5 @@ sqlite3 (incluido en Python)
 
 ---
 
-**Documento actualizado**: Marzo 2026  
-**Estado**: Listo para desarrollo  
+**Documento actualizado**: 26 de Marzo 2026
 **Contexto**: Proyecto académico - Red LAN
