@@ -61,7 +61,7 @@ class Protocol:
             "data": {
                 "sender":    sender,
                 "sender_id": sender_id,
-                "content":   content,
+                "content":   encrypted_content,
             },
         })
         return msg_id, payload

@@ -19,6 +19,7 @@ Una aplicación de mensajería descentralizada **Peer-to-Peer (P2P)** diseñada 
 - **websockets** + **asyncio** para la red TCP no bloqueante.
 - **qasync** para acoplar los event loops de Qt y asyncio.
 - **sqlite3** para la base de datos local.
+- **cryptography** para el cifrado de mensajes.
 
 ## 🏗️ Arquitectura del Sistema
 

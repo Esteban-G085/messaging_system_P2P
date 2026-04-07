@@ -13,7 +13,7 @@ COLORS = {
     "bg_panel":     "#1E1E1E",
     "bg_bubble_me": "#1A3A2A",
     "bg_bubble_th": "#252525",
-    "text":         "#FFFFFF",
+    "text":         "#FFFFFF",  
     "text_muted":   "#888888",
     "border":       "#333333",
     "accent":       "#00FF88",
@@ -66,7 +66,7 @@ QLineEdit::placeholder {
 /* ── Botones ──────────────────────── */
 QPushButton {
     background-color: #00FF88;
-    color: #121212;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     padding: 7px 16px;

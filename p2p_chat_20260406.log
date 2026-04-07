@@ -1,5 +1,0 @@
-[21:25:00] INFO      p2p_chat › Iniciando P2P Chat v1.1.0 — alice:5001
-[21:25:00] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
-[21:25:01] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
-[21:25:01] INFO      p2p_chat › [NODE] alice iniciado | id=2477adbb… | 192.168.20.21:5001
-[21:25:01] INFO      p2p_chat › Aplicación lista
