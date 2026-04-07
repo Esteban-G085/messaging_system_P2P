@@ -1,6 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/widgets/connection_panel.py
-#  Panel para conectar a un peer nuevo
+#           Panel para conectar a un peer nuevo
 # ──────────────────────────────────────────────
 
 from PySide6.QtWidgets import (

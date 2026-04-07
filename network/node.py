@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  network/node.py  –  Nodo P2P con ECC + AES + Archivos
+#           Nodo P2P con ECC + AES + Archivos
 # ──────────────────────────────────────────────
 
 import asyncio
@@ -66,11 +66,16 @@ class P2PNode:
     # ── Ciclo de vida ─────────────────────────────────────────────────────────
 
     async def start(self):
+        """
+        Inicia el servidor WebSocket local para aceptar conexiones entrantes de otros peers.
+        Asigna el manejador de mensajes a la instancia del servidor.
+        """
         self._server.set_message_handler(self._handler.handle)
         await self._server.start()
         logger.info(f"[NODE] {self.username} | {self.local_ip}:{self.port}")
 
     async def stop(self):
+        """Desconecta a todos los peers activos y detiene el servidor de escucha local."""
         for peer_id in list(self.peers):
             await self.disconnect_from_peer(peer_id)
         await self._server.stop()
@@ -78,6 +83,14 @@ class P2PNode:
     # ── API pública ───────────────────────────────────────────────────────────
 
     async def connect_to_peer(self, ip: str, port: int):
+        """
+        Establece conexión WebSocket como cliente hacia un peer remoto y envía el handshake (HELLO).
+        Mantiene en estado pendiente las credenciales de cifrado hasta que se recibe el ACK.
+        
+        Args:
+            ip (str): Dirección IP a conectar.
+            port (int): Puerto remoto.
+        """
         session = CryptoSession()
         ws      = await self._client.connect(ip, port)
         tmp_key = f"_pending_{ip}:{port}"
@@ -88,6 +101,10 @@ class P2PNode:
         asyncio.create_task(self._listen_outgoing(ws, ip, port, tmp_key))
 
     async def send_message(self, peer_id: str, content: str) -> Optional[str]:
+        """
+        Cifra y envía un mensaje de texto a un peer conectado.
+        Retorna el identificador (UUID) único del mensaje enviado, o None si hay problemas de red o cifrado.
+        """
         peer    = self.peers.get(peer_id)
         session = self._crypto.get(peer_id)
         if not peer or not peer.is_ready:
@@ -149,6 +166,10 @@ class P2PNode:
         self.ft_manager.cancel(file_id)
 
     async def disconnect_from_peer(self, peer_id: str):
+        """
+        Cierra la conexión WebSocket activa con el peer indicado y limpia las sesiones criptográficas.
+        Envía una señal de control de desconexión antes de cerrar.
+        """
         peer = self.peers.get(peer_id)
         if peer and peer.connection:
             try:

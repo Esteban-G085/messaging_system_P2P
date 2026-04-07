@@ -1,14 +1,20 @@
 # ──────────────────────────────────────────────
-#  network/server.py  –  Servidor WebSocket
+#         Servidor WebSocket
 # ──────────────────────────────────────────────
 
 import asyncio
+import logging
 import websockets
-from websockets.server import WebSocketServerProtocol
+from websockets.exceptions import InvalidUpgrade, InvalidHandshake
 from typing import Callable, Optional
 
 from config.settings import DEFAULT_HOST
 from utils.logger import logger
+
+
+# Silenciar los tracebacks de websockets por peticiones HTTP no-WebSocket
+# (Windows/antivirus/OS que tocan el puerto con HTTP normal)
+logging.getLogger("websockets.server").setLevel(logging.CRITICAL)
 
 
 class WebSocketServer:
@@ -24,12 +30,9 @@ class WebSocketServer:
         self._message_handler: Optional[Callable] = None
 
     def set_message_handler(self, handler: Callable):
-        """
-        Registra la función que recibirá (websocket, raw_str) por cada mensaje.
-        """
         self._message_handler = handler
 
-    async def _handle_connection(self, websocket: WebSocketServerProtocol):
+    async def _handle_connection(self, websocket):
         remote = websocket.remote_address
         logger.info(f"[SERVER] Conexión entrante desde {remote}")
         try:
@@ -40,6 +43,9 @@ class WebSocketServer:
             logger.info(f"[SERVER] Conexión cerrada normalmente: {remote}")
         except websockets.exceptions.ConnectionClosedError as e:
             logger.warning(f"[SERVER] Conexión cerrada con error: {remote} – {e}")
+        except (InvalidUpgrade, InvalidHandshake):
+            # Petición HTTP plana al puerto WebSocket — ignorar silenciosamente
+            pass
         except Exception as e:
             logger.error(f"[SERVER] Error inesperado con {remote}: {e}")
 
@@ -48,6 +54,8 @@ class WebSocketServer:
             self._handle_connection,
             self.host,
             self.port,
+            # Suprimir logs internos de websockets sobre handshakes fallidos
+            logger=None,
         )
         logger.info(f"[SERVER] Escuchando en {self.host}:{self.port}")
 

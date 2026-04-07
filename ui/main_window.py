@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/main_window.py  –  Ventana principal
+#           Ventana principal
 # ──────────────────────────────────────────────
 
 import os

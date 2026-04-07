@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  models/connection_state.py  –  Estados P2P
+#           Estados P2P
 # ──────────────────────────────────────────────
 
 from enum import Enum

@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  network/message_handler.py  –  Despachador
+#           Despachador
 # ──────────────────────────────────────────────
 
 import json

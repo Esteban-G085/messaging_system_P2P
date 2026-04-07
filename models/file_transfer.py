@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  models/file_transfer.py  –  Transferencia
+#           Transferencia
 # ──────────────────────────────────────────────
 
 from dataclasses import dataclass, field

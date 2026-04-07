@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  controller/app_controller.py  –  Controlador
+#           Controlador
 # ──────────────────────────────────────────────
 
 from datetime import datetime
@@ -16,6 +16,11 @@ from utils.validators import validate_connection
 
 
 class AppController:
+    """
+    Controlador principal de la aplicación.
+    Sirve como puente entre la interfaz de usuario (UI), el nodo P2P (red) y la base de datos (persistencia).
+    Gestiona el ciclo de vida de la conexión, los mensajes y las transferencias de archivos.
+    """
     def __init__(self, username: str, port: int):
         self.node = P2PNode(username, port)
 
@@ -45,11 +50,21 @@ class AppController:
     # ── Ciclo de vida ─────────────────────────────────────────────────────────
 
     async def start(self):
+        """
+        Inicia el nodo P2P (servidor WebSocket local) e inicializa la escucha de conexiones entrantes.
+        """
         await self.node.start()
 
     # ── API para la UI ────────────────────────────────────────────────────────
 
     async def connect_to_peer(self, ip: str, port: int):
+        """
+        Intenta establecer una conexión con un peer remoto dadas su dirección IP y puerto.
+        
+        Args:
+            ip (str): Dirección IP del peer remoto.
+            port (int): Puerto de escucha del peer remoto.
+        """
         ok, err = validate_connection(ip, port)
         if not ok:
             if self.ui_on_error:
@@ -62,6 +77,14 @@ class AppController:
                 self.ui_on_error(str(e))
 
     async def send_message(self, peer_id: str, content: str):
+        """
+        Envía un mensaje de texto cifrado a un peer específico.
+        También guarda el mensaje en la base de datos local y actualiza la lista de mensajes en memoria.
+
+        Args:
+            peer_id (str): Identificador único del peer destinatario.
+            content (str): Texto del mensaje a enviar.
+        """
         if not content.strip():
             return
         msg_id = await self.node.send_message(peer_id, content)
@@ -79,28 +102,35 @@ class AppController:
             self.ui_on_message(peer_id, msg)
 
     async def send_file(self, peer_id: str, filepath: str):
+        """Ofrece el envío de un archivo a un peer específico."""
         ft = await self.node.send_file(peer_id, filepath)
         if ft and self.ui_on_transfer_update:
             self.ui_on_transfer_update(ft)
 
     async def accept_file(self, file_id: str):
+        """Acepta una transferencia de archivo entrante."""
         await self.node.accept_file(file_id)
 
     async def reject_file(self, file_id: str):
+        """Rechaza una transferencia de archivo entrante."""
         await self.node.reject_file(file_id)
 
     async def cancel_file(self, file_id: str):
+        """Cancela una transferencia de archivo activa (enviando o recibiendo)."""
         await self.node.cancel_file(file_id)
 
     # ── Consultas ─────────────────────────────────────────────────────────────
 
     def get_messages(self, peer_id: str) -> List[Message]:
+        """Obtiene el historial de mensajes en memoria con un peer específico."""
         return self._messages.get(peer_id, [])
 
     def get_peers(self) -> List[Peer]:
+        """Obtiene la lista de todos los peers conectados."""
         return list(self.node.peers.values())
 
     def get_local_info(self) -> dict:
+        """Devuelve un diccionario con la información del nodo local (username, ip, puerto y peer id)."""
         return {
             "username": self.node.username,
             "ip":       self.node.local_ip,

@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  main.py  –  Punto de entrada de la aplicación
+#           Punto de entrada de la aplicación
 # ──────────────────────────────────────────────
 
 import asyncio

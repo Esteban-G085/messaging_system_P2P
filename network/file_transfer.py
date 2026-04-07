@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────────────────
-#  network/file_transfer.py  –  Motor de transferencia
+#           Motor de transferencia
 #
 #  Flujo emisor:
 #    send_file() → FILE_OFFER → espera FILE_OFFER_ACK

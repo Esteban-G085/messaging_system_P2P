@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  network/client.py  –  Cliente WebSocket
+#           Cliente WebSocket
 # ──────────────────────────────────────────────
 
 import asyncio

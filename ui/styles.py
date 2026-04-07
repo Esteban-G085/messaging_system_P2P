@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/styles.py  –  Estilos Qt (dark theme)
+#           Estilos Qt (dark theme)
 # ──────────────────────────────────────────────
 
 COLORS = {

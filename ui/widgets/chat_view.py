@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/widgets/chat_view.py  –  Vista de mensajes
+#           Vista de mensajes
 # ──────────────────────────────────────────────
 
 from PySide6.QtWidgets import (

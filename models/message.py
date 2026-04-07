@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  models/message.py  –  Modelo de mensaje
+#           Modelo de mensaje
 # ──────────────────────────────────────────────
 
 from dataclasses import dataclass, field

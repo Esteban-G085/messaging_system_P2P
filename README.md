@@ -2,7 +2,7 @@
 
 ### Autores: Esteban Guapacha, David Julian Torres y Kevin Esguerra
 
-Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento para redes locales, ahora en su **versión 1.2.0**. Desarrollada en **Python**, combina una arquitectura asíncrona robusta con seguridad de nivel militar y soporte para intercambio de archivos.
+Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento para redes locales, ahora en su **versión 1.2.0**. Desarrollada en **Python**, combina una arquitectura asíncrona robusta y soporte para intercambio de archivos.
 
 ---
 

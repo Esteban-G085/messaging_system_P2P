@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/widgets/peers_list.py  –  Lista de peers
+#           Lista de peers
 # ──────────────────────────────────────────────
 
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QListWidgetItem

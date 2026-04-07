@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  network/protocol.py  –  Protocolo de mensajes
+#           Protocolo de mensajes
 # ──────────────────────────────────────────────
 
 import json

@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  models/peer.py  –  Modelo de un nodo remoto
+#           Modelo de un nodo remoto
 # ──────────────────────────────────────────────
 
 from dataclasses import dataclass, field

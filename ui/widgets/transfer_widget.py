@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  ui/widgets/transfer_widget.py  –  Burbuja de transferencia
+#           Burbuja de transferencia
 # ──────────────────────────────────────────────
 
 from PySide6.QtWidgets import (

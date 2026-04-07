@@ -1,5 +1,5 @@
 # ──────────────────────────────────────────────
-#  database/db_manager.py  –  Gestor SQLite
+#           Gestor SQLite
 # ──────────────────────────────────────────────
 
 import sqlite3
@@ -75,16 +75,22 @@ class DBManager:
         self._conn.commit()
 
     def get_all_peers(self) -> List[Peer]:
+        """Obtiene la lista de todos los peers registrados en la base de datos."""
         rows = self._conn.execute("SELECT * FROM peers").fetchall()
         return [self._row_to_peer(r) for r in rows]
 
     def get_peer(self, peer_id: str) -> Optional[Peer]:
+        """
+        Busca un peer por su identificador único.
+        Retorna el objeto Peer si lo encuentra, de lo contrario None.
+        """
         row = self._conn.execute(
             "SELECT * FROM peers WHERE id = ?", (peer_id,)
         ).fetchone()
         return self._row_to_peer(row) if row else None
 
     def set_favorite(self, peer_id: str, value: bool):
+        """Marca o desmarca un peer como favorito."""
         self._conn.execute(
             "UPDATE peers SET is_favorite = ? WHERE id = ?",
             (int(value), peer_id),
@@ -104,6 +110,10 @@ class DBManager:
     # ── Mensajes ─────────────────────────────────────────────────────────────
 
     def save_message(self, msg: Message):
+        """
+        Inserta un nuevo mensaje en el historial. 
+        Si el identificador del mensaje ya existe, la operación se ignora para evitar duplicados.
+        """
         sql = """
             INSERT OR IGNORE INTO messages
                 (id, sender_id, receiver_id, content, timestamp, is_delivered, is_read)
@@ -143,12 +153,14 @@ class DBManager:
         return [self._row_to_message(r, local_id) for r in rows]
 
     def mark_delivered(self, msg_id: str):
+        """Marca un mensaje como entregado exitosamente."""
         self._conn.execute(
             "UPDATE messages SET is_delivered = 1 WHERE id = ?", (msg_id,)
         )
         self._conn.commit()
 
     def mark_read(self, msg_id: str):
+        """Marca un mensaje como leído por el usuario."""
         self._conn.execute(
             "UPDATE messages SET is_read = 1 WHERE id = ?", (msg_id,)
         )
