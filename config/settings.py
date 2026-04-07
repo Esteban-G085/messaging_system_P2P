@@ -3,7 +3,7 @@
 # ──────────────────────────────────────────────
 
 APP_NAME    = "P2P Chat"
-APP_VERSION = "1.1.0"
+APP_VERSION = "1.2.0"
 
 # Red
 DEFAULT_PORT = 5000

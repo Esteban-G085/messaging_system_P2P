@@ -157,3 +157,10 @@ class ChatView(QWidget):
             item = self.msg_layout.takeAt(0)
             if item.widget():
                 item.widget().deleteLater()
+
+    def add_transfer_bubble(self, peer_id: str, bubble):
+        """Inserta una burbuja de transferencia de archivo en el chat activo."""
+        if peer_id == self._current_peer_id:
+            idx = self.msg_layout.count() - 1
+            self.msg_layout.insertWidget(idx, bubble)
+            QTimer.singleShot(50, self._scroll_to_bottom)
