@@ -17,7 +17,8 @@ class Protocol:
     # ── Handshake ───────────────────────────────────────────────────────────
 
     @staticmethod
-    def hello(username: str, peer_id: str, port: int) -> str:
+    def hello(username: str, peer_id: str, port: int, public_key_pem: str) -> str:
+        """Incluye la clave pública ECC del nodo para iniciar ECDH."""
         return json.dumps({
             "type":      "HELLO",
             "msg_id":    generate_msg_id(),
@@ -26,11 +27,13 @@ class Protocol:
                 "username": username,
                 "peer_id":  peer_id,
                 "port":     port,
+                "public_key": public_key_pem,
             },
         })
 
     @staticmethod
-    def hello_ack(peer_id: str) -> str:
+    def hello_ack(peer_id: str, public_key_pem: str) -> str:
+        """Incluye la clave pública ECC del receptor para completar ECDH."""
         return json.dumps({
             "type":      "HELLO_ACK",
             "msg_id":    generate_msg_id(),
@@ -38,14 +41,18 @@ class Protocol:
             "data": {
                 "status":  "accepted",
                 "peer_id": peer_id,
+                "public_key": public_key_pem,
             },
         })
 
     # ── Mensajería ───────────────────────────────────────────────────────────
 
     @staticmethod
-    def message(sender: str, sender_id: str, content: str) -> Tuple[str, str]:
-        """Retorna (msg_id, payload_json) para poder rastrear ACKs."""
+    def message(sender: str, sender_id: str, encrypted_content: str) -> Tuple[str, str]:
+        """
+        Retorna (msg_id, payload_json).
+        encrypted_content ya viene cifrado con AES-GCM.
+        """
         msg_id = generate_msg_id()
         payload = json.dumps({
             "type":      "MESSAGE",

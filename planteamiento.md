@@ -354,6 +354,23 @@ Peer A              Peer B
    └─ Re-intentar conexión (máx 3)
 ```
 
+### Flujo de establecimiento de sesión segura
+
+Nodo A                              Nodo B
+──────                              ──────
+CryptoSession()                     CryptoSession()
+    │                                   │
+    ├── HELLO (public_key_A) ─────────→ │
+    │                                   ├── session.establish(public_key_A)
+    │                                   │   → deriva clave AES ✓
+    │ ←── HELLO_ACK (public_key_B) ─────┤
+    │                                   │
+session.establish(public_key_B)         │
+→ deriva clave AES ✓                    │
+    │                                   │
+    ├── MESSAGE (AES-GCM cifrado) ────→ │
+    │                                   ├── session.decrypt() → texto claro
+    │ ←── MESSAGE_ACK ──────────────────┤
 ---
 
 ## 9. Diseño de la interfaz 
@@ -549,8 +566,8 @@ p2p-chat/
 │   └── app_controller.py    # Controlador principal
 │
 ├── network/
-│   ├── protocol.py          # Protocolo JSON
-│   ├── node.py              # Nodo P2P (orquestador)
+│   ├── protocol.py          # Protocolo JSON (actualizado para incluir datos cifrados)
+│   ├── node.py              # Nodo P2P (orquestador) (actualizado para cifrar/descifrar)
 │   ├── server.py            # Servidor WebSocket
 │   ├── client.py            # Cliente WebSocket
 │   └── message_handler.py   # Procesamiento de mensajes
@@ -563,6 +580,7 @@ p2p-chat/
     ├── logger.py            # Logging
     ├── validators.py        # Validación (IP, puerto, etc)
     └── helpers.py           # Funciones auxiliares
+    └── crypto.py
 ```
 
 ---
@@ -589,12 +607,15 @@ p2p-chat/
 -  Historial en SQLite
 -  Logging de actividad
 
-### Fase 4: Polish (futuro)
--  Múltiples chats simultáneos
+### Fase 4: Seguridad
+-  Encriptación
+-  Autenticación
+
+### Fase 5: Polish (futuro)
 -  Notificaciones
 -  Buscar en historial
 -  Exportar chat
--  seguridad (encriptación, autenticación)
+-  seguridad (autenticación)
 
 ---
 
@@ -637,6 +658,8 @@ p2p-chat/
 -  Validación de entrada
 -  Logging y debugging
 -  Escalable a múltiples conexiones simultáneas
+-  Encriptación
+
 
 ---
 
@@ -646,22 +669,10 @@ p2p-chat/
 PySide6>=6.4.0
 websockets>=11.0
 qasync>=0.27.0
+cryptography>=41.0.0
 asyncio (incluido en Python 3.10+)
 sqlite3 (incluido en Python)
 ```
-
----
-
-## 18. Próximos pasos
-
-1. **Crear estructura base** del proyecto
-2. **Implementar modelos** (Peer, Message, ConnectionState)
-3. **Desarrollar capa de red** (protocol, server, client, node)
-4. **Crear interfaz básica** con PySide6
-5. **Integrar con qasync**
-6. **Pruebas en LAN** con múltiples dispositivos
-7. **Agregar persistencia** SQLite
-8. **Optimización y pulido** final
 
 ---
 
