@@ -1,6 +1,6 @@
 # Sistema de Mensajería P2P
 
-### Autores: Esteban Guapacha, David Julian Torres y [Kevin Esguerra](mailto:kevin.esguerra@utp.edu.co)
+### Autores: Esteban Guapacha, David Julian Torres y [Kevin Esguerra](https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1)
 
 Una aplicación de mensajería descentralizada **Peer-to-Peer (P2P)** diseñada para funcionar en redes locales (LAN). Desarrollada en Python, combina una interfaz gráfica reactiva, manejo de red asíncrono y persistencia de datos local, sin depender de un servidor central.
 
