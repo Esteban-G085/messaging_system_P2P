@@ -1,114 +1,109 @@
-# Sistema de Mensajería P2P Descentralizado (LAN)
+# ◈ P2P Messenger (LAN)
 
-### Autores: Esteban Guapacha, David Julian Torres y Kevin Esguerra
+### **Autores:** Esteban Guapacha, David Julian Torres y Kevin Esguerra
 
-Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento para redes locales, ahora en su **versión 1.2.0**. Desarrollada en **Python**, combina una arquitectura asíncrona robusta y soporte para intercambio de archivos.
+Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.2.2**. Este sistema combina una arquitectura asíncrona robusta con cifrado y capacidades avanzadas de transferencia de archivos.
 
 ---
 
-## 🌟 Características Destacadas
+## 🌟 Características Principales
 
-- **Nodos Autónomos (P2P):** Eliminación total de servidores centrales; cada instancia actúa como cliente y servidor de forma simultánea.
-- **Transferencia de Archivos (Nuevo en v1.2.0):** Soporte para el envío de archivos entre peers con verificación de integridad SHA-256 y control de flujo por chunks.
+- **Descentralización Pura:** Sin servidores centrales. Cada nodo es autónomo, actuando como cliente y servidor simultáneamente.
 - **Seguridad End-to-End (E2EE):**
-  - **Intercambio de Claves:** Diffie-Hellman sobre Curvas Elípticas (ECDH) usando SECP256R1.
-  - **Cifrado de Mensajes:** AES-256-GCM para garantizar confidencialidad e integridad.
-- **Interfaz Fluida y Reactiva:** UI nativa con **PySide6**, integrada con el event loop asíncrono mediante `qasync`.
-- **Resiliencia de Conexión:** Monitoreo mediante **Heartbeats** para detección automática de desconexiones en tiempo real.
-- **Persistencia Local Segura:** Historial de chat y contactos almacenados en una base de datos **SQLite** local.
+  - **Intercambio de Claves:** Implementación de Diffie-Hellman sobre Curvas Elípticas (ECDH - SECP256R1).
+  - **Cifrado Real-Time:** AES-256-GCM para asegurar que solo los participantes puedan leer los mensajes.
+- **Transferencia de Archivos Optimizada:**
+  - Envío de archivos de cualquier tamaño mediante fragmentación (chunking).
+  - Verificación de integridad mediante **SHA-256**.
+  - Control de flujo asíncrono para no bloquear la interfaz.
+- **Interfaz Moderna (PySide6):** UI fluida diseñada con paradigmas modernos, integrada totalmente con `asyncio` mediante `qasync`.
+- **Detección de Estado (Heartbeat):** Monitoreo constante de la salud de la conexión para detectar desconexiones abruptas en milisegundos.
+- **Persistencia Local:** Historial de conversaciones y gestión de contactos mediante **SQLite3**.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-| Componente | Tecnología | Propósito |
+| Componente | Tecnología | Función |
 | :--- | :--- | :--- |
-| **Core** | Python 3.10+ | Lenguaje base |
-| **Frontend** | PySide6 (Qt) | Interfaz gráfica y UX |
-| **Network** | websockets + asyncio | Comunicación TCP asíncrona |
-| **Bridge** | qasync | Integración Qt-Asyncio |
-| **Security** | cryptography | ECC + AES-GCM (E2EE) |
-| **Persistence** | SQLite3 | Base de datos local |
+| **Lenguaje** | Python 3.10+ | Lógica de alto nivel y asincronía |
+| **Interfaz** | PySide6 (Qt) | Motor gráfico y experiencia de usuario |
+| **Network** | WebSockets + Asyncio | Protocolo de transporte bidireccional |
+| **Criptografía** | Cryptography.io | Implementación de estándares de seguridad |
+| **Base de Datos** | SQLite3 | Almacenamiento local ligero |
+| **Integración** | qasync | Puente entre el loop de Qt y Asyncio |
 
 ---
 
 ## 🏗️ Arquitectura del Sistema
 
-El proyecto implementa una arquitectura modular de 4 capas para garantizar escalabilidad y mantenimiento simple:
+El sistema se divide en capas especializadas para maximizar la mantenibilidad:
 
-1.  **Capa de Aplicación (UI):** Gestiona la presentación y eventos del usuario. Utiliza `@asyncSlot` para operaciones no bloqueantes.
-2.  **Capa de Control (AppController):** Orquesta la comunicación entre la UI, la red y la persistencia. Gestiona el estado de las transferencias.
-3.  **Capa de Comunicaciones (P2PNode):** Implementa el servidor/cliente WebSocket y maneja el protocolo de señalización.
-4.  **Capa de Seguridad (CryptoSession):** Responsable de la derivación de claves por sesión y el cifrado/descifrado de payloads.
+1. **Capa de Presentación (UI):** Componentes basados en Qt que reaccionan a eventos asíncronos sin congelar la ventana.
+2. **Capa de Orquestación (Controller):** El `AppController` gestiona el flujo de datos entre la red, la interfaz y la base de datos.
+3. **Capa de Red (Network/Node):** Maneja el servidor WebSocket y el protocolo de señalización P2P.
+4. **Capa de Seguridad (Crypto):** Gestiona la generación de secretos, derivación de claves y cifrado simétrico.
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Estructura del Repositorio
 
-```text
+```bash
 modelo_P2P/
-├── config/        # Configuraciones globales (puertos, versión, nombres)
-├── controller/    # Lógica de negocio (AppController)
-├── database/      # Modelos y controladores de SQLite (DBManager)
-├── models/        # Entidades del dominio (Peer, Message, FileTransfer)
-├── network/       # Implementación P2P, Protocolo y Handlers
-├── ui/            # Layouts, estilos CSS y componentes visuales
-├── utils/         # Helpers, validadores, logger y Criptografía
-├── main.py        # Punto de entrada principal (Setup + App Loop)
+├── assets/        # Recursos visuales y multimedia
+├── config/        # Parámetros globales (puertos, timeouts, versión)
+├── controller/    # Orquestador principal (AppController)
+├── database/      # Lógica de persistencia y modelos SQL
+├── models/        # Estructuras de datos (Peer, ChatMessage, FileTransfer)
+├── network/       # Implementación del protocolo P2P y WebSockets
+├── ui/            # Vistas, widgets personalizados y estilos CSS
+├── utils/         # Utilidades de criptografía, logging y validación
+├── main.py        # Punto de entrada de la aplicación
 └── requirements.txt
 ```
 
 ---
 
-## ⚙️ Protocolo de Comunicación (JSON over WS)
+## 🚀 Instalación y Guía de Uso
 
-El intercambio de datos sigue un flujo estrictamente tipado:
+### 1. Clonar y Configurar Entorno
 
-- **Handshake:** `HELLO` / `HELLO_ACK` (Intercambio de claves públicas ECC).
-- **Mensajería:** `MESSAGE` / `MESSAGE_ACK` (Contenido cifrado AES).
-- **Archivos:** `FILE_OFFER` -> `FILE_OFFER_ACK` -> Envío de Chunks binarios.
-- **Control:** `HEARTBEAT` (Mantenimiento) y `DISCONNECT` (Cierre ordenado).
-
----
-
-## 🚀 Instalación y Uso
-
-### 1. Preparar el Entorno
-
-Se recomienda el uso de un entorno virtual (`venv` o `conda`):
+Se recomienda usar un entorno virtual para mantener las dependencias aisladas:
 
 ```bash
-# Crear entorno virtual
+# Crear el entorno
 python -m venv .venv
 
-# Activar (Windows)
+# Activar en Windows
 .venv\Scripts\activate
 
 # Instalar dependencias
 pip install -r requirements.txt
 ```
 
-### 2. Lanzar la Aplicación
+### 2. Ejecución
+
+Inicia la aplicación ejecutando el script principal:
 
 ```bash
 python main.py
 ```
 
-Al iniciar, se abrirá un diálogo de configuración donde deberás ingresar tu **Nickname** y el **Puerto Local** en el que deseas escuchar nuevas conexiones.
+Al abrirse, deberás configurar:
+
+- **Nickname:** Tu identidad visible en la red.
+- **Puerto Local:** El puerto por donde escucharás nuevas conexiones (default: 5000).
 
 ---
 
-## 📈 Roadmap Técnico
+## 📈 Próximos Pasos (Roadmap)
 
-- [ ] **Grupos (Discovery):** Escaneo automático de red local (mDNS/UDP Broadcast) para encontrar peers.
-- [ ] **Avatar Dinámico:** Generación de identificadores visuales únicos basados en el ID del peer.
-- [ ] **Búsqueda Global:** Indexación de mensajes antiguos para búsqueda rápida local.
-- [ ] **Transferencias en Paralelo:** Soporte para múltiples transferencias simultáneas a diferentes peers.
+- [ ] **mDNS Discovery:** Detección automática de peers en la misma subred sin necesidad de IP manual.
+- [ ] **Soporte de Grupos:** Creación de salas de chat grupales con intercambio de llaves de grupo.
+- [ ] **Emojis & Markdown:** Soporte para renderizado rico de mensajes.
 
 ---
 
 <div align="center">
-  <sub>Desarrollado para la asignatura de Sistemas Distribuidos.</sub>
+  <sub>Sistemas Distribuidos - Universidad</sub>
 </div>
-
-

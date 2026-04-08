@@ -1,8 +1,10 @@
 # ──────────────────────────────────────────────
-#           Ventana principal
+#  Ventana principal
 # ──────────────────────────────────────────────
 
+import asyncio
 import os
+
 from PySide6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QFrame, QLineEdit, QPushButton, QLabel,
@@ -12,7 +14,7 @@ from PySide6.QtCore import Qt
 from qasync import asyncSlot
 
 from controller.app_controller import AppController
-from models.file_transfer import FileTransfer, TransferStatus
+from models.file_transfer import FileTransfer
 from models.message import Message
 from models.peer import Peer
 from ui.styles import COLORS, MAIN_STYLE
@@ -27,8 +29,8 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.ctrl = controller
         self._active_peer: Peer | None = None
-        # file_id → TransferBubble
         self._transfer_bubbles: dict[str, TransferBubble] = {}
+        self._connect_task: asyncio.Task | None = None   # tarea de conexión en curso
 
         self._setup_ui()
         self._connect_signals()
@@ -44,7 +46,7 @@ class MainWindow(QMainWindow):
 
     def _setup_ui(self):
         self.setStyleSheet(MAIN_STYLE)
-        self.resize(920, 640)
+        self.resize(980, 660)
 
         central = QWidget()
         self.setCentralWidget(central)
@@ -52,7 +54,7 @@ class MainWindow(QMainWindow):
         root.setContentsMargins(0, 0, 0, 0)
         root.setSpacing(0)
 
-        # ── Panel izquierdo ───────────────────────────────────────────────────
+        # Panel izquierdo
         left = QFrame()
         left.setFixedWidth(250)
         left.setStyleSheet(
@@ -74,7 +76,7 @@ class MainWindow(QMainWindow):
         ll.addWidget(self.conn_panel)
         root.addWidget(left)
 
-        # ── Panel derecho ─────────────────────────────────────────────────────
+        # Panel derecho
         right = QWidget()
         rl = QVBoxLayout(right)
         rl.setContentsMargins(0, 0, 0, 0)
@@ -92,7 +94,6 @@ class MainWindow(QMainWindow):
         il.setContentsMargins(10, 8, 10, 8)
         il.setSpacing(8)
 
-        # Botón adjuntar archivo
         self.attach_btn = QPushButton("📎")
         self.attach_btn.setFixedSize(36, 36)
         self.attach_btn.setToolTip("Enviar archivo")
@@ -107,11 +108,12 @@ class MainWindow(QMainWindow):
         il.addWidget(self.attach_btn)
 
         self.msg_input = QLineEdit()
-        self.msg_input.setPlaceholderText("Escribe tu mensaje…")
+        self.msg_input.setPlaceholderText("Selecciona un peer para chatear…")
         self.msg_input.setStyleSheet(
             "background-color: #2A2A2A; border-radius: 18px; "
             "padding: 7px 14px; font-size: 10pt; border: none;"
         )
+        self.msg_input.setEnabled(False)
         self.msg_input.returnPressed.connect(self._on_send)
         il.addWidget(self.msg_input, stretch=1)
 
@@ -129,6 +131,8 @@ class MainWindow(QMainWindow):
     def _connect_signals(self):
         self.peers_list.peer_selected.connect(self._on_peer_selected)
         self.conn_panel.connect_requested.connect(self._on_connect_requested)
+        self.conn_panel.cancel_requested.connect(self._on_connect_cancelled)
+        self.chat_view._tabs.currentChanged.connect(self._on_tab_changed)
 
     def _connect_controller(self):
         self.ctrl.ui_on_peer_update     = self._ui_peer_update
@@ -142,49 +146,44 @@ class MainWindow(QMainWindow):
 
     def _ui_peer_update(self, peer: Peer):
         self.peers_list.add_or_update_peer(peer)
+        # Si el peer se conectó correctamente → restaurar panel
+        if peer.is_ready:
+            self.conn_panel.set_idle()
         if self._active_peer and self._active_peer.id == peer.id:
             self._active_peer = peer
+            self._update_input_state(peer)
 
     def _ui_message(self, peer_id: str, msg: Message):
         self.chat_view.add_message(peer_id, msg)
 
     def _ui_error(self, error: str):
+        # El error ya restaura el panel a idle
         self.conn_panel.set_connect_error(error)
 
     def _ui_file_offer(self, ft: FileTransfer):
-        """Diálogo de aceptar/rechazar archivo entrante."""
-        peer = self.ctrl.node.peers.get(ft.peer_id)
+        peer        = self.ctrl.node.peers.get(ft.peer_id)
         sender_name = peer.username if peer else ft.peer_id[:8]
-
         reply = QMessageBox.question(
-            self,
-            "Archivo entrante",
+            self, "Archivo entrante",
             f"<b>{sender_name}</b> quiere enviarte:<br><br>"
             f"📄  <b>{ft.filename}</b>  ({ft.size_str})<br><br>"
-            f"¿Aceptar la transferencia?",
-            QMessageBox.Yes | QMessageBox.No,
-            QMessageBox.Yes,
+            "¿Aceptar la transferencia?",
+            QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes,
         )
-
         bubble = TransferBubble(ft)
         bubble.cancel_requested.connect(self._on_cancel_transfer)
         self._transfer_bubbles[ft.id] = bubble
         self.chat_view.add_transfer_bubble(ft.peer_id, bubble)
-
         if reply == QMessageBox.Yes:
-            import asyncio
             asyncio.ensure_future(self.ctrl.accept_file(ft.id))
         else:
-            import asyncio
             asyncio.ensure_future(self.ctrl.reject_file(ft.id))
 
     def _ui_transfer_update(self, ft: FileTransfer):
-        """Actualiza la burbuja de progreso en el chat."""
         bubble = self._transfer_bubbles.get(ft.id)
         if bubble:
             bubble.update_transfer(ft)
         elif ft.is_sender:
-            # Primera actualización del sender → crear burbuja
             bubble = TransferBubble(ft)
             bubble.cancel_requested.connect(self._on_cancel_transfer)
             self._transfer_bubbles[ft.id] = bubble
@@ -193,8 +192,7 @@ class MainWindow(QMainWindow):
     def _ui_file_saved(self, ft: FileTransfer):
         save_dir = os.path.dirname(os.path.abspath(ft.save_path))
         QMessageBox.information(
-            self,
-            "Archivo recibido",
+            self, "Archivo recibido",
             f"✅  <b>{ft.filename}</b> guardado correctamente.<br><br>"
             f"📁  {save_dir}",
         )
@@ -204,18 +202,64 @@ class MainWindow(QMainWindow):
     def _on_peer_selected(self, peer: Peer):
         self._active_peer = peer
         messages = self.ctrl.get_messages(peer.id)
-        self.chat_view.set_peer(peer.username, peer.id, messages)
+        self.chat_view.open_chat(peer.id, peer.username, messages)
+        self._update_input_state(peer)
+
+    def _on_tab_changed(self, index: int):
+        if index < 0:
+            self._active_peer = None
+            self._set_input_enabled(False)
+            return
+        panel = self.chat_view._tabs.widget(index)
+        if not panel:
+            return
+        self.chat_view._clear_badge(panel.peer_id)
+        peer = self.ctrl.node.peers.get(panel.peer_id)
+        if peer:
+            self._active_peer = peer
+            self._update_input_state(peer)
+        else:
+            self._active_peer = None
+            self._set_input_enabled(False)
+
+    # ── Conexión en background ────────────────────────────────────────────────
+
+    def _on_connect_requested(self, ip: str, port: int):
+        """
+        Lanza la conexión como tarea asyncio en background.
+        La UI queda libre inmediatamente — el resultado llega
+        por _ui_peer_update (éxito) o _ui_error (fallo).
+        """
+        # Cancelar intento previo si lo hubiera
+        if self._connect_task and not self._connect_task.done():
+            self._connect_task.cancel()
+
+        self._connect_task = asyncio.ensure_future(
+            self.ctrl.connect_to_peer(ip, port)
+        )
+
+    def _on_connect_cancelled(self):
+        """El usuario pulsó Cancelar — abortar la tarea en curso."""
+        if self._connect_task and not self._connect_task.done():
+            self._connect_task.cancel()
+            self._connect_task = None
+
+    # ── Input bar ─────────────────────────────────────────────────────────────
+
+    def _update_input_state(self, peer: Peer):
         ready = peer.is_ready
-        self.send_btn.setEnabled(ready)
-        self.attach_btn.setEnabled(ready)
-        self.msg_input.setEnabled(ready)
+        self._set_input_enabled(ready)
+        self.msg_input.setPlaceholderText(
+            f"Mensaje para {peer.username}…" if ready
+            else "El peer está desconectado"
+        )
         if ready:
             self.msg_input.setFocus()
 
-    @asyncSlot()
-    async def _on_connect_requested(self, ip: str, port: int):
-        await self.ctrl.connect_to_peer(ip, port)
-        self.conn_panel.set_idle()
+    def _set_input_enabled(self, enabled: bool):
+        self.send_btn.setEnabled(enabled)
+        self.attach_btn.setEnabled(enabled)
+        self.msg_input.setEnabled(enabled)
 
     @asyncSlot()
     async def _on_send(self):
@@ -232,7 +276,7 @@ class MainWindow(QMainWindow):
         if not self._active_peer:
             return
         filepath, _ = QFileDialog.getOpenFileName(
-            self, "Seleccionar archivo para enviar", "", "Todos los archivos (*)"
+            self, "Seleccionar archivo", "", "Todos los archivos (*)"
         )
         if not filepath:
             return
