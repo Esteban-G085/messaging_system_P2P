@@ -126,6 +126,20 @@ class MainWindow(QMainWindow):
         rl.addWidget(input_bar)
         root.addWidget(right, stretch=1)
 
+        #------------- videollamada -------------
+        
+        # Botón para iniciar videollamada
+        self.btn_start_call = QPushButton("📹 Iniciar videollamada")
+        # Botón para aceptar llamada
+        self.btn_accept_call = QPushButton("✅ Aceptar llamada")
+        # Botón para rechazar llamada
+        self.btn_reject_call = QPushButton("❌ Rechazar llamada")
+
+        # Añadirlos al layout principal
+        self.layout.addWidget(self.btn_start_call)
+        self.layout.addWidget(self.btn_accept_call)
+        self.layout.addWidget(self.btn_reject_call)
+
     # ── Señales ───────────────────────────────────────────────────────────────
 
     def _connect_signals(self):
@@ -260,6 +274,20 @@ class MainWindow(QMainWindow):
         self.send_btn.setEnabled(enabled)
         self.attach_btn.setEnabled(enabled)
         self.msg_input.setEnabled(enabled)
+
+    #--------------videollamada----------------
+    def _on_start_call(self):
+        peer = self._on_peer_selected()  # reutilizas tu lógica para obtener el peer
+        self.controller.start_videocall(peer)
+
+    def _on_accept_call(self):
+        peer = self._on_peer_selected()
+        offer_sdp = self.get_incoming_offer()  # deberás implementar cómo obtienes el SDP
+        self.controller.accept_videocall(peer, offer_sdp)
+
+    def _on_reject_call(self):
+        print("Llamada rechazada")
+        # Aquí podrías enviar un mensaje de rechazo al peer
 
     @asyncSlot()
     async def _on_send(self):
