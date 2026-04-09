@@ -4,6 +4,7 @@
 
 import asyncio
 from datetime import datetime
+import json
 from typing import Callable, Dict, Optional
 
 import websockets
@@ -19,6 +20,13 @@ from network.server import WebSocketServer
 from utils.crypto import CryptoSession
 from utils.helpers import generate_peer_id, get_local_ip
 from utils.logger import logger
+
+##videollamada
+from network.videocall import VideoCall
+from network.signaling import Signaling
+
+videocall = VideoCall()
+signaling = Signaling(videocall.pc, self.crypto_session)
 
 
 class P2PNode:
@@ -44,6 +52,9 @@ class P2PNode:
         self.on_file_offer:        Optional[Callable] = None   # (FileTransfer)
         self.on_transfer_update:   Optional[Callable] = None   # (FileTransfer)
         self.on_file_saved:        Optional[Callable] = None   # (FileTransfer)
+
+        videocall = VideoCall()
+        signaling = Signaling(videocall.pc, self.crypto_session)
 
         self._setup_handlers()
 
@@ -357,3 +368,38 @@ class P2PNode:
             self._crypto.pop(peer.id, None)
             if self.on_peer_disconnected:
                 self.on_peer_disconnected(peer)
+
+    
+
+    # network/node.py
+
+    async def handle_message(self, peer, raw_message):
+        """
+        Procesa mensajes entrantes de texto, archivos y ahora videollamadas.
+        """
+        try:
+            # 1. Descifrar mensaje con CryptoSession
+            decrypted = self.crypto_session.decrypt_message(raw_message)
+            message = json.loads(decrypted)
+
+            # 2. Revisar tipo de mensaje
+            if message["type"] == "videocall_offer":
+                # Guardar oferta y notificar al controlador
+                await self.controller.accept_videocall(peer, message["sdp"])
+
+            elif message["type"] == "videocall_answer":
+                # Aplicar respuesta remota
+                await self.controller.videocall.set_remote_description(message["sdp"])
+
+            elif message["type"] == "ice_candidate":
+                # Añadir candidato ICE
+                await self.controller.videocall.add_ice_candidate(message["candidate"])
+
+            else:
+                # Mantener compatibilidad con mensajes de chat/archivo
+                await self.controller.handle_chat_message(peer, message)
+
+        except Exception as e:
+            print(f"[ERROR] Fallo al procesar mensaje de {peer}: {e}")
+
+
