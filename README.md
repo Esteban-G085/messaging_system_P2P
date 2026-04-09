@@ -50,7 +50,6 @@ El sistema se divide en capas especializadas para maximizar la mantenibilidad:
 
 ```bash
 modelo_P2P/
-├── assets/        # Recursos visuales y multimedia
 ├── config/        # Parámetros globales (puertos, timeouts, versión)
 ├── controller/    # Orquestador principal (AppController)
 ├── database/      # Lógica de persistencia y modelos SQL
