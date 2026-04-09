@@ -14,6 +14,10 @@ from utils.helpers import generate_msg_id
 from utils.logger import logger
 from utils.validators import validate_connection
 
+##videollamada
+from network.videocall import VideoCall
+from network.signaling import Signaling
+
 
 class AppController:
     """
@@ -46,6 +50,10 @@ class AppController:
         self.ui_on_file_offer:     Optional[Callable[[FileTransfer], None]] = None
         self.ui_on_transfer_update:Optional[Callable[[FileTransfer], None]] = None
         self.ui_on_file_saved:     Optional[Callable[[FileTransfer], None]] = None
+
+        #videollamada
+        self.videocall = None
+        self.signaling = None
 
     # ── Ciclo de vida ─────────────────────────────────────────────────────────
 
@@ -188,3 +196,35 @@ class AppController:
     def _on_file_saved(self, ft: FileTransfer):
         if self.ui_on_file_saved:
             self.ui_on_file_saved(ft)
+
+    
+    #-------videollamada
+
+    async def start_videocall(self, peer):
+        self.videocall = VideoCall()
+        self.videocall.add_local_tracks()
+        # controller/app_controller.py
+        self.signaling = Signaling(self.videocall.pc, self.node.crypto_session)
+
+        # Generar oferta y enviarla al peer usando self.node
+        offer = await self.videocall.create_offer()
+        self.signaling.send_offer(self.node, peer, offer)
+
+    async def accept_videocall(self, peer, offer_sdp):
+        self.videocall = VideoCall()
+        self.videocall.add_local_tracks()
+        # controller/app_controller.py
+        self.signaling = Signaling(self.videocall.pc, self.node.crypto_session)
+
+        await self.videocall.set_remote_description(offer_sdp)
+        answer = await self.videocall.create_answer()
+        self.signaling.send_answer(self.node, peer, answer)
+
+    async def handle_incoming_message(self, peer, message):
+        if message["type"] == "videocall_offer":
+            await self.accept_videocall(peer, message["sdp"])
+        elif message["type"] == "videocall_answer":
+            await self.videocall.set_remote_description(message["sdp"])
+        elif message["type"] == "ice_candidate":
+            await self.videocall.add_ice_candidate(message["candidate"])
+
