@@ -4,6 +4,9 @@
 
 from datetime import datetime
 from typing import Callable, Dict, List, Optional
+import json
+import asyncio
+
 
 from database.db_manager import DBManager
 from models.file_transfer import FileTransfer
@@ -14,9 +17,9 @@ from utils.helpers import generate_msg_id
 from utils.logger import logger
 from utils.validators import validate_connection
 
+
 ##videollamada
-from network.videocall import VideoCall
-from network.signaling import Signaling
+from network.videocall import VideoCallWS
 
 
 class AppController:
@@ -41,6 +44,7 @@ class AppController:
         self.node.on_file_offer        = self._on_file_offer
         self.node.on_transfer_update   = self._on_transfer_update
         self.node.on_file_saved        = self._on_file_saved
+        self.node.on_videocall_message = self._on_videocall_message
 
         # Callbacks para la UI
         self.ui_on_peer_update:    Optional[Callable[[Peer], None]]         = None
@@ -50,10 +54,15 @@ class AppController:
         self.ui_on_file_offer:     Optional[Callable[[FileTransfer], None]] = None
         self.ui_on_transfer_update:Optional[Callable[[FileTransfer], None]] = None
         self.ui_on_file_saved:     Optional[Callable[[FileTransfer], None]] = None
+        self.ui_on_incoming_call:  Optional[Callable[[str, str], None]]     = None  # peer_id, peer_name
+        self.ui_on_video_track:    Optional[Callable[[str], None]]          = None  # track_kind
 
         #videollamada
-        self.videocall = None
-        self.signaling = None
+        self.videocall = VideoCallWS()
+        self._pending_videocall_offers: Dict[str, dict] = {}
+        # app_controller.py — en __init__, añadir:
+        self._pending_ice_candidates: Dict[str, list] = {}  # peer_id -> [candidates]
+        
 
     # ── Ciclo de vida ─────────────────────────────────────────────────────────
 
@@ -61,7 +70,19 @@ class AppController:
         """
         Inicia el nodo P2P (servidor WebSocket local) e inicializa la escucha de conexiones entrantes.
         """
+        logger.info("=" * 80)
+        logger.info("🚀 INICIANDO APLICACIÓN P2P")
+        logger.info("=" * 80)
+        logger.info(f"[CTRL] Usuario: {self.node.username}")
+        logger.info(f"[CTRL] Peer ID: {self.node.peer_id[:16]}...")
+        logger.info(f"[CTRL] IP Local: {self.node.local_ip}")
+        logger.info(f"[CTRL] Puerto: {self.node.port}")
+        logger.info("[CTRL] ⏳ Iniciando servidor WebSocket...")
+        
         await self.node.start()
+        
+        logger.info("[CTRL] ✅ Servidor WebSocket iniciado correctamente")
+        logger.info("=" * 80)
 
     # ── API para la UI ────────────────────────────────────────────────────────
 
@@ -73,16 +94,32 @@ class AppController:
             ip (str): Dirección IP del peer remoto.
             port (int): Puerto de escucha del peer remoto.
         """
+        logger.info("=" * 80)
+        logger.info(f"[CTRL] 🔗 INICIANDO CONEXIÓN A PEER")
+        logger.info("=" * 80)
+        
         ok, err = validate_connection(ip, port)
         if not ok:
+            logger.error(f"[CTRL] ❌ Validación fallida: {err}")
             if self.ui_on_error:
                 self.ui_on_error(err)
             return
+        
+        logger.info(f"[CTRL] [FASE 0/3] Validación de parámetros completada ✓")
+        logger.info(f"[CTRL]    → Destino: {ip}:{port}")
+        
         try:
+            logger.info("[CTRL] ⏳ Conectando..." if not self.ui_on_error else "")
             await self.node.connect_to_peer(ip, port)
+            logger.info("[CTRL] ✅ Conexión completada")
         except ConnectionError as e:
+            logger.error(f"[CTRL] ❌ Error de conexión: {e}")
             if self.ui_on_error:
                 self.ui_on_error(str(e))
+        except Exception as e:
+            logger.error(f"[CTRL] ❌ Error inesperado: {e}")
+            if self.ui_on_error:
+                self.ui_on_error(f"Error inesperado: {e}")
 
     async def send_message(self, peer_id: str, content: str):
         """
@@ -149,6 +186,14 @@ class AppController:
     # ── Callbacks del nodo ────────────────────────────────────────────────────
 
     def _on_peer_connected(self, peer: Peer):
+        logger.info("=" * 80)
+        logger.info(f"[CTRL] ✅ PEER CONECTADO")
+        logger.info("=" * 80)
+        logger.info(f"[CTRL] Username: {peer.username}")
+        logger.info(f"[CTRL] Peer ID: {peer.id[:16]}...")
+        logger.info(f"[CTRL] IP/Puerto: {peer.ip}:{peer.port}")
+        logger.info(f"[CTRL] Estado: {peer.state}")
+        
         self.db.upsert_peer(peer)
         self.db.log_connection(peer.id, "connected")
         if peer.id not in self._messages:
@@ -156,10 +201,21 @@ class AppController:
             for msg in history:
                 msg.sender_name = peer.username if not msg.is_mine else self.node.username
             self._messages[peer.id] = history
+        
+        logger.info("[CTRL] 🏠 Cargado historial messajes")
+        logger.info("=" * 80)
+        
         if self.ui_on_peer_update:
             self.ui_on_peer_update(peer)
 
     def _on_peer_disconnected(self, peer: Peer):
+        logger.warning("=" * 80)
+        logger.warning(f"[CTRL] ❌ PEER DESCONECTADO")
+        logger.warning("=" * 80)
+        logger.warning(f"[CTRL] Username: {peer.username}")
+        logger.warning(f"[CTRL] Peer ID: {peer.id[:16]}...")
+        logger.warning("=" * 80)
+        
         self.db.log_connection(peer.id, "disconnected")
         if self.ui_on_peer_update:
             self.ui_on_peer_update(peer)
@@ -197,34 +253,81 @@ class AppController:
         if self.ui_on_file_saved:
             self.ui_on_file_saved(ft)
 
+    async def _on_videocall_message(self, peer: Peer, message: dict):
+        """Callback del nodo para mensajes de videollamada."""
+        await self.handle_incoming_videocall_message(peer, message)
+
     
     #-------videollamada
 
-    async def start_videocall(self, peer):
-        self.videocall = VideoCall()
-        self.videocall.add_local_tracks()
-        # controller/app_controller.py
-        self.signaling = Signaling(self.videocall.pc, self.node.crypto_session)
+    async def start_videocall(self, peer_id: str):
+        """Inicia videollamada: envía señal de oferta y empieza a capturar."""
+        peer = self.node.peers.get(peer_id)
+        if not peer:
+            logger.error(f"[VIDEOCALL] Peer {peer_id} no encontrado")
+            return
 
-        # Generar oferta y enviarla al peer usando self.node
-        offer = await self.videocall.create_offer()
-        self.signaling.send_offer(self.node, peer, offer)
+        logger.info(f"[VIDEOCALL] 🎥 Iniciando videollamada con {peer.username}")
 
-    async def accept_videocall(self, peer, offer_sdp):
-        self.videocall = VideoCall()
-        self.videocall.add_local_tracks()
-        # controller/app_controller.py
-        self.signaling = Signaling(self.videocall.pc, self.node.crypto_session)
+        # Notificar al peer que queremos llamar
+        session = self.node._crypto.get(peer_id)
+        msg     = json.dumps({"type": "videocall_offer"})
+        encrypted = session.encrypt(msg)
+        from network.protocol import Protocol
+        _, payload = Protocol.message(self.node.username, self.node.peer_id, encrypted)
+        await peer.connection.send(payload)
 
-        await self.videocall.set_remote_description(offer_sdp)
-        answer = await self.videocall.create_answer()
-        self.signaling.send_answer(self.node, peer, answer)
+        # Conectar callback de frames a la UI y empezar a enviar video
+        self.videocall.on_frame_received = self.ui_on_video_track
+        self.videocall._send_task = asyncio.get_event_loop().create_task(
+            self.videocall.start_sending(self.node, peer)
+        )
+        logger.info(f"[VIDEOCALL] ✅ Captura iniciada, esperando respuesta de {peer.username}")
 
-    async def handle_incoming_message(self, peer, message):
-        if message["type"] == "videocall_offer":
-            await self.accept_videocall(peer, message["sdp"])
-        elif message["type"] == "videocall_answer":
-            await self.videocall.set_remote_description(message["sdp"])
-        elif message["type"] == "ice_candidate":
-            await self.videocall.add_ice_candidate(message["candidate"])
+    async def accept_videocall(self, peer_id: str):
+        """Acepta llamada entrante: envía ACK y empieza a capturar."""
+        peer = self.node.peers.get(peer_id)
+        if not peer:
+            return
+
+        logger.info(f"[VIDEOCALL] 📞 Aceptando videollamada de {peer.username}")
+
+        # Notificar al peer que aceptamos
+        session = self.node._crypto.get(peer_id)
+        msg     = json.dumps({"type": "videocall_answer"})
+        encrypted = session.encrypt(msg)
+        from network.protocol import Protocol
+        _, payload = Protocol.message(self.node.username, self.node.peer_id, encrypted)
+        await peer.connection.send(payload)
+
+        # Conectar callback y empezar a enviar video
+        self.videocall.on_frame_received = self.ui_on_video_track
+        self.videocall._send_task = asyncio.get_event_loop().create_task(
+            self.videocall.start_sending(self.node, peer)
+        )
+
+        # Limpiar oferta pendiente
+        self._pending_videocall_offers.pop(peer_id, None)
+        logger.info(f"[VIDEOCALL] ✅ Videollamada aceptada")
+
+    async def reject_videocall(self, peer_id: str):
+        self._pending_videocall_offers.pop(peer_id, None)
+        self.videocall.stop()
+        logger.info(f"[VIDEOCALL] Videollamada rechazada de {peer_id}")
+
+    async def handle_incoming_videocall_message(self, peer, message):
+        msg_type = message.get("type")
+
+        if msg_type == "videocall_offer":
+            self._pending_videocall_offers[peer.id] = {"peer_obj": peer}
+            logger.info(f"[VIDEOCALL] 📨 Oferta recibida de {peer.username}")
+            if self.ui_on_incoming_call:
+                self.ui_on_incoming_call(peer.id, peer.username)
+
+        elif msg_type == "videocall_answer":
+            # El receptor aceptó — ya estamos enviando, nada más que hacer
+            logger.info(f"[VIDEOCALL] ✅ {peer.username} aceptó la llamada")
+
+        elif msg_type == "video_frame":
+            self.videocall.receive_frame(message["data"])
 

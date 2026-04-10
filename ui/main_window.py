@@ -22,6 +22,8 @@ from ui.widgets.chat_view import ChatView
 from ui.widgets.connection_panel import ConnectionPanel
 from ui.widgets.peers_list import PeersList
 from ui.widgets.transfer_widget import TransferBubble
+from ui.widgets.incoming_call_dialog import IncomingCallDialog
+from ui.widgets.video_window import VideoWindow
 
 
 class MainWindow(QMainWindow):
@@ -31,6 +33,7 @@ class MainWindow(QMainWindow):
         self._active_peer: Peer | None = None
         self._transfer_bubbles: dict[str, TransferBubble] = {}
         self._connect_task: asyncio.Task | None = None   # tarea de conexión en curso
+        self._video_window: VideoWindow | None = None    # ventana de videollamada
 
         self._setup_ui()
         self._connect_signals()
@@ -117,6 +120,19 @@ class MainWindow(QMainWindow):
         self.msg_input.returnPressed.connect(self._on_send)
         il.addWidget(self.msg_input, stretch=1)
 
+        self.video_btn = QPushButton("📹")
+        self.video_btn.setFixedSize(36, 36)
+        self.video_btn.setToolTip("Iniciar videollamada")
+        self.video_btn.setStyleSheet(
+            "background-color: #2A2A2A; color: #FFFFFF; border-radius: 18px; "
+            "font-size: 14pt; border: none;"
+            "QPushButton:hover { background-color: #3A3A3A; }"
+            "QPushButton:disabled { color: #444444; }"
+        )
+        self.video_btn.clicked.connect(self._on_start_call)
+        self.video_btn.setEnabled(False)
+        il.addWidget(self.video_btn)
+
         self.send_btn = QPushButton("Enviar")
         self.send_btn.setFixedWidth(80)
         self.send_btn.clicked.connect(self._on_send)
@@ -125,20 +141,6 @@ class MainWindow(QMainWindow):
 
         rl.addWidget(input_bar)
         root.addWidget(right, stretch=1)
-
-        #------------- videollamada -------------
-        
-        # Botón para iniciar videollamada
-        self.btn_start_call = QPushButton("📹 Iniciar videollamada")
-        # Botón para aceptar llamada
-        self.btn_accept_call = QPushButton("✅ Aceptar llamada")
-        # Botón para rechazar llamada
-        self.btn_reject_call = QPushButton("❌ Rechazar llamada")
-
-        # Añadirlos al layout principal
-        self.layout.addWidget(self.btn_start_call)
-        self.layout.addWidget(self.btn_accept_call)
-        self.layout.addWidget(self.btn_reject_call)
 
     # ── Señales ───────────────────────────────────────────────────────────────
 
@@ -155,6 +157,11 @@ class MainWindow(QMainWindow):
         self.ctrl.ui_on_file_offer      = self._ui_file_offer
         self.ctrl.ui_on_transfer_update = self._ui_transfer_update
         self.ctrl.ui_on_file_saved      = self._ui_file_saved
+        # Videollamada
+        if hasattr(self.ctrl, 'ui_on_incoming_call'):
+            self.ctrl.ui_on_incoming_call = self._ui_incoming_call
+        if hasattr(self.ctrl, 'ui_on_video_track'):
+            self.ctrl.ui_on_video_track = self._ui_video_track
 
     # ── Callbacks del controlador ─────────────────────────────────────────────
 
@@ -210,6 +217,17 @@ class MainWindow(QMainWindow):
             f"✅  <b>{ft.filename}</b> guardado correctamente.<br><br>"
             f"📁  {save_dir}",
         )
+
+    def _ui_incoming_call(self, peer_id: str, peer_name: str):
+        """Muestra el diálogo cuando llega una llamada entrante."""
+        dialog = IncomingCallDialog(peer_name, self)
+        dialog.accepted_signal.connect(lambda: self._on_call_accepted(peer_id))
+        dialog.rejected_signal.connect(lambda: self._on_call_rejected(peer_id))
+        dialog.exec()
+
+    def _ui_video_track(self, frame):
+        if self._video_window:
+            self._video_window.update_frame(frame)
 
     # ── Eventos de UI ─────────────────────────────────────────────────────────
 
@@ -273,21 +291,50 @@ class MainWindow(QMainWindow):
     def _set_input_enabled(self, enabled: bool):
         self.send_btn.setEnabled(enabled)
         self.attach_btn.setEnabled(enabled)
+        self.video_btn.setEnabled(enabled)
         self.msg_input.setEnabled(enabled)
 
-    #--------------videollamada----------------
-    def _on_start_call(self):
-        peer = self._on_peer_selected()  # reutilizas tu lógica para obtener el peer
-        self.controller.start_videocall(peer)
+    @asyncSlot()
+    async def _on_start_call(self):
+        """Inicia una videollamada con el peer actual."""
+        if not self._active_peer:
+            QMessageBox.warning(self, "Advertencia", "Selecciona un peer primero")
+            return
+        if not self._active_peer.is_ready:
+            QMessageBox.warning(self, "Advertencia", "El peer no está conectado")
+            return
+        
+        # Abrir ventana de video
+        self._video_window = VideoWindow(self._active_peer.username, self)
+        self._video_window.set_video_label("⏳ Conectando... esperando respuesta")
+        self._video_window.set_status("⏳ Iniciando videollamada...")
+        self._video_window.show()
+        
+        await self.ctrl.start_videocall(self._active_peer.id)
 
-    def _on_accept_call(self):
-        peer = self._on_peer_selected()
-        offer_sdp = self.get_incoming_offer()  # deberás implementar cómo obtienes el SDP
-        self.controller.accept_videocall(peer, offer_sdp)
+    @asyncSlot(str)
+    async def _on_call_accepted(self, peer_id: str):
+        """Usuario aceptó la llamada entrante."""
+        # Obtener nombre del peer
+        peer = self.ctrl.node.peers.get(peer_id)
+        peer_name = peer.username if peer else "Peer"
+        
+        # Abrir ventana de video
+        self._video_window = VideoWindow(peer_name, self)
+        self._video_window.set_video_label("⏳ Conectando...")
+        self._video_window.set_status("⏳ Aceptando videollamada...")
+        self._video_window.show()
+        
+        await self.ctrl.accept_videocall(peer_id)
 
-    def _on_reject_call(self):
-        print("Llamada rechazada")
-        # Aquí podrías enviar un mensaje de rechazo al peer
+    @asyncSlot(str)
+    async def _on_call_rejected(self, peer_id: str):
+        """Usuario rechazó la llamada entrante."""
+        # Cerrar ventana de video si está abierta
+        if self._video_window:
+            self._video_window.close()
+            self._video_window = None
+        await self.ctrl.reject_videocall(peer_id)
 
     @asyncSlot()
     async def _on_send(self):

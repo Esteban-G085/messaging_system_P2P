@@ -1,0 +1,1294 @@
+[10:26:32] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — david:5005
+[10:26:32] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[10:26:32] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5005
+[10:26:32] INFO      p2p_chat › [NODE] david | 10.253.30.80:5005
+[10:26:32] INFO      p2p_chat › Aplicación lista
+[10:26:57] INFO      p2p_chat › [CLIENT] Conectando a ws://10.253.30.80:5001  (intento 1/3)
+[10:26:59] WARNING   p2p_chat › [CLIENT] Error conectando a ws://10.253.30.80:5001: [WinError 1225] El equipo remoto rechazó la conexión de red
+[10:26:59] INFO      p2p_chat › [CLIENT] Reintentando en 2s…
+[10:27:01] INFO      p2p_chat › [CLIENT] Conectando a ws://10.253.30.80:5001  (intento 2/3)
+[10:27:03] WARNING   p2p_chat › [CLIENT] Error conectando a ws://10.253.30.80:5001: [WinError 1225] El equipo remoto rechazó la conexión de red
+[10:27:03] INFO      p2p_chat › [CLIENT] Reintentando en 5s…
+[10:27:08] INFO      p2p_chat › [CLIENT] Conectando a ws://10.253.30.80:5001  (intento 3/3)
+[10:27:10] WARNING   p2p_chat › [CLIENT] Error conectando a ws://10.253.30.80:5001: [WinError 1225] El equipo remoto rechazó la conexión de red
+[10:28:02] INFO      p2p_chat › [SERVER] Conexión entrante desde ('10.253.51.224', 49863)
+[10:28:02] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:28:02] INFO      p2p_chat › [NODE] HELLO de enderes ✓
+[18:47:31] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:02:26] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:02:26] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:12:08] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:12:08] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:12:08] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:12:08] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:12:08] INFO      p2p_chat › Aplicación lista
+[19:19:51] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:19:51] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:19:51] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:19:51] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:19:51] INFO      p2p_chat › Aplicación lista
+[19:20:22] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:20:22] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:20:22] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:20:22] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:20:22] INFO      p2p_chat › Aplicación lista
+[19:20:42] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5007
+[19:20:42] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:20:42] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5007
+[19:20:42] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5007
+[19:20:42] INFO      p2p_chat › Aplicación lista
+[19:21:07] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5007  (intento 1/3)
+[19:21:07] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 55333)
+[19:21:07] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5007
+[19:21:07] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:21:07] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:21:07] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:24:36] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:24:36] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:24:36] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:24:36] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:24:36] INFO      p2p_chat › Aplicación lista
+[19:24:52] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5004
+[19:24:52] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:24:52] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:24:52] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5004
+[19:24:52] INFO      p2p_chat › Aplicación lista
+[19:25:12] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:25:12] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 64679)
+[19:25:12] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:25:12] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:25:12] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:25:12] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:25:22] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:25:22] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:25:22] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:27:37] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:27:37] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:27:37] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:27:37] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:27:37] INFO      p2p_chat › Aplicación lista
+[19:27:55] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5004
+[19:27:55] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:27:56] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:27:56] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5004
+[19:27:56] INFO      p2p_chat › Aplicación lista
+[19:28:20] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:28:20] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 62446)
+[19:28:20] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:28:20] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:28:20] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:28:20] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:28:27] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:28:27] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:28:27] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:28:27] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:28:27] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:28:27] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:28:28] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:28:28] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:28:28] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:28:28] ERROR     p2p_chat › [VIDEOCALL] Error estableciendo descripción remota: 'str' object has no attribute 'type'
+[19:30:47] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ho:5000
+[19:30:47] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:30:47] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:30:47] INFO      p2p_chat › [NODE] ho | 192.168.20.51:5000
+[19:30:47] INFO      p2p_chat › Aplicación lista
+[19:31:02] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5004
+[19:31:02] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:31:03] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:31:03] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5004
+[19:31:03] INFO      p2p_chat › Aplicación lista
+[19:31:27] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:31:27] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 60581)
+[19:31:27] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:31:27] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:31:27] INFO      p2p_chat › [NODE] HELLO de ho ✓
+[19:31:27] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:31:36] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:31:36] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:31:36] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:31:36] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:31:36] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:31:36] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:31:37] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:31:37] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:31:37] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:31:37] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:31:37] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:31:37] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a ho
+[19:31:37] INFO      p2p_chat › Videollamada aceptada con ho
+[19:31:37] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:37:24] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:37:24] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:37:24] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:37:24] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:37:24] INFO      p2p_chat › Aplicación lista
+[19:37:42] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5004
+[19:37:42] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:37:43] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:37:43] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5004
+[19:37:43] INFO      p2p_chat › Aplicación lista
+[19:38:00] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:38:00] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 58247)
+[19:38:00] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:38:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:38:00] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:38:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:38:06] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:38:06] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:38:06] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:38:06] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:38:06] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:38:06] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:38:08] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:38:08] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:38:08] INFO      p2p_chat › [VIDEOCALL] Continuando en modo testing sin captura de medios
+[19:38:08] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:38:08] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:38:08] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:38:08] INFO      p2p_chat › Videollamada aceptada con hola
+[19:38:08] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:41:45] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:41:45] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:41:45] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:41:45] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:41:45] INFO      p2p_chat › Aplicación lista
+[19:42:01] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5003
+[19:42:01] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:42:02] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5003
+[19:42:02] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5003
+[19:42:02] INFO      p2p_chat › Aplicación lista
+[19:42:20] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5003  (intento 1/3)
+[19:42:20] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 61807)
+[19:42:20] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5003
+[19:42:20] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:42:20] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:42:20] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:42:45] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:42:45] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:42:45] INFO      p2p_chat › [VIDEOCALL] Usando tracks dummy para testing
+[19:42:45] INFO      p2p_chat › [VIDEOCALL] Track de audio dummy agregado
+[19:42:45] INFO      p2p_chat › [VIDEOCALL] Track de video dummy agregado
+[19:42:50] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:42:50] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:42:50] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:42:52] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:42:52] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:42:52] INFO      p2p_chat › [VIDEOCALL] Usando tracks dummy para testing
+[19:42:52] INFO      p2p_chat › [VIDEOCALL] Track de audio dummy agregado
+[19:42:52] INFO      p2p_chat › [VIDEOCALL] Track de video dummy agregado
+[19:42:53] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:42:53] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:42:53] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:42:53] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:42:53] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:42:58] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:42:58] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:42:58] INFO      p2p_chat › Videollamada aceptada con hola
+[19:42:58] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:42:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:42:58] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:42:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:42:58] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:44:45] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 61807) – no close frame received or sent
+[19:46:54] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:46:54] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:46:54] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:46:54] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:46:54] INFO      p2p_chat › Aplicación lista
+[19:47:12] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5003
+[19:47:12] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:47:12] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5003
+[19:47:12] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5003
+[19:47:12] INFO      p2p_chat › Aplicación lista
+[19:47:29] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5003  (intento 1/3)
+[19:47:29] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 49297)
+[19:47:29] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5003
+[19:47:29] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:47:29] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:47:29] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:47:47] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:47:47] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:47:47] INFO      p2p_chat › [VIDEOCALL] Usando tracks dummy para testing
+[19:47:47] INFO      p2p_chat › [VIDEOCALL] Track de audio dummy agregado
+[19:47:47] INFO      p2p_chat › [VIDEOCALL] Track de video dummy agregado
+[19:47:53] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:47:53] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:47:53] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Intentando cargar dispositivos de medios...
+[19:47:56] WARNING   p2p_chat › [VIDEOCALL] No se puede acceder a cámara/micrófono: [Errno 2] No such file or directory: 'default'
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Usando tracks dummy para testing
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Track de audio dummy agregado
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Track de video dummy agregado
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:47:56] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:47:56] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:47:56] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:48:01] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:48:01] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:48:01] INFO      p2p_chat › Videollamada aceptada con hola
+[19:48:01] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:48:01] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:48:01] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:48:01] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:48:01] ERROR     p2p_chat › [VIDEOCALL] Error grabando track: object NoneType can't be used in 'await' expression
+[19:50:43] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:50:43] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:50:43] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:50:43] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:50:43] INFO      p2p_chat › Aplicación lista
+[19:51:01] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5004
+[19:51:01] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:51:02] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:51:02] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5004
+[19:51:02] INFO      p2p_chat › Aplicación lista
+[19:51:23] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:51:23] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 49649)
+[19:51:23] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:51:23] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:51:23] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:51:23] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:51:26] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:51:26] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:51:29] WARNING   p2p_chat › [VIDEOCALL] ❌ No se puede acceder a cámara: module 'av' has no attribute 'Rational'
+[19:51:29] WARNING   p2p_chat › [VIDEOCALL] PyAudio no está instalado. Instalar: pip install pyaudio
+[19:51:29] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:51:29] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:51:29] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:51:31] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:51:31] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:51:31] WARNING   p2p_chat › [VIDEOCALL] ❌ No se puede acceder a cámara: module 'av' has no attribute 'Rational'
+[19:51:31] WARNING   p2p_chat › [VIDEOCALL] PyAudio no está instalado. Instalar: pip install pyaudio
+[19:51:31] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:51:31] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:51:31] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:51:31] INFO      p2p_chat › Videollamada aceptada con hola
+[19:51:31] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:52:59] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:52:59] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:52:59] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:52:59] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:52:59] INFO      p2p_chat › Aplicación lista
+[19:53:17] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5003
+[19:53:17] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:53:17] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5003
+[19:53:17] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5003
+[19:53:17] INFO      p2p_chat › Aplicación lista
+[19:53:36] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5003  (intento 1/3)
+[19:53:37] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 53305)
+[19:53:37] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5003
+[19:53:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:53:37] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:53:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:53:43] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:53:43] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:53:44] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:53:44] WARNING   p2p_chat › [VIDEOCALL] PyAudio no está instalado. Instalar: pip install pyaudio
+[19:53:49] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:53:49] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:53:49] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:53:50] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:53:50] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:53:50] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:53:50] WARNING   p2p_chat › [VIDEOCALL] PyAudio no está instalado. Instalar: pip install pyaudio
+[19:53:50] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:53:50] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:53:50] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:53:55] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:53:55] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:53:55] INFO      p2p_chat › Videollamada aceptada con hola
+[19:53:55] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:53:55] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:53:55] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:54:15] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 53305) – no close frame received or sent
+[19:55:00] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[19:55:00] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:55:01] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:55:01] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[19:55:01] INFO      p2p_chat › Aplicación lista
+[19:55:19] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5005
+[19:55:19] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:55:20] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5005
+[19:55:20] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5005
+[19:55:20] INFO      p2p_chat › Aplicación lista
+[19:55:41] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5005  (intento 1/3)
+[19:55:41] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 62199)
+[19:55:41] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5005
+[19:55:41] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:55:41] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[19:55:41] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:55:47] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:55:47] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:55:48] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:55:48] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[19:55:51] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[19:55:56] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:55:56] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:55:56] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:55:57] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:55:57] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:55:58] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:55:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:55:58] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:56:03] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:56:03] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[19:56:03] INFO      p2p_chat › Videollamada aceptada con hola
+[19:56:03] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:56:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:56:03] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:56:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:56:03] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:56:35] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 62199) – no close frame received or sent
+[19:57:27] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5000
+[19:57:27] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:57:28] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[19:57:28] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5000
+[19:57:28] INFO      p2p_chat › Aplicación lista
+[19:57:43] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5004
+[19:57:43] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[19:57:44] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5004
+[19:57:44] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5004
+[19:57:44] INFO      p2p_chat › Aplicación lista
+[19:58:00] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5004  (intento 1/3)
+[19:58:00] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 59558)
+[19:58:00] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5004
+[19:58:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:58:00] INFO      p2p_chat › [NODE] HELLO de hi ✓
+[19:58:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[19:58:06] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:58:06] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:58:07] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:58:07] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[19:58:07] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[19:58:12] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[19:58:12] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[19:58:12] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:58:14] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:58:14] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:58:14] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:58:19] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[19:58:19] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hi
+[19:58:19] INFO      p2p_chat › Videollamada aceptada con hi
+[19:58:19] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[19:58:19] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[19:58:19] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[19:58:19] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[19:58:19] ERROR     p2p_chat › [VIDEOCALL] Error procesando track: object NoneType can't be used in 'await' expression
+[20:06:18] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:06:18] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:06:18] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:06:18] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:06:18] INFO      p2p_chat › Aplicación lista
+[20:06:34] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5002
+[20:06:34] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:06:34] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5002
+[20:06:34] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5002
+[20:06:34] INFO      p2p_chat › Aplicación lista
+[20:06:54] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5002  (intento 1/3)
+[20:06:54] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 56423)
+[20:06:54] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5002
+[20:06:54] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:06:54] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:06:54] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:07:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:07:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:07:01] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:07:01] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:07:01] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:07:06] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:07:06] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:07:06] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:07:07] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:07:07] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:07:08] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:07:13] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:07:13] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:07:13] INFO      p2p_chat › Videollamada aceptada con hola
+[20:07:13] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:07:13] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:07:13] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:07:56] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 56423) – no close frame received or sent
+[20:22:51] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:22:51] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:22:51] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:22:51] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:22:51] INFO      p2p_chat › Aplicación lista
+[20:23:10] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5002
+[20:23:10] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:23:10] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5002
+[20:23:10] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5002
+[20:23:10] INFO      p2p_chat › Aplicación lista
+[20:23:27] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5002  (intento 1/3)
+[20:23:27] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 56321)
+[20:23:27] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5002
+[20:23:27] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:23:27] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:23:27] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:23:34] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:23:34] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:23:35] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:23:35] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:23:35] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:23:40] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:23:40] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:23:40] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:23:41] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:23:41] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:23:42] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:23:47] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:23:47] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:23:47] INFO      p2p_chat › Videollamada aceptada con hola
+[20:23:47] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:23:47] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:23:47] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:25:27] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:25:27] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:25:27] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:25:27] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:25:27] INFO      p2p_chat › Aplicación lista
+[20:25:46] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5003
+[20:25:46] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:25:47] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5003
+[20:25:47] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5003
+[20:25:47] INFO      p2p_chat › Aplicación lista
+[20:26:02] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5003  (intento 1/3)
+[20:26:02] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 61887)
+[20:26:02] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5003
+[20:26:02] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:26:02] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:26:02] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:26:10] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:26:10] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:26:11] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:26:11] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:26:11] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:26:16] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:26:16] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:26:16] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:26:17] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:26:23] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:26:23] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:26:23] INFO      p2p_chat › Videollamada aceptada con hola
+[20:26:23] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:26:23] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:26:23] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:27:24] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 61887) – no close frame received or sent
+[20:29:53] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:29:53] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:29:53] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:29:53] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:29:53] INFO      p2p_chat › Aplicación lista
+[20:30:11] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[20:30:11] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:30:11] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[20:30:11] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5001
+[20:30:11] INFO      p2p_chat › Aplicación lista
+[20:30:34] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[20:30:34] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 62645)
+[20:30:34] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[20:30:34] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:30:34] INFO      p2p_chat › [NODE] HELLO de hi ✓
+[20:30:34] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:30:37] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:30:37] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:30:38] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:30:38] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:30:38] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:30:43] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:30:43] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:30:43] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:30:44] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:30:49] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:30:49] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hi
+[20:30:49] INFO      p2p_chat › Videollamada aceptada con hi
+[20:30:49] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:30:49] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:30:49] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:33:17] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:33:17] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:33:17] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:33:17] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:33:17] INFO      p2p_chat › Aplicación lista
+[20:33:33] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5003
+[20:33:33] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:33:33] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5003
+[20:33:33] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5003
+[20:33:33] INFO      p2p_chat › Aplicación lista
+[20:33:50] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5003  (intento 1/3)
+[20:33:50] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 58307)
+[20:33:50] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5003
+[20:33:50] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:33:50] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:33:50] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:33:52] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:33:52] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:33:53] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:33:53] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:33:53] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:33:58] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:33:58] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:33:58] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:34:00] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:34:05] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:34:05] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:34:05] INFO      p2p_chat › Videollamada aceptada con hola
+[20:34:05] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:34:05] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:34:05] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:36:34] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 58307) – no close frame received or sent
+[20:44:09] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:44:09] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:44:09] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:44:09] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:44:09] INFO      p2p_chat › Aplicación lista
+[20:44:34] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[20:44:34] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:44:34] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[20:44:34] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5001
+[20:44:34] INFO      p2p_chat › Aplicación lista
+[20:44:52] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5001  (intento 1/3)
+[20:44:52] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 52444)
+[20:44:52] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5001
+[20:44:52] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:44:52] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:44:52] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:44:52] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5001  (intento 1/3)
+[20:44:52] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 52445)
+[20:44:52] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5001
+[20:44:52] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:44:52] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:44:52] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:44:55] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:44:55] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:44:56] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:44:56] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:44:57] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:45:02] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:45:02] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:45:02] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:45:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:45:08] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:45:08] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:45:08] INFO      p2p_chat › Videollamada aceptada con hola
+[20:45:08] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:45:08] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:45:08] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:49:56] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:49:56] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:49:56] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:49:56] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:49:56] INFO      p2p_chat › Aplicación lista
+[20:50:33] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[20:50:33] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:50:33] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[20:50:33] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5001
+[20:50:33] INFO      p2p_chat › Aplicación lista
+[20:50:50] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5001  (intento 1/3)
+[20:50:50] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 61987)
+[20:50:50] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5001
+[20:50:50] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:50:50] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:50:50] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:50:53] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:50:53] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:50:53] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:50:53] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:50:54] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:50:59] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:50:59] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:50:59] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:51:00] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:51:05] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:51:05] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:51:05] INFO      p2p_chat › Videollamada aceptada con hola
+[20:51:05] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:51:05] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:51:05] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:57:12] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[20:57:12] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:57:12] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[20:57:12] INFO      p2p_chat › [NODE] hola | 192.168.20.51:5000
+[20:57:12] INFO      p2p_chat › Aplicación lista
+[20:57:31] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[20:57:31] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[20:57:31] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[20:57:31] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5001
+[20:57:31] INFO      p2p_chat › Aplicación lista
+[20:57:48] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5001  (intento 1/3)
+[20:57:48] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 61130)
+[20:57:48] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5001
+[20:57:48] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:57:48] INFO      p2p_chat › [NODE] HELLO de hola ✓
+[20:57:48] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[20:57:51] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:57:51] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:57:52] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:57:52] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:57:52] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:57:57] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[20:57:57] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[20:57:57] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:57:58] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[20:58:03] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[20:58:03] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hola
+[20:58:03] INFO      p2p_chat › Videollamada aceptada con hola
+[20:58:03] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[20:58:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[20:58:03] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:00:49] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — jo:5000
+[21:00:49] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:00:49] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:00:49] INFO      p2p_chat › [NODE] jo | 192.168.20.51:5000
+[21:00:49] INFO      p2p_chat › Aplicación lista
+[21:01:10] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ju:5001
+[21:01:10] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:01:11] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:01:11] INFO      p2p_chat › [NODE] ju | 192.168.20.51:5001
+[21:01:11] INFO      p2p_chat › Aplicación lista
+[21:01:35] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:01:35] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 60477)
+[21:01:35] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:01:35] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:01:35] INFO      p2p_chat › [NODE] HELLO de ju ✓
+[21:01:35] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:01:39] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:01:39] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:01:40] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:01:40] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:01:40] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:01:45] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[21:01:45] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[21:01:45] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[21:01:46] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:01:46] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:01:47] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:01:52] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[21:01:52] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a ju
+[21:01:52] INFO      p2p_chat › Videollamada aceptada con ju
+[21:01:52] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:01:52] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:01:52] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:02:43] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 60477) – no close frame received or sent
+[21:04:28] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — jo:5000
+[21:04:28] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:04:28] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:04:28] INFO      p2p_chat › [NODE] jo | 192.168.20.51:5000
+[21:04:28] INFO      p2p_chat › Aplicación lista
+[21:04:42] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ja:5001
+[21:04:42] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:04:42] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:04:42] INFO      p2p_chat › [NODE] ja | 192.168.20.51:5001
+[21:04:42] INFO      p2p_chat › Aplicación lista
+[21:04:56] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:04:56] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 50495)
+[21:04:56] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:04:56] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:04:56] INFO      p2p_chat › [NODE] HELLO de ja ✓
+[21:04:56] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:04:59] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:04:59] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:05:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:05:00] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:05:00] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:05:05] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[21:05:05] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[21:05:05] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:05:06] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:05:11] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[21:05:11] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a ja
+[21:05:11] INFO      p2p_chat › Videollamada aceptada con ja
+[21:05:11] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:05:11] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:05:11] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:16:03] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5000
+[21:16:03] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:16:03] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:16:03] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5000
+[21:16:03] INFO      p2p_chat › Aplicación lista
+[21:16:24] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[21:16:24] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:16:24] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:16:24] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5001
+[21:16:24] INFO      p2p_chat › Aplicación lista
+[21:16:36] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:16:37] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 55912)
+[21:16:37] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:16:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:16:37] INFO      p2p_chat › [NODE] HELLO de hi ✓
+[21:16:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:16:41] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:16:41] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:16:42] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:16:42] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:16:42] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:16:47] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[21:16:47] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[21:16:47] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:16:49] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:16:54] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[21:16:54] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a hi
+[21:16:54] INFO      p2p_chat › Videollamada aceptada con hi
+[21:16:54] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:16:54] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:16:54] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:26:27] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5000
+[21:26:27] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:26:28] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:26:28] INFO      p2p_chat › [NODE] hi | 192.168.20.51:5000
+[21:26:28] INFO      p2p_chat › Aplicación lista
+[21:26:42] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ho:5001
+[21:26:42] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:26:43] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:26:43] INFO      p2p_chat › [NODE] ho | 192.168.20.51:5001
+[21:26:43] INFO      p2p_chat › Aplicación lista
+[21:26:53] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:26:53] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 62859)
+[21:26:53] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:26:53] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:26:53] INFO      p2p_chat › [NODE] HELLO de ho ✓
+[21:26:53] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:26:55] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:26:55] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:26:56] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:26:56] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:26:56] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:28:01] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 62859) – no close frame received or sent
+[21:28:51] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — jo:5000
+[21:28:51] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:28:51] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:28:51] INFO      p2p_chat › [NODE] jo | 192.168.20.51:5000
+[21:28:51] INFO      p2p_chat › Aplicación lista
+[21:29:03] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ja:5001
+[21:29:03] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:29:04] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:29:04] INFO      p2p_chat › [NODE] ja | 192.168.20.51:5001
+[21:29:04] INFO      p2p_chat › Aplicación lista
+[21:29:12] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:29:12] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 54046)
+[21:29:12] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:29:12] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:29:12] INFO      p2p_chat › [NODE] HELLO de ja ✓
+[21:29:12] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:29:15] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:29:15] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:29:15] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:29:15] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:29:16] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:29:16] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[21:29:21] INFO      p2p_chat › [VIDEOCALL] Oferta SDP creada exitosamente
+[21:29:21] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[21:29:21] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:29:22] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:29:27] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP creada exitosamente
+[21:29:27] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a ja
+[21:29:27] INFO      p2p_chat › Videollamada aceptada con ja
+[21:29:27] INFO      p2p_chat › [VIDEOCALL] Descripción remota establecida
+[21:29:27] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:29:27] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:44:10] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ho:5000
+[21:44:10] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:44:11] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5000
+[21:44:11] INFO      p2p_chat › [NODE] ho | 192.168.20.51:5000
+[21:44:11] INFO      p2p_chat › Aplicación lista
+[21:44:35] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — la:5001
+[21:44:35] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:44:35] INFO      p2p_chat › [SERVER] Escuchando en 0.0.0.0:5001
+[21:44:35] INFO      p2p_chat › [NODE] la | 192.168.20.51:5001
+[21:44:35] INFO      p2p_chat › Aplicación lista
+[21:44:54] INFO      p2p_chat › [CLIENT] Conectando a ws://192.168.20.51:5000  (intento 1/3)
+[21:44:54] INFO      p2p_chat › [SERVER] Conexión entrante desde ('192.168.20.51', 59490)
+[21:44:54] INFO      p2p_chat › [CLIENT] Conectado a ws://192.168.20.51:5000
+[21:44:54] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:44:54] INFO      p2p_chat › [NODE] HELLO de la ✓
+[21:44:54] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:44:57] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[21:44:57] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:44:57] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:44:58] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:44:58] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:44:59] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:44:59] INFO      p2p_chat › [VIDEOCALL] 🎥 Creando oferta SDP...
+[21:44:59] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[21:45:04] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[21:45:04] INFO      p2p_chat › [VIDEOCALL] ✅ Oferta SDP creada exitosamente
+[21:45:04] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984777899 3984777899 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:45:04] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[21:45:04] INFO      p2p_chat › Videollamada iniciada con 192.168.20.51
+[21:45:04] INFO      p2p_chat › [VIDEOCALL] Oferta recibida de la
+[21:45:11] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[21:45:11] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:45:11] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:45:11] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:45:11] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota (SDP primeras 100 chars): v=0
+o=- 3984777899 3984777899 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] ✅ Descripción remota establecida
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] 📞 Creando respuesta SDP...
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:45:12] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] ✅ Respuesta SDP creada exitosamente
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984777912 3984777912 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:45:17] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a la
+[21:45:17] INFO      p2p_chat › Videollamada aceptada con la
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota (SDP primeras 100 chars): v=0
+o=- 3984777912 3984777912 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] ICE CONNECTION: checking
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] CONNECTION STATE: connecting
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] ✅ Descripción remota establecida
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] Respuesta SDP recibida de 192.168.20.51
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] ICE CONNECTION: checking
+[21:45:17] INFO      p2p_chat › [VIDEOCALL] CONNECTION STATE: connecting
+[21:46:55] WARNING   p2p_chat › [SERVER] Conexión cerrada con error: ('192.168.20.51', 59490) – no close frame received or sent
+[21:56:27] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ho:5000
+[21:56:27] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:56:27] INFO      p2p_chat › ================================================================================
+[21:56:27] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[21:56:27] INFO      p2p_chat › ================================================================================
+[21:56:27] INFO      p2p_chat › [CTRL] Usuario: ho
+[21:56:27] INFO      p2p_chat › [CTRL] Peer ID: 040b3582-486b-42...
+[21:56:27] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[21:56:27] INFO      p2p_chat › [CTRL] Puerto: 5000
+[21:56:27] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[21:56:27] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[21:56:27] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: ho
+[21:56:27] INFO      p2p_chat › [NODE]    • Peer ID: 040b3582-486b-42...
+[21:56:27] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[21:56:27] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[21:56:27] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[21:56:27] INFO      p2p_chat › ================================================================================
+[21:56:27] INFO      p2p_chat › Aplicación lista
+[21:56:49] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — al:5001
+[21:56:49] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[21:56:49] INFO      p2p_chat › ================================================================================
+[21:56:49] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[21:56:49] INFO      p2p_chat › ================================================================================
+[21:56:49] INFO      p2p_chat › [CTRL] Usuario: al
+[21:56:49] INFO      p2p_chat › [CTRL] Peer ID: c89f1911-9bd7-4e...
+[21:56:49] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[21:56:49] INFO      p2p_chat › [CTRL] Puerto: 5001
+[21:56:49] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[21:56:49] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5001
+[21:56:49] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: al
+[21:56:49] INFO      p2p_chat › [NODE]    • Peer ID: c89f1911-9bd7-4e...
+[21:56:49] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[21:56:49] INFO      p2p_chat › [NODE]    • Puerto: 5001
+[21:56:49] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[21:56:49] INFO      p2p_chat › ================================================================================
+[21:56:49] INFO      p2p_chat › Aplicación lista
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[21:57:00] INFO      p2p_chat › [CTRL]    → Destino: 192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › 
+[21:57:00] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[21:57:00] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[21:57:00] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 192.168.20.51:55983
+[21:57:00] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 192.168.20.51...
+[21:57:00] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[21:57:00] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[21:57:00] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[21:57:00] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 192.168.20.51:5001...
+[21:57:00] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de al (192.168.20.51)
+[21:57:00] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[21:57:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:57:00] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[21:57:00] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[21:57:00] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con al
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] Username: al
+[21:57:00] INFO      p2p_chat › [CTRL] Peer ID: c89f1911-9bd7-4e...
+[21:57:00] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[21:57:00] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 192.168.20.51
+[21:57:00] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[21:57:00] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[21:57:00] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[21:57:00] INFO      p2p_chat › [NODE]    → Actualizando estado de al a READY
+[21:57:00] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 192.168.20.51 está listo para comunicación
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:00] INFO      p2p_chat › [CTRL] Username: al
+[21:57:00] INFO      p2p_chat › [CTRL] Peer ID: c89f1911-9bd7-4e...
+[21:57:00] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:5001
+[21:57:00] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[21:57:00] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[21:57:00] INFO      p2p_chat › ================================================================================
+[21:57:02] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[21:57:02] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:57:02] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:57:03] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:57:03] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:57:03] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:57:03] INFO      p2p_chat › [VIDEOCALL] 🎥 Creando oferta SDP...
+[21:57:03] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[21:57:08] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[21:57:08] INFO      p2p_chat › [VIDEOCALL] ✅ Oferta SDP creada exitosamente
+[21:57:08] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984778623 3984778623 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:57:08] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a al
+[21:57:08] INFO      p2p_chat › Videollamada iniciada con al
+[21:57:08] INFO      p2p_chat › [VIDEOCALL] Oferta recibida de al
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota (SDP primeras 100 chars): v=0
+o=- 3984778623 3984778623 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] ✅ Descripción remota establecida
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] 📞 Creando respuesta SDP...
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[21:57:09] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[21:57:10] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] ✅ Respuesta SDP creada exitosamente
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984778629 3984778629 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:57:15] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a al
+[21:57:15] INFO      p2p_chat › Videollamada aceptada con al
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] ICE CONNECTION: checking
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] CONNECTION STATE: connecting
+[21:57:15] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota (SDP primeras 100 chars): v=0
+o=- 3984778629 3984778629 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[21:57:15] ERROR     p2p_chat › [VIDEOCALL] Error estableciendo descripción remota: Cannot handle answer in signaling state "stable"
+[21:57:15] ERROR     p2p_chat › [VIDEOCALL] Error manejando mensaje de videollamada: Cannot handle answer in signaling state "stable"
+[22:07:04] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — ho:5000
+[22:07:04] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[22:07:04] INFO      p2p_chat › ================================================================================
+[22:07:04] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[22:07:04] INFO      p2p_chat › ================================================================================
+[22:07:04] INFO      p2p_chat › [CTRL] Usuario: ho
+[22:07:04] INFO      p2p_chat › [CTRL] Peer ID: 9e741c5a-e4c0-4f...
+[22:07:04] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[22:07:04] INFO      p2p_chat › [CTRL] Puerto: 5000
+[22:07:04] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[22:07:04] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[22:07:04] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: ho
+[22:07:04] INFO      p2p_chat › [NODE]    • Peer ID: 9e741c5a-e4c0-4f...
+[22:07:04] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[22:07:04] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[22:07:04] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[22:07:04] INFO      p2p_chat › ================================================================================
+[22:07:04] INFO      p2p_chat › Aplicación lista
+[22:07:22] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[22:07:22] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[22:07:22] INFO      p2p_chat › ================================================================================
+[22:07:22] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[22:07:22] INFO      p2p_chat › ================================================================================
+[22:07:22] INFO      p2p_chat › [CTRL] Usuario: hi
+[22:07:22] INFO      p2p_chat › [CTRL] Peer ID: a203d95d-ddea-42...
+[22:07:22] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[22:07:22] INFO      p2p_chat › [CTRL] Puerto: 5001
+[22:07:22] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[22:07:22] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5001
+[22:07:22] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: hi
+[22:07:22] INFO      p2p_chat › [NODE]    • Peer ID: a203d95d-ddea-42...
+[22:07:22] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[22:07:22] INFO      p2p_chat › [NODE]    • Puerto: 5001
+[22:07:22] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[22:07:22] INFO      p2p_chat › ================================================================================
+[22:07:22] INFO      p2p_chat › Aplicación lista
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[22:07:38] INFO      p2p_chat › [CTRL]    → Destino: 192.168.20.51:5001
+[22:07:38] INFO      p2p_chat › 
+[22:07:38] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 192.168.20.51:5001
+[22:07:38] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[22:07:38] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://192.168.20.51:5001
+[22:07:38] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[22:07:38] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 192.168.20.51:53125
+[22:07:38] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 192.168.20.51...
+[22:07:38] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://192.168.20.51:5001
+[22:07:38] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[22:07:38] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[22:07:38] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[22:07:38] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de ho (192.168.20.51)
+[22:07:38] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 192.168.20.51:5001...
+[22:07:38] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[22:07:38] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[22:07:38] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[22:07:38] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[22:07:38] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con ho
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 192.168.20.51
+[22:07:38] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[22:07:38] INFO      p2p_chat › [CTRL] Username: ho
+[22:07:38] INFO      p2p_chat › [CTRL] Peer ID: 9e741c5a-e4c0-4f...
+[22:07:38] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:5000
+[22:07:38] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[22:07:38] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[22:07:38] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[22:07:38] INFO      p2p_chat › [NODE]    → Creando nuevo peer a203d95d-ddea-429c-8234-39624f89bd20
+[22:07:38] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 192.168.20.51 está listo para comunicación
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [CTRL] Username: 192.168.20.51
+[22:07:38] INFO      p2p_chat › [CTRL] Peer ID: a203d95d-ddea-42...
+[22:07:38] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:0
+[22:07:38] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[22:07:38] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:38] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[22:07:38] INFO      p2p_chat › ================================================================================
+[22:07:40] INFO      p2p_chat › ================================================================================
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA
+[22:07:40] INFO      p2p_chat › ================================================================================
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] Destino: 192.168.20.51
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión de cifrado disponible
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] [PASO 1/4] Creando VideoCall instance...
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] [PASO 2/4] Configurando handler ICE...
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] [PASO 3/4] Accediendo a dispositivos locales...
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[22:07:40] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[22:07:41] INFO      p2p_chat › [VIDEOCALL]    ✅ Tracks locales agregados
+[22:07:41] INFO      p2p_chat › [VIDEOCALL]    ✅ Handlers de tracks remotos configurados
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] [PASO 4/4] Creando oferta SDP...
+[22:07:41] INFO      p2p_chat › [VIDEOCALL]    Estado actual: stable
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] 🎥 Creando oferta SDP...
+[22:07:41] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[22:07:46] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[22:07:46] INFO      p2p_chat › [VIDEOCALL] ✅ Oferta SDP creada exitosamente
+[22:07:46] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984779261 3984779261 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[22:07:46] INFO      p2p_chat › [VIDEOCALL]    ✅ Oferta creada (setLocalDescription)
+[22:07:46] INFO      p2p_chat › [VIDEOCALL]    Nuevo estado: have-local-offer
+[22:07:46] INFO      p2p_chat › [VIDEOCALL]    → Enviando oferta a 192.168.20.51...
+[22:07:46] INFO      p2p_chat › [SIGNALING] Oferta SDP enviada a 192.168.20.51
+[22:07:46] INFO      p2p_chat › ================================================================================
+[22:07:46] INFO      p2p_chat › [VIDEOCALL] ✅ VIDEOLLAMADA INICIADA
+[22:07:46] INFO      p2p_chat › [VIDEOCALL]    → Esperando aceptación de 192.168.20.51...
+[22:07:46] INFO      p2p_chat › ================================================================================
+[22:07:46] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de ho
+[22:07:46] INFO      p2p_chat › [VIDEOCALL]    → Esperando que usuario acepte o rechace...
+[22:07:47] INFO      p2p_chat › ================================================================================
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA
+[22:07:47] INFO      p2p_chat › ================================================================================
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] Origen: ho
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] ✅ Oferta pendiente encontrada
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión de cifrado disponible
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] [PASO 1/5] Creando VideoCall instance...
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] Signaling, node y peer establecidos
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] [PASO 2/5] Configurando handler ICE...
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] [PASO 3/5] Accediendo a dispositivos locales...
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a dispositivos de medios...
+[22:07:47] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a cámara...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] ✅ Track de video agregado
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] Intentando acceder a micrófono...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] ✅ Track de audio agregado
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    ✅ Tracks locales agregados
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    ✅ Handlers de tracks remotos configurados
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] [PASO 4/5] Procesando oferta remota...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    Estado actual: stable
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    → Estableciendo descripción remota (offer)...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    SDP Type: offer
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    Estado actual: stable
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    SDP (primeras 100 chars): v=0
+o=- 3984779261 3984779261 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] ✅ Descripción remota establecida (nuevo estado: have-remote-offer)
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    ✅ Oferta remota procesada
+[22:07:48] INFO      p2p_chat › [VIDEOCALL]    Nuevo estado: have-remote-offer
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] [PASO 5/5] Creando respuesta SDP...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] 📞 Creando respuesta SDP...
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[22:07:48] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: gathering
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ICE GATHERING: complete
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ✅ Respuesta SDP creada exitosamente
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] SDP Local (primeras 100 chars): v=0
+o=- 3984779268 3984779268 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    ✅ Respuesta creada (setLocalDescription)
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    Nuevo estado: stable
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    → Enviando respuesta a ho...
+[22:07:53] INFO      p2p_chat › [SIGNALING] Respuesta SDP enviada a ho
+[22:07:53] INFO      p2p_chat › ================================================================================
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ✅ VIDEOLLAMADA ACEPTADA Y CONECTADA
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    Completando conexión P2P...
+[22:07:53] INFO      p2p_chat › ================================================================================
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ICE CONNECTION: checking
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] CONNECTION STATE: connecting
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] 📨 Respuesta SDP recibida de 192.168.20.51
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    Estado actual: have-local-offer
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] 📡 Estableciendo descripción remota
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    SDP Type: answer
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    Estado actual: have-local-offer
+[22:07:53] INFO      p2p_chat › [VIDEOCALL]    SDP (primeras 100 chars): v=0
+o=- 3984779268 3984779268 IN IP4 0.0.0.0
+s=-
+t=0 0
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS *...
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ✅ Descripción remota establecida (nuevo estado: stable)
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ✅ Respuesta SDP procesada exitosamente
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] Track recibido: video
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] Track recibido: audio
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] ICE CONNECTION: checking
+[22:07:53] INFO      p2p_chat › [VIDEOCALL] CONNECTION STATE: connecting
+[22:12:19] WARNING   p2p_chat › [NODE] ❌ Conexión de 192.168.20.51:5001 cerrada
+[22:12:19] WARNING   p2p_chat › ================================================================================
+[22:12:19] WARNING   p2p_chat › [CTRL] ❌ PEER DESCONECTADO
+[22:12:19] WARNING   p2p_chat › ================================================================================
+[22:12:19] WARNING   p2p_chat › [CTRL] Username: 192.168.20.51
+[22:12:19] WARNING   p2p_chat › [CTRL] Peer ID: a203d95d-ddea-42...
+[22:12:19] WARNING   p2p_chat › ================================================================================
