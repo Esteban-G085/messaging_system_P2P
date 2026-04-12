@@ -19,33 +19,18 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Fixed
 - Mejor manejo de dispositivos de audio en sistemas con múltiples interfaces
 - Resolución de conflictos en merge de repositorio
-
-### Security
 - Dependencias verificadas y pintadas en requirements.txt
 
 ---
 
-## [1.2.1] - 2026-04-10
+## [1.3.1] - 2026-04-10
 
 ### Added
 - Sistema de logging avanzado con archivos rotatorios
 - Mejor detección de estado de peers
-
-### Fixed
-- Mejoras en la estabilidad de videollamadas
-- Optimización de memoria en transferencias de archivos
-
----
-
-## [1.2.0] - 2026-04-01
-
-### Added
 - Soporte completo para videollamadas con H.264
-- Transferencia de archivos con verificación SHA-256
-- Historial persistente de mensajes con SQLite
 
 ### Changed
-- Refactorización completa del sistema de red
 - Migración a arquitectura completamente asíncrona con `asyncio`
 
 ---
@@ -72,11 +57,4 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ---
 
-## Notas de Desarrollo
 
-**Próximas versiones planeadas:**
-- [1.3.0] - Descubrimiento automático con mDNS
-- [1.4.0] - Soporte para chats grupales
-- [2.0.0] - Protocolo mejorado con mejor tolerancia a fallos
-
-Para más detalles sobre características y cambios, consulta [README.md](README.md).
