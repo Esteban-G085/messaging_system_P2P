@@ -2,7 +2,7 @@
 
 ### **Autores:** Esteban Guapacha, David Julian Torres y Kevin Esguerra
 
-Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.2.2**. Este sistema combina una arquitectura asíncrona robusta con cifrado y capacidades avanzadas de transferencia de archivos.
+Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.3.2**. Este sistema combina una arquitectura asíncrona robusta con cifrado y capacidades avanzadas de transferencia de archivos.
 
 ---
 
