@@ -9,6 +9,7 @@ import asyncio
 
 
 from database.db_manager import DBManager
+from models import message
 from models.file_transfer import FileTransfer
 from models.message import Message, MessageStatus
 from models.peer import Peer
@@ -329,5 +330,8 @@ class AppController:
             logger.info(f"[VIDEOCALL] ✅ {peer.username} aceptó la llamada")
 
         elif msg_type == "video_frame":
-            self.videocall.receive_frame(message["data"])
+            self.videocall.receive_video_frame(message["data"])
+        
+        elif msg_type == "audio_frame":                         
+            self.videocall.receive_audio_frame(message["data"])
 

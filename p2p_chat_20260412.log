@@ -1,0 +1,1032 @@
+[13:40:08] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[13:40:08] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[13:40:09] INFO      p2p_chat › ================================================================================
+[13:40:09] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[13:40:09] INFO      p2p_chat › ================================================================================
+[13:40:09] INFO      p2p_chat › [CTRL] Usuario: hola
+[13:40:09] INFO      p2p_chat › [CTRL] Peer ID: fa261f26-ba53-48...
+[13:40:09] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[13:40:09] INFO      p2p_chat › [CTRL] Puerto: 5000
+[13:40:09] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[13:40:09] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[13:40:09] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: hola
+[13:40:09] INFO      p2p_chat › [NODE]    • Peer ID: fa261f26-ba53-48...
+[13:40:09] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[13:40:09] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[13:40:09] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[13:40:09] INFO      p2p_chat › ================================================================================
+[13:40:09] INFO      p2p_chat › Aplicación lista
+[13:40:22] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[13:40:22] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[13:40:23] INFO      p2p_chat › ================================================================================
+[13:40:23] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[13:40:23] INFO      p2p_chat › ================================================================================
+[13:40:23] INFO      p2p_chat › [CTRL] Usuario: hi
+[13:40:23] INFO      p2p_chat › [CTRL] Peer ID: 1164b671-84d5-46...
+[13:40:23] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[13:40:23] INFO      p2p_chat › [CTRL] Puerto: 5001
+[13:40:23] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[13:40:23] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5001
+[13:40:23] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: hi
+[13:40:23] INFO      p2p_chat › [NODE]    • Peer ID: 1164b671-84d5-46...
+[13:40:23] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[13:40:23] INFO      p2p_chat › [NODE]    • Puerto: 5001
+[13:40:23] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[13:40:23] INFO      p2p_chat › ================================================================================
+[13:40:23] INFO      p2p_chat › Aplicación lista
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[13:40:39] INFO      p2p_chat › [CTRL]    → Destino: 192.168.20.51:5001
+[13:40:39] INFO      p2p_chat › 
+[13:40:39] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 192.168.20.51:5001
+[13:40:39] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[13:40:39] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://192.168.20.51:5001
+[13:40:39] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[13:40:39] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 192.168.20.51:57263
+[13:40:39] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 192.168.20.51...
+[13:40:39] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://192.168.20.51:5001
+[13:40:39] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[13:40:39] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[13:40:39] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[13:40:39] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 192.168.20.51:5001...
+[13:40:39] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de hola (192.168.20.51)
+[13:40:39] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[13:40:39] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[13:40:39] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[13:40:39] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[13:40:39] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con hola
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 192.168.20.51
+[13:40:39] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[13:40:39] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] Username: hola
+[13:40:39] INFO      p2p_chat › [CTRL] Peer ID: fa261f26-ba53-48...
+[13:40:39] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[13:40:39] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:5000
+[13:40:39] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[13:40:39] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+671-84d5-4619-8bb6-929fd015d84a
+[13:40:39] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 192.168.20.51 está listo para comunicación
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] Username: 192.168.20.51
+[13:40:39] INFO      p2p_chat › [CTRL] Peer ID: 1164b671-84d5-46...
+[13:40:39] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:0
+[13:40:39] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[13:40:39] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:39] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[13:40:39] INFO      p2p_chat › ================================================================================
+[13:40:43] INFO      p2p_chat › [VIDEOCALL] 🎥 Iniciando videollamada con 192.168.20.51
+[13:40:43] INFO      p2p_chat › [VIDEOCALL] ✅ Captura iniciada, esperando respuesta de 192.168.20.51
+[13:40:43] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de hola
+[13:40:43] INFO      p2p_chat › ================================================================================
+[13:40:43] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA (video + audio)
+[13:40:43] INFO      p2p_chat › ================================================================================
+[13:40:43] INFO      p2p_chat › [VIDEOCALL] PyAudio inicializado
+[13:40:44] INFO      p2p_chat › [VIDEOCALL] 📞 Aceptando videollamada de hola
+[13:40:44] INFO      p2p_chat › [VIDEOCALL] ✅ Videollamada aceptada
+[13:40:44] INFO      p2p_chat › ================================================================================
+[13:40:44] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA (video + audio)
+[13:40:44] INFO      p2p_chat › ================================================================================
+[13:40:44] INFO      p2p_chat › [VIDEOCALL] Cámara: 640x480 @ 30 FPS
+[13:40:44] INFO      p2p_chat › [VIDEOCALL] PyAudio inicializado
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] ✅ Encoder video listo — transmitiendo
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] Cámara: 640x480 @ 30 FPS
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] ✅ Stream de entrada de audio abierto (micrófono)
+[13:40:45] ERROR     p2p_chat › [VIDEOCALL] ❌ Error en audio loop: attribute 'channels' of 'av.audio.codeccontext.AudioCodecContext' objects is not writable
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] ✅ Stream de entrada de audio abierto (micrófono)
+[13:40:45] ERROR     p2p_chat › [VIDEOCALL] ❌ Error en audio loop: attribute 'channels' of 'av.audio.codeccontext.AudioCodecContext' objects is not writable
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio de entrada detenido
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio de entrada detenido
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] INFO      p2p_chat › [VIDEOCALL] ✅ 192.168.20.51 aceptó la llamada
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:45] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:46] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:47] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:48] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:49] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:50] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:51] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:52] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:53] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:54] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:55] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:56] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:57] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:58] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:40:59] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:00] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:01] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:02] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:03] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:04] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:05] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:06] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:07] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:08] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:09] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:10] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:11] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:12] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:13] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:14] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:15] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:16] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:17] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:18] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:19] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:20] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:21] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:22] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:23] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:24] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:25] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:26] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:27] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:28] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:29] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:30] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:31] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:32] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:41:33] ERROR     p2p_chat › [HANDLER] Error en callback de 'MESSAGE': 'VideoCallWS' object has no attribute 'receive_frame'
+[13:42:55] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hola:5000
+[13:42:55] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[13:42:56] INFO      p2p_chat › ================================================================================
+[13:42:56] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[13:42:56] INFO      p2p_chat › ================================================================================
+[13:42:56] INFO      p2p_chat › [CTRL] Usuario: hola
+[13:42:56] INFO      p2p_chat › [CTRL] Peer ID: 1ec05ab5-bce6-47...
+[13:42:56] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[13:42:56] INFO      p2p_chat › [CTRL] Puerto: 5000
+[13:42:56] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[13:42:56] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[13:42:56] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: hola
+[13:42:56] INFO      p2p_chat › [NODE]    • Peer ID: 1ec05ab5-bce6-47...
+[13:42:56] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[13:42:56] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[13:42:56] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[13:42:56] INFO      p2p_chat › ================================================================================
+[13:42:56] INFO      p2p_chat › Aplicación lista
+[13:43:16] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — hi:5001
+[13:43:16] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[13:43:16] INFO      p2p_chat › ================================================================================
+[13:43:16] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[13:43:16] INFO      p2p_chat › ================================================================================
+[13:43:16] INFO      p2p_chat › [CTRL] Usuario: hi
+[13:43:16] INFO      p2p_chat › [CTRL] Peer ID: 09d004b9-bea5-4c...
+[13:43:16] INFO      p2p_chat › [CTRL] IP Local: 192.168.20.51
+[13:43:16] INFO      p2p_chat › [CTRL] Puerto: 5001
+[13:43:16] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[13:43:16] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5001
+[13:43:16] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: hi
+[13:43:16] INFO      p2p_chat › [NODE]    • Peer ID: 09d004b9-bea5-4c...
+[13:43:16] INFO      p2p_chat › [NODE]    • IP Local: 192.168.20.51
+[13:43:16] INFO      p2p_chat › [NODE]    • Puerto: 5001
+[13:43:16] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[13:43:16] INFO      p2p_chat › ================================================================================
+[13:43:16] INFO      p2p_chat › Aplicación lista
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[13:43:37] INFO      p2p_chat › [CTRL]    → Destino: 192.168.20.51:5001
+[13:43:37] INFO      p2p_chat › 
+[13:43:37] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 192.168.20.51:5001
+[13:43:37] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[13:43:37] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://192.168.20.51:5001
+[13:43:37] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[13:43:37] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 192.168.20.51:63053
+[13:43:37] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 192.168.20.51...
+[13:43:37] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://192.168.20.51:5001
+[13:43:37] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[13:43:37] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[13:43:37] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[13:43:37] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de hola (192.168.20.51)
+[13:43:37] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 192.168.20.51:5001...
+[13:43:37] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[13:43:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[13:43:37] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[13:43:37] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[13:43:37] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con hola
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 192.168.20.51
+[13:43:37] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[13:43:37] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [CTRL] Username: hola
+[13:43:37] INFO      p2p_chat › [CTRL] Peer ID: 1ec05ab5-bce6-47...
+[13:43:37] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:5000
+[13:43:37] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[13:43:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[13:43:37] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[13:43:37] INFO      p2p_chat › [NODE]    → Creando nuevo peer 09d004b9-bea5-4c15-9c49-eb42b12d242c
+[13:43:37] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 192.168.20.51 está listo para comunicación
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:37] INFO      p2p_chat › [CTRL] Username: 192.168.20.51
+[13:43:37] INFO      p2p_chat › [CTRL] Peer ID: 09d004b9-bea5-4c...
+[13:43:37] INFO      p2p_chat › [CTRL] IP/Puerto: 192.168.20.51:0
+[13:43:37] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[13:43:37] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[13:43:37] INFO      p2p_chat › ================================================================================
+[13:43:38] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[13:43:38] INFO      p2p_chat › ================================================================================
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] 🎥 Iniciando videollamada con hola
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] ✅ Captura iniciada, esperando respuesta de hola
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de 192.168.20.51
+[13:43:41] INFO      p2p_chat › ================================================================================
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA (video + audio)
+[13:43:41] INFO      p2p_chat › ================================================================================
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] PyAudio inicializado
+[13:43:41] INFO      p2p_chat › [VIDEOCALL] Cámara: 640x480 @ 30 FPS
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] 📞 Aceptando videollamada de 192.168.20.51
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ Videollamada aceptada
+[13:43:42] INFO      p2p_chat › ================================================================================
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA (video + audio)
+[13:43:42] INFO      p2p_chat › ================================================================================
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ Encoder video listo — transmitiendo
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ Stream de entrada de audio abierto (micrófono)
+[13:43:42] ERROR     p2p_chat › [VIDEOCALL] ❌ Error en audio loop: attribute 'channels' of 'av.audio.codeccontext.AudioCodecContext' objects is not writable
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio de entrada detenido
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ hola aceptó la llamada
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] PyAudio inicializado
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] Cámara: 640x480 @ 30 FPS
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ Stream de entrada de audio abierto (micrófono)
+[13:43:42] ERROR     p2p_chat › [VIDEOCALL] ❌ Error en audio loop: attribute 'channels' of 'av.audio.codeccontext.AudioCodecContext' objects is not writable
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio de entrada detenido
+[13:43:42] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo

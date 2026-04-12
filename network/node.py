@@ -297,7 +297,7 @@ class P2PNode:
         # Detectar si es un mensaje de videollamada
         try:
             msg_data = json.loads(content)
-            if isinstance(msg_data, dict) and msg_data.get("type") in ["videocall_offer", "videocall_answer", "ice_candidate", "video_frame"]:
+            if isinstance(msg_data, dict) and msg_data.get("type") in ["videocall_offer", "videocall_answer", "ice_candidate", "video_frame", "audio_frame"]:
                 # Es un mensaje de videollamada
                 peer = self.peers.get(sender_id)
                 if peer and self.on_videocall_message:
