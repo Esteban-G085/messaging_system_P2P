@@ -33,7 +33,7 @@ Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento dise�
 
 ---
 
-## � Cambios Recientes (v1.2.2)
+## � Cambios Recientes (v1.3.2)
 
 - ✅ **Actualización de Dependencias:** Se actualizó `pyaudio >= 0.2.14` para mejorar compatibilidad con sistemas modernos.
 - ✅ **Mejoras de Audio:** Soporte mejorado para captura y transmisión de audio con mejor manejo de dispositivos.
