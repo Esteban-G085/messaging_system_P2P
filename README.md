@@ -2,7 +2,7 @@
 
 ### **Autores:** Esteban Guapacha, David Julian Torres y Kevin Esguerra
 
-Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.3.0**. Este sistema combina una arquitectura asíncrona robusta con cifrado y capacidades avanzadas de transferencia de archivos.
+Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.2.2**. Este sistema combina una arquitectura asíncrona robusta con cifrado y capacidades avanzadas de transferencia de archivos.
 
 ---
 
@@ -33,7 +33,15 @@ Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento dise�
 
 ---
 
-## 🛠️ Stack Tecnológico
+## � Cambios Recientes (v1.2.2)
+
+- ✅ **Actualización de Dependencias:** Se actualizó `pyaudio >= 0.2.14` para mejorar compatibilidad con sistemas modernos.
+- ✅ **Mejoras de Audio:** Soporte mejorado para captura y transmisión de audio con mejor manejo de dispositivos.
+- ✅ **Limpieza de Logs:** Gestión automática de archivos de log (logs antiguos se reemplazan con nuevos).
+
+---
+
+## �🛠️ Stack Tecnológico
 
 | Componente | Tecnología | Función |
 | :--- | :--- | :--- |
@@ -42,7 +50,7 @@ Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento dise�
 | **Network** | WebSockets + Asyncio | Protocolo de transporte bidireccional |
 | **Criptografía** | Cryptography.io | Implementación de estándares de seguridad |
 | **Video** | OpenCV + PyAV + aiortc | Captura, codificación H.264 y streaming de video |
-| **Audio** | PyAudio | Captura y transmisión de audio |
+| **Audio** | PyAudio (>=0.2.14) | Captura y transmisión de audio |
 | **Base de Datos** | SQLite3 | Almacenamiento local ligero |
 | **Integración** | qasync | Puente entre el loop de Qt y Asyncio |
 
@@ -256,7 +264,14 @@ Ambos derivan: clave AES-256 | nonces únicos
 
 ---
 
-## 👥 Contribuciones
+## � Documentación
+
+- [CHANGELOG](CHANGELOG.md) - Historial de cambios y versiones
+- [README.md](README.md) - Este archivo (guía principal)
+
+---
+
+## �👥 Contribuciones
 
 Este proyecto es desarrollado como parte del curso de **Sistemas Distribuidos**.
 
