@@ -6,7 +6,7 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ---
 
-## [1.2.2] - 2026-04-12
+## [1.3.2] - 2026-04-12
 
 ### Added
 - Versión actualizada de PyAudio con especificación explícita de versión mínima
