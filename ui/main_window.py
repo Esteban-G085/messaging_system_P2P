@@ -162,6 +162,8 @@ class MainWindow(QMainWindow):
             self.ctrl.ui_on_incoming_call = self._ui_incoming_call
         if hasattr(self.ctrl, 'ui_on_video_track'):
             self.ctrl.ui_on_video_track = self._ui_video_track
+        if hasattr(self.ctrl, 'ui_on_call_ended'):
+            self.ctrl.ui_on_call_ended = self._ui_call_ended
 
     # ── Callbacks del controlador ─────────────────────────────────────────────
 
@@ -309,6 +311,12 @@ class MainWindow(QMainWindow):
         self._video_window.set_video_label("⏳ Conectando... esperando respuesta")
         self._video_window.set_status("⏳ Iniciando videollamada...")
         self._video_window.show()
+        self._video_window.hangup_btn.clicked.connect(
+            lambda: asyncio.get_event_loop().create_task(
+                self.ctrl.end_videocall(self._active_peer.id)
+            )
+        )
+        self._video_window.hangup_btn.clicked.connect(self._video_window.close)
         
         await self.ctrl.start_videocall(self._active_peer.id)
 
@@ -324,6 +332,12 @@ class MainWindow(QMainWindow):
         self._video_window.set_video_label("⏳ Conectando...")
         self._video_window.set_status("⏳ Aceptando videollamada...")
         self._video_window.show()
+        self._video_window.hangup_btn.clicked.connect(
+            lambda: asyncio.get_event_loop().create_task(
+                self.ctrl.end_videocall(peer_id)
+            )
+        )
+        self._video_window.hangup_btn.clicked.connect(self._video_window.close)
         
         await self.ctrl.accept_videocall(peer_id)
 
@@ -360,3 +374,9 @@ class MainWindow(QMainWindow):
     @asyncSlot(str)
     async def _on_cancel_transfer(self, file_id: str):
         await self.ctrl.cancel_file(file_id)
+
+    def _ui_call_ended(self):
+        """El peer remoto colgó."""
+        if self._video_window:
+            self._video_window.close()
+            self._video_window = None

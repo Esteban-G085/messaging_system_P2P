@@ -54,7 +54,7 @@ class VideoWindow(QMainWindow):
         # 🔥 permite que el contenido se adapte
         self.video_label.setScaledContents(False)
 
-        video_layout.addWidget(self.video_label)
+        video_layout.addWidget(self.video_label) 
         layout.addWidget(video_area, stretch=1)
 
         # ── Barra de estado ────────────────────────────────────────────
@@ -157,13 +157,12 @@ class VideoWindow(QMainWindow):
 
     # video_window.py — en update_frame:
     def update_frame(self, frame):
+        """Recibe frame RGB (numpy array) y lo renderiza."""
         try:
-            import cv2
-            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            h, w, ch = rgb.shape
-            image   = QImage(rgb.data, w, h, ch * w, QImage.Format_RGB888)
-            pixmap  = QPixmap.fromImage(image)
-            scaled  = pixmap.scaled(
+            h, w, ch = frame.shape
+            image  = QImage(frame.data, w, h, ch * w, QImage.Format_RGB888)
+            pixmap = QPixmap.fromImage(image)
+            scaled = pixmap.scaled(
                 self.video_label.size(),
                 Qt.KeepAspectRatio,
                 Qt.SmoothTransformation
