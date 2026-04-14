@@ -16,7 +16,11 @@ from utils.logger import logger
 # 16 kHz es suficiente para voz y usa la mitad de ancho de banda que 44.1 kHz
 AUDIO_RATE     = 16000
 AUDIO_CHANNELS = 1
-AUDIO_CHUNK    = 512   # ~32 ms a 16 kHz — buen balance latencia/overhead
+AUDIO_CHUNK    = 512
+
+VIDEO_WIDTH    = 320    
+VIDEO_HEIGHT   = 240    
+VIDEO_FPS      = 20  
 
 
 def _find_camera() -> int:
@@ -69,16 +73,16 @@ class VideoCallWS:
         ctx.width     = w
         ctx.height    = h
         ctx.pix_fmt   = "yuv420p"
-        ctx.time_base = Fraction(1, 30)
+        ctx.time_base = Fraction(1, VIDEO_FPS)
         ctx.options   = {
             "preset":  "ultrafast",
             "tune":    "zerolatency",
             "profile": "baseline",
             # Limitar tamaño de GOP → menor latencia en el receptor
-            "g":       "30",
+            "g":       str(VIDEO_FPS),
         }
         ctx.open()
-        logger.debug(f"[VIDEOCALL] Encoder H.264 listo {w}x{h}")
+        logger.debug(f"[VIDEOCALL] Encoder H.264 listo {w}x{h} @ {VIDEO_FPS}FPS")
         return ctx
 
     def _build_decoder(self) -> av.CodecContext:
@@ -169,19 +173,16 @@ class VideoCallWS:
     async def _loop_video_tx(self, node, peer):
         cam_idx  = _find_camera()
         self.cap = cv2.VideoCapture(cam_idx, cv2.CAP_DSHOW)
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,  640)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
-        self.cap.set(cv2.CAP_PROP_FPS, 30)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,  VIDEO_WIDTH)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, VIDEO_HEIGHT)
+        self.cap.set(cv2.CAP_PROP_FPS,          VIDEO_FPS)
 
         if not self.cap.isOpened():
             logger.error("[VIDEOCALL] ❌ Cámara no disponible")
             return
 
         logger.info(
-            f"[VIDEOCALL] Cámara: "
-            f"{int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))}x"
-            f"{int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))}"
-            f" @ {self.cap.get(cv2.CAP_PROP_FPS):.0f} FPS"
+            f"[VIDEOCALL] Cámara: {VIDEO_WIDTH}x{VIDEO_HEIGHT} @ {VIDEO_FPS} FPS"
         )
 
         loop        = asyncio.get_event_loop()
@@ -189,22 +190,26 @@ class VideoCallWS:
 
         try:
             while self.running:
-                # cap.read() es bloqueante — no bloquear el event loop
                 ret, bgr = await loop.run_in_executor(None, self.cap.read)
                 if not ret:
                     await asyncio.sleep(0.01)
                     continue
 
                 h, w = bgr.shape[:2]
+
+                # Resize explícito por si la cámara no respeta el set()
+                if w != VIDEO_WIDTH or h != VIDEO_HEIGHT:
+                    bgr = cv2.resize(bgr, (VIDEO_WIDTH, VIDEO_HEIGHT))
+
                 if self._enc is None:
-                    self._enc = self._build_encoder(w, h)
+                    self._enc = self._build_encoder(VIDEO_WIDTH, VIDEO_HEIGHT)
                     logger.info("[VIDEOCALL] ✅ Transmitiendo video H.264...")
 
                 rgb      = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
                 frame_av = av.VideoFrame.from_ndarray(rgb, format="rgb24")
                 frame_av = frame_av.reformat(format="yuv420p")
                 frame_av.pts       = self._pts
-                frame_av.time_base = Fraction(1, 30)
+                frame_av.time_base = Fraction(1, VIDEO_FPS)   # antes era Fraction(1, 30)
                 self._pts         += 1
 
                 for pkt in self._enc.encode(frame_av):
@@ -212,8 +217,12 @@ class VideoCallWS:
                         await self._ws_send(node, peer, "video_frame", bytes(pkt))
                         frames_sent += 1
 
-                if frames_sent % 150 == 0 and frames_sent:
+                if frames_sent % 100 == 0 and frames_sent:
                     logger.debug(f"[VIDEOCALL] 📡 Video frames TX: {frames_sent}")
+
+                await asyncio.sleep(1 / VIDEO_FPS)   # antes era 1/30
+
+
 
         except asyncio.CancelledError:
             pass
