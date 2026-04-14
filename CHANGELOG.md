@@ -56,4 +56,3 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Intercambio de claves ECDH
 
 ---
-
