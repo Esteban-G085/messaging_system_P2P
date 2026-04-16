@@ -196,7 +196,6 @@ class AppController:
         logger.info(f"[CTRL] Estado: {peer.state}")
         
         self.db.upsert_peer(peer)
-        self.db.log_connection(peer.id, "connected")
         if peer.id not in self._messages:
             history = self.db.get_messages_for_peer(peer.id, self.node.peer_id)
             for msg in history:
@@ -217,7 +216,6 @@ class AppController:
         logger.warning(f"[CTRL] Peer ID: {peer.id[:16]}...")
         logger.warning("=" * 80)
         
-        self.db.log_connection(peer.id, "disconnected")
         if self.ui_on_peer_update:
             self.ui_on_peer_update(peer)
 

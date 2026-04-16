@@ -1,8 +1,4 @@
-# ──────────────────────────────────────────────
-#           Modelo de un nodo remoto
-# ──────────────────────────────────────────────
-
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional
 
@@ -11,16 +7,14 @@ from models.connection_state import ConnectionState
 
 @dataclass
 class Peer:
-    id:          str
-    username:    str
-    ip:          str
-    port:        int
-    state:       ConnectionState       = ConnectionState.IDLE
-    last_seen:   Optional[datetime]    = None
-    is_favorite: bool                  = False
-    connection:  Optional[object]      = None   # websockets.WebSocketCommonProtocol
+    id:         str
+    username:   str
+    ip:         str
+    port:       int
+    state:      ConnectionState    = ConnectionState.IDLE
+    last_seen:  Optional[datetime] = None
+    connection: Optional[object]   = None
 
-    # ── Helpers ─────────────────────────────
     @property
     def address(self) -> str:
         return f"{self.ip}:{self.port}"
@@ -38,3 +32,4 @@ class Peer:
             "state":     self.state.value,
             "last_seen": self.last_seen.isoformat() if self.last_seen else None,
         }
+        
