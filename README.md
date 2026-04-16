@@ -273,7 +273,6 @@ Peer A                              Peer B
 
 - [ ] **mDNS Discovery:** Detección automática de peers sin IP manual.
 - [ ] **Grupos:** Salas de chat con intercambio de claves de grupo.
-- [ ] **Emojis & Markdown:** Renderizado rico en el chat.
 - [ ] **Compresión adaptativa:** Ajustar calidad de video según ancho de banda.
 - [ ] **Sincronización de contactos:** Guardar favoritos localmente.
 
