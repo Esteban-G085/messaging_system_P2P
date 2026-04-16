@@ -4,6 +4,7 @@
 
 import asyncio
 from datetime import datetime
+import json
 from typing import Callable, Dict, Optional
 
 import websockets
@@ -44,6 +45,7 @@ class P2PNode:
         self.on_file_offer:        Optional[Callable] = None   # (FileTransfer)
         self.on_transfer_update:   Optional[Callable] = None   # (FileTransfer)
         self.on_file_saved:        Optional[Callable] = None   # (FileTransfer)
+        self.on_videocall_message: Optional[Callable] = None   # (peer, message)
 
         self._setup_handlers()
 
@@ -72,7 +74,10 @@ class P2PNode:
         """
         self._server.set_message_handler(self._handler.handle)
         await self._server.start()
-        logger.info(f"[NODE] {self.username} | {self.local_ip}:{self.port}")
+        logger.info(f"[NODE] 🚀 Nodo iniciado: {self.username}")
+        logger.info(f"[NODE]    • Peer ID: {self.peer_id[:16]}...")
+        logger.info(f"[NODE]    • IP Local: {self.local_ip}")
+        logger.info(f"[NODE]    • Puerto: {self.port}")
 
     async def stop(self):
         """Desconecta a todos los peers activos y detiene el servidor de escucha local."""
@@ -91,13 +96,21 @@ class P2PNode:
             ip (str): Dirección IP a conectar.
             port (int): Puerto remoto.
         """
+        logger.info(f"[NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con {ip}:{port}")
+        
         session = CryptoSession()
+        logger.info(f"[NODE]    → Generando par de claves ECC (SECP256R1)...")
+        
         ws      = await self._client.connect(ip, port)
         tmp_key = f"_pending_{ip}:{port}"
         self._crypto[tmp_key] = session
+        
+        logger.info(f"[NODE]    → Enviando mensaje HELLO con clave pública...")
         await ws.send(Protocol.hello(
             self.username, self.peer_id, self.port, session.public_key_pem()
         ))
+        logger.info(f"[NODE]    → HELLO enviado, esperando HELLO_ACK...")
+        
         asyncio.create_task(self._listen_outgoing(ws, ip, port, tmp_key))
 
     async def send_message(self, peer_id: str, content: str) -> Optional[str]:
@@ -184,10 +197,14 @@ class P2PNode:
     # ── Escucha saliente ──────────────────────────────────────────────────────
 
     async def _listen_outgoing(self, ws, ip, port, tmp_key):
+        peer_addr = f"{ip}:{port}"
+        logger.info(f"[NODE]    Escuchando mensajes desde {peer_addr}...")
         try:
             async for raw in ws:
+                logger.debug(f"[NODE]    ← Mensaje recibido de {peer_addr}")
                 await self._handler.handle(ws, raw)
         except websockets.exceptions.ConnectionClosed:
+            logger.warning(f"[NODE] ❌ Conexión de {peer_addr} cerrada")
             self._crypto.pop(tmp_key, None)
             self._mark_peer_disconnected_by_ip(ip)
 
@@ -195,21 +212,34 @@ class P2PNode:
 
     async def _on_hello(self, ws, data):
         d       = data["data"]
+        username = d["username"]
+        peer_id = d["peer_id"]
+        remote_ip = ws.remote_address[0]
+        
+        logger.info(f"[NODE] 📨 Recibido HELLO de {username} ({remote_ip})")
+        
         session = CryptoSession()
         pub_key = d.get("public_key", "")
+        
         if pub_key:
+            logger.info(f"[NODE]    → Recibida clave pública ECC del peer")
             if not session.establish(pub_key):
-                logger.error("[NODE] Fallo cripto en HELLO")
+                logger.error("[NODE] ❌ Error: Fallo en derivación de secreto compartido (ECDH)")
                 return
+            logger.info(f"[NODE]    ✅ Secreto compartido derivado exitosamente")
+        
         peer = Peer(
-            id=d["peer_id"], username=d["username"],
-            ip=ws.remote_address[0], port=d["port"],
+            id=peer_id, username=username,
+            ip=remote_ip, port=d["port"],
             state=ConnectionState.READY, last_seen=datetime.now(), connection=ws,
         )
         self.peers[peer.id]   = peer
         self._crypto[peer.id] = session
+        
+        logger.info(f"[NODE]    → Enviando HELLO_ACK con nuestra clave pública...")
         await ws.send(Protocol.hello_ack(self.peer_id, session.public_key_pem()))
-        logger.info(f"[NODE] HELLO de {peer.username} ✓")
+        
+        logger.info(f"[NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con {username}")
         if self.on_peer_connected:
             self.on_peer_connected(peer)
 
@@ -218,24 +248,35 @@ class P2PNode:
         remote_ip = ws.remote_address[0]
         remote_id = d.get("peer_id", remote_ip)
         pub_key   = d.get("public_key", "")
+        
+        logger.info(f"[NODE] 📨 Recibido HELLO_ACK de {remote_ip}")
+        
         tmp_key   = next(
             (k for k in self._crypto if k.startswith("_pending_") and remote_ip in k), None
         )
         session = self._crypto.pop(tmp_key, None) if tmp_key else CryptoSession()
+        
         if session and pub_key:
+            logger.info(f"[NODE]    → Recibida clave pública ECC del peer")
             session.establish(pub_key)
+            logger.info(f"[NODE]    ✅ Secreto compartido derivado exitosamente")
+        else:
+            logger.warning(f"[NODE]    ⚠️  No hay clave pública en HELLO_ACK")
 
         peer = self._find_peer_by_ip(remote_ip)
         if peer:
+            logger.info(f"[NODE]    → Actualizando estado de {peer.username} a READY")
             peer.state = ConnectionState.READY
             peer.connection = ws
             peer.last_seen  = datetime.now()
         else:
+            logger.info(f"[NODE]    → Creando nuevo peer {remote_id}")
             peer = Peer(id=remote_id, username=remote_ip, ip=remote_ip, port=0,
                         state=ConnectionState.READY, last_seen=datetime.now(), connection=ws)
             self.peers[peer.id] = peer
 
         self._crypto[peer.id] = session
+        logger.info(f"[NODE] ✅ [HANDSHAKE COMPLETADO] {remote_ip} está listo para comunicación")
         if self.on_peer_connected:
             self.on_peer_connected(peer)
 
@@ -252,6 +293,19 @@ class P2PNode:
             except Exception as e:
                 logger.error(f"[NODE] Descifrado fallido: {e}")
                 return
+        
+        # Detectar si es un mensaje de videollamada
+        try:
+            msg_data = json.loads(content)
+            if isinstance(msg_data, dict) and msg_data.get("type") in ["videocall_offer", "videocall_answer","video_frame", "audio_frame", "videocall_end"]:
+                # Es un mensaje de videollamada
+                peer = self.peers.get(sender_id)
+                if peer and self.on_videocall_message:
+                    await self.on_videocall_message(peer, msg_data)
+                return
+        except (json.JSONDecodeError, ValueError):
+            pass  # No es JSON, tratarlo como mensaje normal
+        
         if self.on_message_received:
             self.on_message_received(sender_id, d["sender"], content, data["timestamp"])
 
@@ -357,3 +411,8 @@ class P2PNode:
             self._crypto.pop(peer.id, None)
             if self.on_peer_disconnected:
                 self.on_peer_disconnected(peer)
+
+
+
+
+
