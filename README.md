@@ -4,6 +4,8 @@
 
 Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento diseñada para redes locales, actualmente en su **versión 1.3.3**. Este sistema combina una arquitectura asíncrona robusta con cifrado de extremo a extremo y capacidades avanzadas de videollamada, transferencia de archivos y mensajería.
 
+> **v1.3.3** — Audio bidireccional funcional, optimización de video (320×240 @ 20 FPS) para reducir la competencia con el audio en el WebSocket compartido.
+
 ---
 
 ## 🌟 Características Principales
@@ -14,11 +16,12 @@ Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento dise�
   - **Cifrado Real-Time:** AES-256-GCM para todos los datos: mensajes, archivos, video y audio.
 - **Mensajería Instantánea:** Chat en tiempo real con historial persistente y notificaciones de entrega.
 - **Videollamadas en Tiempo Real:**
-  - Video H.264 (`libx264 ultrafast/zerolatency`) a 640×480 @ 30 FPS.
-  - Audio PCM 16 kHz bidireccional con baja latencia.
+  - Video H.264 (`libx264 ultrafast/zerolatency`) a 320×240 @ 20 FPS — optimizado para compartir el canal con el audio.
+  - Audio PCM 16 kHz 16-bit mono bidireccional con baja latencia.
   - Transmisión completa sobre el WebSocket existente — sin WebRTC, sin ICE, sin STUN.
   - Detección automática de cámara entre múltiples dispositivos del sistema.
   - Señal de colgar bidireccional: ambos peers cierran la sesión limpiamente.
+  - Resize explícito de frames si la cámara no respeta la resolución solicitada.
 - **Transferencia de Archivos Optimizada:**
   - Envío de archivos de cualquier tamaño mediante fragmentación (chunking de 64 KB).
   - Verificación de integridad mediante **SHA-256**.
@@ -38,6 +41,7 @@ Una plataforma de comunicación **Peer-to-Peer (P2P)** de alto rendimiento dise�
 - ✅ **Audio bidireccional:** Micrófono y altavoz funcionando en videollamadas.
 - ✅ **Botón colgar funcional:** Termina la sesión local y notifica al peer remoto.
 - ✅ **Arquitectura de videollamada simplificada:** Eliminado WebRTC/aiortc — video y audio viajan por el WebSocket del chat.
+- ✅ **Optimización de video:** Resolución reducida a 320×240 @ 20 FPS — cada frame H.264 pesa ~75% menos, liberando el WebSocket para que el audio pase sin espera.
 - ✅ **Event loop no bloqueante:** `cap.read()` y `stream.write()` movidos a `run_in_executor`.
 - ✅ **Fix crítico de UI:** El widget de video ahora se agrega correctamente al layout.
 - ✅ **Compatibilidad Windows mejorada:** Backend `CAP_DSHOW` para evitar errores de MSMF.
@@ -199,7 +203,7 @@ Al abrirse configura:
 #### 📹 Iniciar Videollamada
 1. Selecciona un peer conectado y haz clic en el botón 📹.
 2. El peer remoto verá un diálogo para aceptar o rechazar.
-3. Al aceptar, ambos lados inician captura de cámara y micrófono.
+3. Al aceptar, ambos lados inician captura de cámara (320×240 @ 20 FPS) y micrófono (PCM 16 kHz).
 4. Usa el botón **📞 Colgar** para terminar — ambos peers cierran la sesión.
 
 #### 📂 Transferir Archivos
