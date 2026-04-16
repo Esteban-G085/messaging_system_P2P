@@ -99,7 +99,6 @@ Al abrirse, deberás configurar:
 
 - [ ] **mDNS Discovery:** Detección automática de peers en la misma subred sin necesidad de IP manual.
 - [ ] **Soporte de Grupos:** Creación de salas de chat grupales con intercambio de llaves de grupo.
-- [ ] **Emojis & Markdown:** Soporte para renderizado rico de mensajes.
 
 ---
 
