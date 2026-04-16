@@ -6,7 +6,7 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ---
 
-## [1.3.3] - 2026-04-13
+## [1.3.3] - 2026-04-15
 
 ### Added
 - **Audio bidireccional en videollamadas:** Captura de micrófono y reproducción por altavoz en tiempo real mediante PCM 16 kHz 16-bit mono sobre WebSocket.
@@ -15,11 +15,16 @@ El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - **Callback `on_call_ended`:** La UI reacciona al cierre de llamada tanto por acción local como remota.
 - **Detección automática de cámara:** `_find_camera()` itera hasta 3 índices para encontrar la primera cámara disponible.
 - **Reset automático de `VideoCallWS`:** Después de cada llamada el objeto se reinicia limpiamente para la siguiente.
+- **Constantes de video centralizadas:** `VIDEO_WIDTH`, `VIDEO_HEIGHT` y `VIDEO_FPS` en la cabecera de `videocall.py` para facilitar ajustes futuros.
+- **Resize explícito de frames:** Si la cámara no respeta la resolución solicitada vía `set()`, se aplica `cv2.resize()` antes de encodear.
 
 ### Changed
 - **Motor de videollamadas migrado completamente de WebRTC/aiortc a WebSocket + H.264:**
   - Eliminados: `aiortc`, `RTCPeerConnection`, `RTCSessionDescription`, `RTCIceCandidate`, ICE, STUN.
   - El video H.264 y el audio PCM viajan cifrados por el mismo WebSocket del chat.
+- **Resolución de video reducida de 640×480 a 320×240:** Reduce los píxeles por frame en un 75%, lo que disminuye el tamaño de cada packet H.264 de ~50–200 KB a ~10–50 KB.
+- **FPS reducido de 30 a 20:** Combinado con la reducción de resolución, libera el WebSocket con mayor frecuencia para que los chunks de audio (1 KB) pasen sin espera apreciable.
+- **`time_base` y GOP del encoder actualizados a `VIDEO_FPS`:** El encoder H.264 queda consistente con la tasa de captura real.
 - **`cap.read()` ahora no bloquea el event loop:** Movido a `run_in_executor` para mantener la UI fluida.
 - **`stream.write()` de PyAudio movido a `run_in_executor`:** La reproducción de audio ya no bloquea el event loop.
 - **Tasa de audio reducida de 44.1 kHz a 16 kHz:** Suficiente para voz, reduce ancho de banda de ~5.6 Mbps a ~512 Kbps.
