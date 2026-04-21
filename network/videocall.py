@@ -3,11 +3,15 @@ import asyncio
 import base64
 import json
 from fractions import Fraction
+from readline import backend
 
 import av
 import cv2
 import numpy as np
 import pyaudio
+import sys
+import os
+import ctypes
 
 from utils.logger import logger
 
@@ -23,17 +27,38 @@ VIDEO_HEIGHT   = 240
 VIDEO_FPS      = 20  
 
 
-def _find_camera() -> int:
-    """Detecta el primer índice de cámara disponible."""
+def _find_camera() -> tuple[int, int]:
+    """
+    Retorna (índice, backend) según el SO.
+    Windows → CAP_DSHOW, Linux/Mac → CAP_V4L2 o automático.
+    """
+    if sys.platform == "win32":
+        backend = cv2.CAP_DSHOW
+    elif sys.platform.startswith("linux"):
+        backend = cv2.CAP_V4L2
+    else:
+        backend = cv2.CAP_ANY   # macOS y otros
+
     for i in range(3):
-        cap = cv2.VideoCapture(i, cv2.CAP_DSHOW)
+        cap = cv2.VideoCapture(i, backend)
         if cap.isOpened():
             cap.release()
-            logger.info(f"[VIDEOCALL] Cámara encontrada en índice {i}")
-            return i
-    logger.warning("[VIDEOCALL] No se encontró cámara — usando índice 0")
-    return 0
+            logger.info(f"[VIDEOCALL] Cámara encontrada en índice {i} (backend: {backend})")
+            return i, backend
 
+    logger.warning("[VIDEOCALL] No se encontró cámara — usando índice 0 automático")
+    return 0, cv2.CAP_ANY
+
+def _suppress_alsa_errors():
+    """Suprime el spam de ALSA/JACK en Linux."""
+    if not sys.platform.startswith("linux"):
+        return
+    try:
+        # Redirigir stderr de las librerías C de ALSA a /dev/null
+        asound = ctypes.cdll.LoadLibrary("libasound.so.2")
+        asound.snd_lib_error_set_handler(None)
+    except Exception:
+        pass
 
 class VideoCallWS:
     """
@@ -95,30 +120,60 @@ class VideoCallWS:
 
     def _init_audio(self) -> bool:
         """Abre micrófono y altavoz. Retorna False si ambos fallan."""
+        _suppress_alsa_errors()
         self._pa = pyaudio.PyAudio()
         ok = False
 
+        # Listar dispositivos disponibles para debug
+        logger.info("[VIDEOCALL] Dispositivos de audio disponibles:")
+        for i in range(self._pa.get_device_count()):
+            info = self._pa.get_device_info_by_index(i)
+            if info["maxInputChannels"] > 0 or info["maxOutputChannels"] > 0:
+                logger.info(
+                    f"[VIDEOCALL]   [{i}] {info['name']} "
+                    f"(in:{info['maxInputChannels']} out:{info['maxOutputChannels']})"
+                )
+
+        # Buscar índices del dispositivo de entrada y salida por defecto
         try:
-            self._mic_stream = self._pa.open(
+            input_idx  = self._pa.get_default_input_device_info()["index"]
+            output_idx = self._pa.get_default_output_device_info()["index"]
+            logger.info(f"[VIDEOCALL] Dispositivo entrada default: {input_idx}")
+            logger.info(f"[VIDEOCALL] Dispositivo salida default:  {output_idx}")
+        except Exception as e:
+            logger.warning(f"[VIDEOCALL] No se pudo obtener dispositivo default: {e}")
+            input_idx  = None
+            output_idx = None
+
+        try:
+            kwargs = dict(
                 format            = pyaudio.paInt16,
                 channels          = AUDIO_CHANNELS,
                 rate              = AUDIO_RATE,
                 input             = True,
                 frames_per_buffer = AUDIO_CHUNK,
             )
+            if input_idx is not None:
+                kwargs["input_device_index"] = input_idx
+
+            self._mic_stream = self._pa.open(**kwargs)
             logger.info("[VIDEOCALL] ✅ Micrófono abierto")
             ok = True
         except Exception as e:
             logger.error(f"[VIDEOCALL] ❌ Micrófono: {e}")
 
         try:
-            self._spk_stream = self._pa.open(
+            kwargs = dict(
                 format            = pyaudio.paInt16,
                 channels          = AUDIO_CHANNELS,
                 rate              = AUDIO_RATE,
                 output            = True,
                 frames_per_buffer = AUDIO_CHUNK,
             )
+            if output_idx is not None:
+                kwargs["output_device_index"] = output_idx
+
+            self._spk_stream = self._pa.open(**kwargs)
             logger.info("[VIDEOCALL] ✅ Altavoz abierto")
             ok = True
         except Exception as e:
@@ -171,8 +226,8 @@ class VideoCallWS:
     # ── Loop: envío de video ──────────────────────────────────────────────────
 
     async def _loop_video_tx(self, node, peer):
-        cam_idx  = _find_camera()
-        self.cap = cv2.VideoCapture(cam_idx, cv2.CAP_DSHOW)
+        cam_idx, backend = _find_camera()
+        self.cap = cv2.VideoCapture(cam_idx, backend)
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH,  VIDEO_WIDTH)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, VIDEO_HEIGHT)
         self.cap.set(cv2.CAP_PROP_FPS,          VIDEO_FPS)
