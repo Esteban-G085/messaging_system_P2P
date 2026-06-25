@@ -31,8 +31,6 @@ def validate_connection(ip: str, port: int) -> Tuple[bool, str]:
     """
     if not validate_ip(ip):
         return False, f"Dirección IP inválida: '{ip}'"
-    if ip.strip() == "127.0.0.1":
-        return False, "No puedes conectarte a localhost"
     if not validate_port(port):
         return False, f"Puerto fuera de rango (1024-65535): {port}"
     return True, ""

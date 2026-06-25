@@ -156,10 +156,10 @@ class VideoCallWS:
                 kwargs["input_device_index"] = input_idx
 
             self._mic_stream = self._pa.open(**kwargs)
-            logger.info("[VIDEOCALL] ✅ Micrófono abierto")
+            logger.info("[VIDEOCALL] [OK] Micrófono abierto")
             ok = True
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Micrófono: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Micrófono: {e}")
 
         try:
             kwargs = dict(
@@ -173,10 +173,10 @@ class VideoCallWS:
                 kwargs["output_device_index"] = output_idx
 
             self._spk_stream = self._pa.open(**kwargs)
-            logger.info("[VIDEOCALL] ✅ Altavoz abierto")
+            logger.info("[VIDEOCALL] [OK] Altavoz abierto")
             ok = True
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Altavoz: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Altavoz: {e}")
 
         return ok
 
@@ -188,7 +188,7 @@ class VideoCallWS:
         Si alguno falla, los demás siguen funcionando.
         """
         logger.info("=" * 80)
-        logger.info("[VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA")
+        logger.info("[VIDEOCALL] INICIANDO VIDEOLLAMADA")
         logger.info(f"[VIDEOCALL]    Peer: {peer.username} ({peer.ip}:{peer.port})")
         logger.info("=" * 80)
 
@@ -232,7 +232,7 @@ class VideoCallWS:
         self.cap.set(cv2.CAP_PROP_FPS,          VIDEO_FPS)
 
         if not self.cap.isOpened():
-            logger.error("[VIDEOCALL] ❌ Cámara no disponible")
+            logger.error("[VIDEOCALL] [ERR] Cámara no disponible")
             return
 
         logger.info(
@@ -257,7 +257,7 @@ class VideoCallWS:
 
                 if self._enc is None:
                     self._enc = self._build_encoder(VIDEO_WIDTH, VIDEO_HEIGHT)
-                    logger.info("[VIDEOCALL] ✅ Transmitiendo video H.264...")
+                    logger.info("[VIDEOCALL] [OK] Transmitiendo video H.264...")
 
                 rgb      = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
                 frame_av = av.VideoFrame.from_ndarray(rgb, format="rgb24")
@@ -272,7 +272,7 @@ class VideoCallWS:
                         frames_sent += 1
 
                 if frames_sent % 100 == 0 and frames_sent:
-                    logger.debug(f"[VIDEOCALL] 📡 Video frames TX: {frames_sent}")
+                    logger.debug(f"[VIDEOCALL] Video frames enviados: {frames_sent}")
 
                 await asyncio.sleep(1 / VIDEO_FPS)   # antes era 1/30
 
@@ -281,7 +281,7 @@ class VideoCallWS:
         except asyncio.CancelledError:
             pass
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Error video TX: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Error video TX: {e}")
         finally:
             # Vaciar buffer del encoder
             if self._enc:
@@ -292,16 +292,16 @@ class VideoCallWS:
             if self.cap:
                 self.cap.release()
                 self.cap = None
-            logger.info(f"[VIDEOCALL] 🛑 Video TX detenido | Frames: {frames_sent}")
+            logger.info(f"[VIDEOCALL] [STOP] Video TX detenido | Frames: {frames_sent}")
 
     # ── Loop: envío de audio ──────────────────────────────────────────────────
 
     async def _loop_audio_tx(self, node, peer):
         if not self._mic_stream:
-            logger.warning("[VIDEOCALL] ⚠️  Sin micrófono — audio TX desactivado")
+            logger.warning("[VIDEOCALL] [WARN]  Sin micrófono — audio TX desactivado")
             return
 
-        logger.info("[VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...")
+        logger.info("[VIDEOCALL] [OK] Transmitiendo audio PCM 16 kHz...")
         loop        = asyncio.get_event_loop()
         chunks_sent = 0
 
@@ -315,23 +315,23 @@ class VideoCallWS:
                 chunks_sent += 1
 
                 if chunks_sent % 500 == 0:
-                    logger.debug(f"[VIDEOCALL] 🎤 Audio chunks TX: {chunks_sent}")
+                    logger.debug(f"[VIDEOCALL] Audio chunks TX: {chunks_sent}")
 
         except asyncio.CancelledError:
             pass
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Error audio TX: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Error audio TX: {e}")
         finally:
-            logger.info(f"[VIDEOCALL] 🛑 Audio TX detenido | Chunks: {chunks_sent}")
+            logger.info(f"[VIDEOCALL] [STOP] Audio TX detenido | Chunks: {chunks_sent}")
 
     # ── Loop: reproducción de audio ───────────────────────────────────────────
 
     async def _loop_audio_rx(self):
         if not self._spk_stream:
-            logger.warning("[VIDEOCALL] ⚠️  Sin altavoz — audio RX desactivado")
+            logger.warning("[VIDEOCALL] [WARN]  Sin altavoz — audio RX desactivado")
             return
 
-        logger.info("[VIDEOCALL] ✅ Reproductor de audio listo")
+        logger.info("[VIDEOCALL] [OK] Reproductor de audio listo")
         loop = asyncio.get_event_loop()
 
         try:
@@ -347,9 +347,9 @@ class VideoCallWS:
         except asyncio.CancelledError:
             pass
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Error audio RX: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Error audio RX: {e}")
         finally:
-            logger.info("[VIDEOCALL] 🛑 Reproductor detenido")
+            logger.info("[VIDEOCALL] [STOP] Reproductor detenido")
 
     # ── WS send ───────────────────────────────────────────────────────────────
 
@@ -362,7 +362,7 @@ class VideoCallWS:
             _, payload = Protocol.message(node.username, node.peer_id, encrypted)
             await peer.connection.send(payload)
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ WS send ({msg_type}): {e}")
+            logger.error(f"[VIDEOCALL] [ERR] WS send ({msg_type}): {e}")
 
     # ── Recepción video ───────────────────────────────────────────────────────
 
@@ -370,7 +370,7 @@ class VideoCallWS:
         try:
             if self._dec is None:
                 self._dec = self._build_decoder()
-                logger.info("[VIDEOCALL] ✅ Decoder video listo — recibiendo")
+                logger.info("[VIDEOCALL] [OK] Decoder video listo — recibiendo")
 
             pkt = av.Packet(base64.b64decode(b64_data))
             for frame_av in self._dec.decode(pkt):
@@ -379,7 +379,7 @@ class VideoCallWS:
                 if self.on_frame_received:
                     self.on_frame_received(rgb)
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Error decode video: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Error decode video: {e}")
 
     # ── Recepción audio ───────────────────────────────────────────────────────
 
@@ -398,7 +398,7 @@ class VideoCallWS:
             except Exception:
                 pass
         except Exception as e:
-            logger.error(f"[VIDEOCALL] ❌ Error encolando audio: {e}")
+            logger.error(f"[VIDEOCALL] [ERR] Error encolando audio: {e}")
 
     # ── Stop ──────────────────────────────────────────────────────────────────
 
@@ -407,7 +407,7 @@ class VideoCallWS:
         if not self.running:
             return
 
-        logger.info("[VIDEOCALL] ⏹️  Deteniendo videollamada...")
+        logger.info("[VIDEOCALL] [STOP]  Deteniendo videollamada...")
         self.running = False
 
         for task in (self._task_video_tx, self._task_audio_tx, self._task_audio_rx):
@@ -444,6 +444,6 @@ class VideoCallWS:
         self._pts     = 0
         self._audio_queue = None
 
-        logger.info("[VIDEOCALL] ✅ Recursos liberados")
+        logger.info("[VIDEOCALL] [OK] Recursos liberados")
         if self.on_call_ended:
             self.on_call_ended()

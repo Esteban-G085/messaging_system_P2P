@@ -11,6 +11,14 @@ CREATE TABLE IF NOT EXISTS peers (
     );
 
 
+CREATE TABLE IF NOT EXISTS peer_fingerprints (
+    peer_id    TEXT PRIMARY KEY,
+    fingerprint TEXT NOT NULL,
+    trusted    BOOLEAN DEFAULT 0,
+    first_seen DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (peer_id) REFERENCES peers(id)
+);
+
 CREATE TABLE IF NOT EXISTS messages (
     id           TEXT PRIMARY KEY,
     sender_id    TEXT    NOT NULL,

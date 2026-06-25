@@ -4,7 +4,7 @@
 
 import socket
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def get_local_ip() -> str:
@@ -35,5 +35,5 @@ def format_timestamp(dt: datetime) -> str:
 
 
 def now_iso() -> str:
-    """Timestamp UTC en formato ISO-8601 con sufijo Z."""
-    return datetime.utcnow().isoformat() + "Z"
+    """Timestamp UTC en formato ISO-8601."""
+    return datetime.now(timezone.utc).isoformat()

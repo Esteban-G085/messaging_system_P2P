@@ -20,13 +20,13 @@ class TransferBubble(QFrame):
     cancel_requested = Signal(str)   # file_id
 
     STATUS_LABELS = {
-        TransferStatus.OFFERING:   ("⏳", "Esperando respuesta…",  COLORS["connecting"]),
-        TransferStatus.ACCEPTED:   ("📤", "Enviando…",             COLORS["connecting"]),
-        TransferStatus.RECEIVING:  ("📥", "Recibiendo…",           COLORS["connecting"]),
-        TransferStatus.COMPLETED:  ("✅", "Completado",            COLORS["connected"]),
-        TransferStatus.REJECTED:   ("🚫", "Rechazado",             COLORS["error"]),
-        TransferStatus.CANCELLED:  ("✗",  "Cancelado",             COLORS["error"]),
-        TransferStatus.ERROR:      ("⚠️", "Error",                  COLORS["error"]),
+        TransferStatus.OFFERING:   ("[WAIT]", "Esperando respuesta...",  COLORS["connecting"]),
+        TransferStatus.ACCEPTED:   ("[UP]",   "Enviando...",             COLORS["connecting"]),
+        TransferStatus.RECEIVING:  ("[DOWN]", "Recibiendo...",           COLORS["connecting"]),
+        TransferStatus.COMPLETED:  ("[OK]",   "Completado",              COLORS["connected"]),
+        TransferStatus.REJECTED:   ("[X]",    "Rechazado",               COLORS["error"]),
+        TransferStatus.CANCELLED:  ("[X]",    "Cancelado",               COLORS["error"]),
+        TransferStatus.ERROR:      ("[!]",    "Error",                   COLORS["error"]),
     }
 
     def __init__(self, ft: FileTransfer):
@@ -51,13 +51,9 @@ class TransferBubble(QFrame):
         inner.setContentsMargins(12, 10, 12, 10)
         inner.setSpacing(6)
 
-        # ── Fila icono + nombre ───────────────────────────────
+        # ── Fila nombre ───────────────────────────────────────
         top_row = QHBoxLayout()
         top_row.setSpacing(8)
-
-        file_icon = QLabel("📄")
-        file_icon.setStyleSheet("font-size: 16pt; background: transparent;")
-        top_row.addWidget(file_icon)
 
         info = QVBoxLayout()
         info.setSpacing(1)
@@ -80,7 +76,7 @@ class TransferBubble(QFrame):
         top_row.addStretch()
 
         # Botón cancelar
-        self.cancel_btn = QPushButton("✕")
+        self.cancel_btn = QPushButton("Cancelar")
         self.cancel_btn.setFixedSize(22, 22)
         self.cancel_btn.setStyleSheet(
             "background-color: #2A2A2A; color: #888888; "
@@ -161,4 +157,4 @@ class TransferBubble(QFrame):
                 """)
 
         if ft.error_msg:
-            self.status_label.setText(f"⚠️  {ft.error_msg}")
+            self.status_label.setText(f"[!] {ft.error_msg}")

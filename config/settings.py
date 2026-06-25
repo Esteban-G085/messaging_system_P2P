@@ -18,3 +18,7 @@ RETRY_DELAYS        = [2, 5, 10]  # segundos de espera entre reintentos (1º, 2�
 
 # Persistencia
 DB_PATH = "p2p_chat.db"
+
+# Seguridad
+RATE_LIMIT_MAX_CONNECTIONS = 10      # máx conexiones entrantes por IP
+RATE_LIMIT_WINDOW          = 60      # en segundos

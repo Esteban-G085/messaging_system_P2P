@@ -97,7 +97,7 @@ class MainWindow(QMainWindow):
         il.setContentsMargins(10, 8, 10, 8)
         il.setSpacing(8)
 
-        self.attach_btn = QPushButton("📎")
+        self.attach_btn = QPushButton("Adjuntar")
         self.attach_btn.setFixedSize(36, 36)
         self.attach_btn.setToolTip("Enviar archivo")
         self.attach_btn.setStyleSheet(
@@ -120,7 +120,7 @@ class MainWindow(QMainWindow):
         self.msg_input.returnPressed.connect(self._on_send)
         il.addWidget(self.msg_input, stretch=1)
 
-        self.video_btn = QPushButton("📹")
+        self.video_btn = QPushButton("Video")
         self.video_btn.setFixedSize(36, 36)
         self.video_btn.setToolTip("Iniciar videollamada")
         self.video_btn.setStyleSheet(
@@ -164,6 +164,9 @@ class MainWindow(QMainWindow):
             self.ctrl.ui_on_video_track = self._ui_video_track
         if hasattr(self.ctrl, 'ui_on_call_ended'):
             self.ctrl.ui_on_call_ended = self._ui_call_ended
+        # Fingerprint
+        if hasattr(self.ctrl, 'ui_on_fingerprint'):
+            self.ctrl.ui_on_fingerprint = self._ui_fingerprint
 
     # ── Callbacks del controlador ─────────────────────────────────────────────
 
@@ -175,6 +178,8 @@ class MainWindow(QMainWindow):
         if self._active_peer and self._active_peer.id == peer.id:
             self._active_peer = peer
             self._update_input_state(peer)
+        # Actualizar nombre del tab si cambió (ej: HELLO_ACK trae el username real)
+        self.chat_view.update_peer_name(peer.id, peer.username)
 
     def _ui_message(self, peer_id: str, msg: Message):
         self.chat_view.add_message(peer_id, msg)
@@ -189,7 +194,7 @@ class MainWindow(QMainWindow):
         reply = QMessageBox.question(
             self, "Archivo entrante",
             f"<b>{sender_name}</b> quiere enviarte:<br><br>"
-            f"📄  <b>{ft.filename}</b>  ({ft.size_str})<br><br>"
+            f"Archivo: <b>{ft.filename}</b> ({ft.size_str})<br><br>"
             "¿Aceptar la transferencia?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes,
         )
@@ -216,8 +221,8 @@ class MainWindow(QMainWindow):
         save_dir = os.path.dirname(os.path.abspath(ft.save_path))
         QMessageBox.information(
             self, "Archivo recibido",
-            f"✅  <b>{ft.filename}</b> guardado correctamente.<br><br>"
-            f"📁  {save_dir}",
+            f"[OK] <b>{ft.filename}</b> guardado correctamente.<br><br>"
+            f"Directorio: {save_dir}",
         )
 
     def _ui_incoming_call(self, peer_id: str, peer_name: str):
@@ -308,15 +313,14 @@ class MainWindow(QMainWindow):
         
         # Abrir ventana de video
         self._video_window = VideoWindow(self._active_peer.username, self)
-        self._video_window.set_video_label("⏳ Conectando... esperando respuesta")
-        self._video_window.set_status("⏳ Iniciando videollamada...")
-        self._video_window.show()
-        self._video_window.hangup_btn.clicked.connect(
+        self._video_window.set_video_label("Conectando... esperando respuesta")
+        self._video_window.set_status("Iniciando videollamada...")
+        self._video_window.hangup_signal.connect(
             lambda: asyncio.get_event_loop().create_task(
                 self.ctrl.end_videocall(self._active_peer.id)
             )
         )
-        self._video_window.hangup_btn.clicked.connect(self._video_window.close)
+        self._video_window.show()
         
         await self.ctrl.start_videocall(self._active_peer.id)
 
@@ -329,15 +333,14 @@ class MainWindow(QMainWindow):
         
         # Abrir ventana de video
         self._video_window = VideoWindow(peer_name, self)
-        self._video_window.set_video_label("⏳ Conectando...")
-        self._video_window.set_status("⏳ Aceptando videollamada...")
-        self._video_window.show()
-        self._video_window.hangup_btn.clicked.connect(
+        self._video_window.set_video_label("Conectando...")
+        self._video_window.set_status("Aceptando videollamada...")
+        self._video_window.hangup_signal.connect(
             lambda: asyncio.get_event_loop().create_task(
                 self.ctrl.end_videocall(peer_id)
             )
         )
-        self._video_window.hangup_btn.clicked.connect(self._video_window.close)
+        self._video_window.show()
         
         await self.ctrl.accept_videocall(peer_id)
 
@@ -374,6 +377,14 @@ class MainWindow(QMainWindow):
     @asyncSlot(str)
     async def _on_cancel_transfer(self, file_id: str):
         await self.ctrl.cancel_file(file_id)
+
+    def _ui_fingerprint(self, peer_id: str, fingerprint: str, is_match: bool):
+        """Muestra el fingerprint del peer en el panel de conexión."""
+        status = "Verificado" if is_match else "Cambiado"
+        color = COLORS["connected"] if is_match else COLORS["error"]
+        self.conn_panel.set_status(
+            f"Fingerprint: {fingerprint[:23]}... [{status}]", color
+        )
 
     def _ui_call_ended(self):
         """El peer remoto colgó."""

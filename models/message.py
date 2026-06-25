@@ -3,7 +3,7 @@
 # ──────────────────────────────────────────────
 
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Optional
 
@@ -22,7 +22,7 @@ class Message:
     sender_id:   str
     sender_name: str
     content:     str
-    timestamp:   datetime              = field(default_factory=datetime.now)
+    timestamp:   datetime              = field(default_factory=lambda: datetime.now(timezone.utc))
     receiver_id: Optional[str]         = None
     status:      MessageStatus         = MessageStatus.SENDING
     is_mine:     bool                  = False

@@ -44,8 +44,9 @@ class FileTransferManager:
     def __init__(self):
         # file_id → FileTransfer
         self.transfers: Dict[str, FileTransfer] = {}
-        # file_id → buffer de bytes recibidos
-        self._buffers: Dict[str, bytearray] = {}
+        # file_id → buffer de bytes recibidos (Dict[int, bytes] para reordenamiento)
+        self._buffers: Dict[str, Dict[int, bytes]] = {}
+        self._chunks_pending: Dict[str, int] = {}
 
         # Callbacks → asignados por P2PNode
         self.on_transfer_update: Optional[Callable[[FileTransfer], None]] = None
@@ -91,6 +92,7 @@ class FileTransferManager:
         try:
             with open(ft.save_path, "rb") as f:
                 chunk_index = 0
+                sent_any = False
                 while True:
                     raw = f.read(CHUNK_SIZE)
                     if not raw:
@@ -124,10 +126,34 @@ class FileTransferManager:
 
                     ft.chunks_done = chunk_index + 1
                     self._notify(ft)
+                    sent_any = True
 
                     chunk_index += 1
                     # Pequeña pausa para no saturar el buffer del WebSocket
                     await asyncio.sleep(0.001)
+
+                # Si nunca se envió nada (archivo vacío), igual marcar como completado
+                if not sent_any:
+                    if ft.status == TransferStatus.CANCELLED:
+                        return False
+                    # Enviar un chunk final vacío para que el receptor sepa que terminó
+                    is_last = True
+                    data_b64 = ""
+                    import json
+                    from utils.helpers import now_iso
+                    payload = json.dumps({
+                        "type":      "FILE_CHUNK",
+                        "msg_id":    generate_msg_id(),
+                        "timestamp": now_iso(),
+                        "data": {
+                            "file_id":     ft.id,
+                            "chunk_index": 0,
+                            "data":        data_b64,
+                            "is_last":     True,
+                        },
+                    })
+                    await ws.send(payload)
+                    ft.chunks_done = 1
 
             ft.status = TransferStatus.COMPLETED
             self._notify(ft)
@@ -167,7 +193,8 @@ class FileTransferManager:
             save_path=save_path,
         )
         self.transfers[file_id] = ft
-        self._buffers[file_id] = bytearray()
+        self._buffers[file_id] = {}
+        self._chunks_pending[file_id] = total_chunks
         return ft
 
     def receive_chunk(
@@ -179,7 +206,7 @@ class FileTransferManager:
         crypto_session,
     ) -> Optional[FileTransfer]:
         """
-        Acumula un chunk recibido.
+        Acumula un chunk recibido (soporta chunks fuera de orden).
         Retorna el FileTransfer actualizado (o None si file_id desconocido).
         """
         ft = self.transfers.get(file_id)
@@ -204,8 +231,14 @@ class FileTransferManager:
             self._notify(ft)
             return ft
 
-        self._buffers[file_id].extend(raw)
-        ft.chunks_done = chunk_index + 1
+        # Guardar chunk por índice (soporta reordenamiento)
+        buf = self._buffers.get(file_id)
+        if buf is None:
+            logger.warning(f"[FT] Buffer para file_id desconocido: {file_id}")
+            return None
+        buf[chunk_index] = raw
+
+        ft.chunks_done = len(buf)
         ft.status = TransferStatus.RECEIVING
         self._notify(ft)
 
@@ -216,7 +249,11 @@ class FileTransferManager:
 
     def _finalize_receive(self, ft: FileTransfer):
         """Verifica SHA-256 y guarda el archivo en disco."""
-        data = bytes(self._buffers.pop(ft.id, b""))
+        chunks_dict = self._buffers.pop(ft.id, {})
+        self._chunks_pending.pop(ft.id, None)
+
+        # Reconstruir en orden por índice
+        data = b"".join(chunks_dict[i] for i in sorted(chunks_dict))
 
         # Verificar integridad
         received_sha = hashlib.sha256(data).hexdigest()
@@ -256,6 +293,7 @@ class FileTransferManager:
         if ft:
             ft.status = TransferStatus.CANCELLED
             self._buffers.pop(file_id, None)
+            self._chunks_pending.pop(file_id, None)
             self._notify(ft)
 
     # ── Interno ───────────────────────────────────────────────────────────────

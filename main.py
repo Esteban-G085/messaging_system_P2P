@@ -49,7 +49,7 @@ class SetupDialog(QDialog):
         header_layout.setContentsMargins(0, 24, 0, 20)
         header_layout.setSpacing(6)
 
-        icon = QLabel("◈")
+        icon = QLabel("")
         icon.setAlignment(Qt.AlignCenter)
         icon.setStyleSheet(
             f"color: {COLORS['accent']}; font-size: 28pt; background: transparent;"
@@ -120,7 +120,7 @@ class SetupDialog(QDialog):
         )
         port_row.addWidget(self.port_spin, stretch=1)
 
-        ip_badge = QLabel(f"  🌐  {get_local_ip()}")
+        ip_badge = QLabel(f"IP: {get_local_ip()}")
         ip_badge.setFixedHeight(42)
         ip_badge.setStyleSheet(
             "background-color: #1A1A1A; color: #555555; "
@@ -189,9 +189,7 @@ class SetupDialog(QDialog):
 #  Arranque de la aplicación
 # ─────────────────────────────────────────────
 
-async def main():
-    app = QApplication.instance() or QApplication(sys.argv)
-
+async def main(app: QApplication):
     # Diálogo de setup (síncrono, antes del event loop async)
     dialog = SetupDialog()
     if dialog.exec() != QDialog.Accepted:
@@ -223,5 +221,5 @@ if __name__ == "__main__":
     asyncio.set_event_loop(loop)
 
     with loop:
-        loop.run_until_complete(main())
+        loop.run_until_complete(main(app))
         loop.run_forever()

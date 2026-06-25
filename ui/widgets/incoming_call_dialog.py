@@ -41,7 +41,7 @@ class IncomingCallDialog(QDialog):
         layout.setSpacing(20)
 
         # ── Mensaje ────────────────────────────────────────────
-        title = QLabel(f"📞 Llamada entrante")
+        title = QLabel("Llamada entrante")
         title_font = QFont()
         title_font.setPointSize(14)
         title_font.setBold(True)
@@ -63,7 +63,7 @@ class IncomingCallDialog(QDialog):
         btn_layout = QHBoxLayout()
         btn_layout.setSpacing(15)
 
-        self.accept_btn = QPushButton("✅ Aceptar")
+        self.accept_btn = QPushButton("Aceptar")
         self.accept_btn.setFixedHeight(40)
         self.accept_btn.setStyleSheet(f"""
             QPushButton {{
@@ -84,7 +84,7 @@ class IncomingCallDialog(QDialog):
         self.accept_btn.clicked.connect(self._on_accept)
         btn_layout.addWidget(self.accept_btn)
 
-        self.reject_btn = QPushButton("❌ Rechazar")
+        self.reject_btn = QPushButton("Rechazar")
         self.reject_btn.setFixedHeight(40)
         self.reject_btn.setStyleSheet(f"""
             QPushButton {{

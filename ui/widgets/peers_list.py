@@ -15,10 +15,10 @@ from ui.styles import COLORS
 
 class PeerItem(QListWidgetItem):
     INDICATORS = {
-        ConnectionState.READY:         ("●", COLORS["connected"]),
-        ConnectionState.CONNECTING:    ("⟳", COLORS["connecting"]),
-        ConnectionState.ERROR:         ("✗", COLORS["error"]),
-        ConnectionState.DISCONNECTING: ("○", COLORS["disconnected"]),
+        ConnectionState.READY:         ("*", COLORS["connected"]),
+        ConnectionState.CONNECTING:    ("~", COLORS["connecting"]),
+        ConnectionState.ERROR:         ("!", COLORS["error"]),
+        ConnectionState.DISCONNECTING: (".", COLORS["disconnected"]),
     }
 
     def __init__(self, peer: Peer):
@@ -28,7 +28,7 @@ class PeerItem(QListWidgetItem):
 
     def refresh(self):
         icon, color = self.INDICATORS.get(
-            self.peer.state, ("○", COLORS["disconnected"])
+            self.peer.state, (".", COLORS["disconnected"])
         )
         self.setText(f"  {icon}  {self.peer.username}   {self.peer.address}")
         self.setForeground(QColor(color))

@@ -74,7 +74,7 @@ class P2PNode:
         """
         self._server.set_message_handler(self._handler.handle)
         await self._server.start()
-        logger.info(f"[NODE] 🚀 Nodo iniciado: {self.username}")
+        logger.info(f"[NODE] [START] Nodo iniciado: {self.username}")
         logger.info(f"[NODE]    • Peer ID: {self.peer_id[:16]}...")
         logger.info(f"[NODE]    • IP Local: {self.local_ip}")
         logger.info(f"[NODE]    • Puerto: {self.port}")
@@ -96,7 +96,7 @@ class P2PNode:
             ip (str): Dirección IP a conectar.
             port (int): Puerto remoto.
         """
-        logger.info(f"[NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con {ip}:{port}")
+        logger.info(f"[NODE] [CONN] [FASE 2/3] Iniciando handshake HELLO con {ip}:{port}")
         
         session = CryptoSession()
         logger.info(f"[NODE]    → Generando par de claves ECC (SECP256R1)...")
@@ -121,8 +121,10 @@ class P2PNode:
         peer    = self.peers.get(peer_id)
         session = self._crypto.get(peer_id)
         if not peer or not peer.is_ready:
+            logger.warning(f"[NODE] Peer {peer_id[:8]}… no está listo para enviar mensaje")
             return None
         if not session or not session.is_ready:
+            logger.warning(f"[NODE] Sesión crypto no disponible para {peer_id[:8]}…")
             return None
         encrypted        = session.encrypt(content)
         msg_id, payload  = Protocol.message(self.username, self.peer_id, encrypted)
@@ -204,7 +206,7 @@ class P2PNode:
                 logger.debug(f"[NODE]    ← Mensaje recibido de {peer_addr}")
                 await self._handler.handle(ws, raw)
         except websockets.exceptions.ConnectionClosed:
-            logger.warning(f"[NODE] ❌ Conexión de {peer_addr} cerrada")
+            logger.warning(f"[NODE] [ERR] Conexión de {peer_addr} cerrada")
             self._crypto.pop(tmp_key, None)
             self._mark_peer_disconnected_by_ip(ip)
 
@@ -216,17 +218,19 @@ class P2PNode:
         peer_id = d["peer_id"]
         remote_ip = ws.remote_address[0]
         
-        logger.info(f"[NODE] 📨 Recibido HELLO de {username} ({remote_ip})")
+        logger.info(f"[NODE] [IN] Recibido HELLO de {username} ({remote_ip})")
+        
+        pub_key = d.get("public_key", "")
+        if not pub_key:
+            logger.error("[NODE] [ERR] HELLO sin clave pública — handshake rechazado")
+            return
         
         session = CryptoSession()
-        pub_key = d.get("public_key", "")
-        
-        if pub_key:
-            logger.info(f"[NODE]    → Recibida clave pública ECC del peer")
-            if not session.establish(pub_key):
-                logger.error("[NODE] ❌ Error: Fallo en derivación de secreto compartido (ECDH)")
-                return
-            logger.info(f"[NODE]    ✅ Secreto compartido derivado exitosamente")
+        logger.info(f"[NODE]    → Recibida clave pública ECC del peer")
+        if not session.establish(pub_key):
+            logger.error("[NODE] [ERR] Error: Fallo en derivación de secreto compartido (ECDH)")
+            return
+        logger.info(f"[NODE]    [OK] Secreto compartido derivado exitosamente")
         
         peer = Peer(
             id=peer_id, username=username,
@@ -237,9 +241,12 @@ class P2PNode:
         self._crypto[peer.id] = session
         
         logger.info(f"[NODE]    → Enviando HELLO_ACK con nuestra clave pública...")
-        await ws.send(Protocol.hello_ack(self.peer_id, session.public_key_pem()))
+        await ws.send(Protocol.hello_ack(
+            self.peer_id, session.public_key_pem(),
+            username=self.username, port=self.port,
+        ))
         
-        logger.info(f"[NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con {username}")
+        logger.info(f"[NODE] [OK] [HANDSHAKE COMPLETADO] Conexión lista con {username}")
         if self.on_peer_connected:
             self.on_peer_connected(peer)
 
@@ -248,20 +255,26 @@ class P2PNode:
         remote_ip = ws.remote_address[0]
         remote_id = d.get("peer_id", remote_ip)
         pub_key   = d.get("public_key", "")
+        username  = d.get("username", remote_ip)
+        port      = d.get("port", 0)
         
-        logger.info(f"[NODE] 📨 Recibido HELLO_ACK de {remote_ip}")
+        logger.info(f"[NODE] [IN] Recibido HELLO_ACK de {username} ({remote_ip})")
         
-        tmp_key   = next(
+        if not pub_key:
+            logger.warning(f"[NODE]    [WARN]  HELLO_ACK sin clave pública — handshake fallido")
+            return
+        
+        tmp_key = next(
             (k for k in self._crypto if k.startswith("_pending_") and remote_ip in k), None
         )
         session = self._crypto.pop(tmp_key, None) if tmp_key else CryptoSession()
         
-        if session and pub_key:
+        if session:
             logger.info(f"[NODE]    → Recibida clave pública ECC del peer")
-            session.establish(pub_key)
-            logger.info(f"[NODE]    ✅ Secreto compartido derivado exitosamente")
-        else:
-            logger.warning(f"[NODE]    ⚠️  No hay clave pública en HELLO_ACK")
+            if not session.establish(pub_key):
+                logger.error("[NODE] [ERR] Error: Fallo en derivación de secreto compartido (ECDH)")
+                return
+            logger.info(f"[NODE]    [OK] Secreto compartido derivado exitosamente")
 
         peer = self._find_peer_by_ip(remote_ip)
         if peer:
@@ -269,14 +282,17 @@ class P2PNode:
             peer.state = ConnectionState.READY
             peer.connection = ws
             peer.last_seen  = datetime.now()
+            peer.port       = port
+            if peer.username == peer.ip:
+                peer.username = username
         else:
-            logger.info(f"[NODE]    → Creando nuevo peer {remote_id}")
-            peer = Peer(id=remote_id, username=remote_ip, ip=remote_ip, port=0,
+            logger.info(f"[NODE]    → Creando nuevo peer {username}")
+            peer = Peer(id=remote_id, username=username, ip=remote_ip, port=port,
                         state=ConnectionState.READY, last_seen=datetime.now(), connection=ws)
             self.peers[peer.id] = peer
 
         self._crypto[peer.id] = session
-        logger.info(f"[NODE] ✅ [HANDSHAKE COMPLETADO] {remote_ip} está listo para comunicación")
+        logger.info(f"[NODE] [OK] [HANDSHAKE COMPLETADO] {username} está listo para comunicación")
         if self.on_peer_connected:
             self.on_peer_connected(peer)
 

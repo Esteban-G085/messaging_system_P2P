@@ -10,6 +10,7 @@
 # ──────────────────────────────────────────────────────────
 
 import base64
+import hashlib
 import os
 
 from cryptography.hazmat.primitives import hashes, serialization
@@ -54,6 +55,7 @@ class CryptoSession:
         # Par de claves ECC de este nodo para esta sesión
         self._private_key: EllipticCurvePrivateKey = generate_private_key(CURVE)
         self._aes_key: bytes | None = None   # se establece tras el intercambio
+        self._peer_public_key_pem: str = ""   # clave pública del peer para fingerprint
 
     # ── Clave pública ─────────────────────────────────────
 
@@ -74,6 +76,7 @@ class CryptoSession:
         Retorna True si todo fue correcto.
         """
         try:
+            self._peer_public_key_pem = peer_public_pem
             peer_pub: EllipticCurvePublicKey = serialization.load_pem_public_key(
                 peer_public_pem.encode("utf-8")
             )
@@ -94,6 +97,15 @@ class CryptoSession:
         except Exception as e:
             logger.error(f"[CRYPTO] Error estableciendo sesión: {e}")
             return False
+
+    @property
+    def peer_fingerprint(self) -> str:
+        """SHA-256 de la clave pública del peer, formateado como fingerprint."""
+        if not self._peer_public_key_pem:
+            return ""
+        raw = hashlib.sha256(self._peer_public_key_pem.encode("utf-8")).hexdigest()
+        # Formato: grupos de 4 caracteres separados por espacio
+        return " ".join(raw[i:i+4] for i in range(0, len(raw), 4))
 
     @property
     def is_ready(self) -> bool:

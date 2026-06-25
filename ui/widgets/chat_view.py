@@ -19,11 +19,11 @@ from utils.helpers import format_timestamp
 
 class MessageBubble(QFrame):
     STATUS_ICONS = {
-        MessageStatus.SENDING:   "⚪",
-        MessageStatus.SENT:      "✓",
-        MessageStatus.DELIVERED: "✓✓",
-        MessageStatus.READ:      "✓✓",
-        MessageStatus.ERROR:     "✗",
+        MessageStatus.SENDING:   "·",
+        MessageStatus.SENT:      "S",
+        MessageStatus.DELIVERED: "D",
+        MessageStatus.READ:      "R",
+        MessageStatus.ERROR:     "!",
     }
 
     def __init__(self, msg: Message):
@@ -238,8 +238,9 @@ class ChatView(QWidget):
         if self._tabs.currentWidget() is not panel:
             panel._unread += 1
             idx = self._tabs.indexOf(panel)
+            badge = f"({panel._unread})" if panel._unread > 1 else "(1)"
             self._tabs.setTabText(
-                idx, f"  {panel.peer_name}  🔴"
+                idx, f"  {panel.peer_name}  {badge}"
             )
 
     def add_transfer_bubble(self, peer_id: str, widget: QWidget):

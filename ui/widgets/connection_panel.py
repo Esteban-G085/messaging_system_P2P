@@ -80,7 +80,7 @@ class ConnectionPanel(QWidget):
         layout.addLayout(btn_row)
 
         # ── Estado ────────────────────────────────
-        self.status_label = QLabel("⚫  Esperando…")
+        self.status_label = QLabel("Esperando...")
         self.status_label.setStyleSheet(
             f"color: {COLORS['text_muted']}; font-size: 9pt;"
         )
@@ -104,7 +104,7 @@ class ConnectionPanel(QWidget):
         self.error_label.setText(text)
 
     def set_listening(self, ip: str, port: int):
-        self._listening_text = f"●  Escuchando en {ip}:{port}"
+        self._listening_text = f"Escuchando en {ip}:{port}"
         if not self._connecting:
             self.set_status(self._listening_text, COLORS["connected"])
 
@@ -129,7 +129,7 @@ class ConnectionPanel(QWidget):
         if self._listening_text:
             self.set_status(self._listening_text, COLORS["connected"])
         else:
-            self.set_status("⚫  Esperando…", COLORS["text_muted"])
+            self.set_status("Esperando...", COLORS["text_muted"])
 
     def set_connect_error(self, msg: str):
         self.set_error(msg)

@@ -31,7 +31,7 @@ class WebSocketClient:
         Lanza ConnectionError si falla tras MAX_RETRIES intentos.
         """
         uri = f"ws://{ip}:{port}"
-        logger.info(f"[CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a {uri}")
+        logger.info(f"[CLIENT] [CONN] [FASE 1/3] Iniciando conexión WebSocket a {uri}")
 
         for attempt in range(MAX_RETRIES):
             try:
@@ -42,13 +42,13 @@ class WebSocketClient:
                 )
                 key = f"{ip}:{port}"
                 self._connections[key] = ws
-                logger.info(f"[CLIENT] ✅ [FASE 1/3] WebSocket conectado a {uri}")
+                logger.info(f"[CLIENT] [OK] [FASE 1/3] WebSocket conectado a {uri}")
                 return ws
 
             except asyncio.TimeoutError:
-                logger.warning(f"[CLIENT]    ⏱️  Timeout ({timeout}s) conectando a {uri}")
+                logger.warning(f"[CLIENT]    [TIMEOUT]  Timeout ({timeout}s) conectando a {uri}")
             except Exception as e:
-                logger.warning(f"[CLIENT]    ❌ Error: {e}")
+                logger.warning(f"[CLIENT]    [ERR] Error: {e}")
 
             if attempt < MAX_RETRIES - 1:
                 delay = RETRY_DELAYS[attempt]

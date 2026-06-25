@@ -1,6 +1,6 @@
 import sqlite3
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Optional
 
 from config.settings import DB_PATH
@@ -61,6 +61,31 @@ class DBManager:
             state=ConnectionState.IDLE,
         )
 
+    # ── Fingerprints ──────────────────────────────────────────────────────────
+
+    def get_fingerprint(self, peer_id: str) -> Optional[str]:
+        """Retorna el fingerprint almacenado para un peer, o None."""
+        row = self._conn.execute(
+            "SELECT fingerprint FROM peer_fingerprints WHERE peer_id = ?", (peer_id,)
+        ).fetchone()
+        return row["fingerprint"] if row else None
+
+    def save_fingerprint(self, peer_id: str, fingerprint: str):
+        """Guarda o actualiza el fingerprint de un peer."""
+        self._conn.execute("""
+            INSERT INTO peer_fingerprints (peer_id, fingerprint, trusted)
+            VALUES (?, ?, 1)
+            ON CONFLICT(peer_id) DO UPDATE SET fingerprint = excluded.fingerprint
+        """, (peer_id, fingerprint))
+        self._conn.commit()
+
+    def is_fingerprint_trusted(self, peer_id: str) -> bool:
+        """Retorna True si el fingerprint está marcado como confiable."""
+        row = self._conn.execute(
+            "SELECT trusted FROM peer_fingerprints WHERE peer_id = ?", (peer_id,)
+        ).fetchone()
+        return bool(row and row["trusted"])
+
     # ── Mensajes ──────────────────────────────────────────────────────────────
 
     def save_message(self, msg: Message):
@@ -107,9 +132,13 @@ class DBManager:
             status = MessageStatus.SENT
 
         try:
-            ts = datetime.fromisoformat(row["timestamp"])
+            ts_str = row["timestamp"]
+            # Compatibilidad con Python < 3.11 (no soporta sufijo Z)
+            if ts_str.endswith("Z"):
+                ts_str = ts_str[:-1] + "+00:00"
+            ts = datetime.fromisoformat(ts_str)
         except Exception:
-            ts = datetime.now()
+            ts = datetime.now(timezone.utc)
 
         return Message(
             id=row["id"],

@@ -21,10 +21,13 @@ class Protocol:
         })
 
     @staticmethod
-    def hello_ack(peer_id: str, public_key_pem: str) -> str:
+    def hello_ack(peer_id: str, public_key_pem: str, username: str = "", port: int = 0) -> str:
         return json.dumps({
             "type": "HELLO_ACK", "msg_id": generate_msg_id(), "timestamp": now_iso(),
-            "data": {"status": "accepted", "peer_id": peer_id, "public_key": public_key_pem},
+            "data": {
+                "status": "accepted", "peer_id": peer_id, "public_key": public_key_pem,
+                "username": username, "port": port,
+            },
         })
 
     # ── Mensajería ───────────────────────────────────────────────────────────
