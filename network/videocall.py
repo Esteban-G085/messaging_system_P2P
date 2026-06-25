@@ -3,7 +3,6 @@ import asyncio
 import base64
 import json
 from fractions import Fraction
-from readline import backend
 
 import av
 import cv2

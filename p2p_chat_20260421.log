@@ -1,0 +1,856 @@
+[10:02:56] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — esteban:5000
+[10:02:56] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[10:02:57] INFO      p2p_chat › ================================================================================
+[10:02:57] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[10:02:57] INFO      p2p_chat › ================================================================================
+[10:02:57] INFO      p2p_chat › [CTRL] Usuario: esteban
+[10:02:57] INFO      p2p_chat › [CTRL] Peer ID: da85feac-f972-42...
+[10:02:57] INFO      p2p_chat › [CTRL] IP Local: 10.253.63.153
+[10:02:57] INFO      p2p_chat › [CTRL] Puerto: 5000
+[10:02:57] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[10:02:57] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[10:02:57] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: esteban
+[10:02:57] INFO      p2p_chat › [NODE]    • Peer ID: da85feac-f972-42...
+[10:02:57] INFO      p2p_chat › [NODE]    • IP Local: 10.253.63.153
+[10:02:57] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[10:02:57] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[10:02:57] INFO      p2p_chat › ================================================================================
+[10:02:57] INFO      p2p_chat › Aplicación lista
+[10:03:18] INFO      p2p_chat › ================================================================================
+[10:03:18] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[10:03:18] INFO      p2p_chat › ================================================================================
+[10:03:18] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[10:03:18] INFO      p2p_chat › [CTRL]    → Destino: 10.253.52.194:5000
+[10:03:18] INFO      p2p_chat › 
+[10:03:18] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 10.253.52.194:5000
+[10:03:18] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[10:03:18] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://10.253.52.194:5000
+[10:03:18] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[10:03:19] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://10.253.52.194:5000
+[10:03:19] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[10:03:19] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[10:03:19] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[10:03:19] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 10.253.52.194:5000...
+[10:03:19] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 10.253.52.194
+[10:03:19] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:03:19] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:03:19] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:03:19] INFO      p2p_chat › [NODE]    → Creando nuevo peer aefd4f98-a593-4507-bb2a-feaee74b5194
+[10:03:19] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 10.253.52.194 está listo para comunicación
+[10:03:19] INFO      p2p_chat › ================================================================================
+[10:03:19] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:03:19] INFO      p2p_chat › ================================================================================
+[10:03:19] INFO      p2p_chat › [CTRL] Username: 10.253.52.194
+[10:03:19] INFO      p2p_chat › [CTRL] Peer ID: aefd4f98-a593-45...
+[10:03:19] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.52.194:0
+[10:03:19] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:03:19] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:03:19] INFO      p2p_chat › ================================================================================
+[10:03:32] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de 10.253.52.194
+[10:03:38] INFO      p2p_chat › ================================================================================
+[10:03:38] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA de 10.253.52.194
+[10:03:38] INFO      p2p_chat › ================================================================================
+[10:03:38] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_answer → 10.253.52.194
+[10:03:38] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:03:38] INFO      p2p_chat › ================================================================================
+[10:03:38] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:03:38] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:03:38] INFO      p2p_chat › ================================================================================
+[10:03:39] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:03:39] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:03:39] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:03:39] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:03:39] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:03:40] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:03:42] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:03:42] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:03:42] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:03:42] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:03:42] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] 📴 Colgando videollamada con aefd4f98-a593-4507-bb2a-feaee74b5194
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_end → 10.253.52.194
+[10:04:15] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 513
+[10:04:16] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:04:16] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 1031
+[10:04:16] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:04:16] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:05:07] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de 10.253.52.194
+[10:05:09] INFO      p2p_chat › ================================================================================
+[10:05:09] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA de 10.253.52.194
+[10:05:09] INFO      p2p_chat › ================================================================================
+[10:05:09] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_answer → 10.253.52.194
+[10:05:09] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:05:09] INFO      p2p_chat › ================================================================================
+[10:05:09] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:05:09] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:05:09] INFO      p2p_chat › ================================================================================
+[10:05:10] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:05:10] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:05:10] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:05:10] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:05:10] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:05:11] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:05:13] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:05:13] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:05:13] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:05:13] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] 📴 10.253.52.194 colgó la llamada
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 1692
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 4088
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:07:25] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:07:26] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de 10.253.52.194
+[10:07:28] INFO      p2p_chat › ================================================================================
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA de 10.253.52.194
+[10:07:28] INFO      p2p_chat › ================================================================================
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_answer → 10.253.52.194
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:07:28] INFO      p2p_chat › ================================================================================
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:07:28] INFO      p2p_chat › ================================================================================
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:07:28] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:07:28] WARNING   p2p_chat › [VIDEOCALL] No se encontró cámara — usando índice 0 automático
+[10:07:29] ERROR     p2p_chat › [VIDEOCALL] ❌ Cámara no disponible
+[10:07:29] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:07:29] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:07:30] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] 📴 Colgando videollamada con aefd4f98-a593-4507-bb2a-feaee74b5194
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_end → 10.253.52.194
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 1422
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:08:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:08:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:08:14] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:08:18] INFO      p2p_chat › ================================================================================
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → 10.253.52.194
+[10:08:18] INFO      p2p_chat › ================================================================================
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → 10.253.52.194
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:08:18] INFO      p2p_chat › ================================================================================
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:08:18] INFO      p2p_chat › ================================================================================
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:08:18] WARNING   p2p_chat › [VIDEOCALL] No se encontró cámara — usando índice 0 automático
+[10:08:18] ERROR     p2p_chat › [VIDEOCALL] ❌ Cámara no disponible
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:08:18] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:08:31] INFO      p2p_chat › [VIDEOCALL] ✅ 10.253.52.194 aceptó la llamada
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] 📴 10.253.52.194 colgó la llamada
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 642
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:08:46] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:16:13] INFO      p2p_chat › ================================================================================
+[10:16:13] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → 10.253.52.194
+[10:16:13] INFO      p2p_chat › ================================================================================
+[10:16:13] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → 10.253.52.194
+[10:16:13] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:16:13] INFO      p2p_chat › ================================================================================
+[10:16:13] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:16:13] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:16:13] INFO      p2p_chat › ================================================================================
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:16:14] WARNING   p2p_chat › [VIDEOCALL] No se encontró cámara — usando índice 0 automático
+[10:16:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Cámara no disponible
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:16:14] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:16:20] INFO      p2p_chat › [VIDEOCALL] ✅ 10.253.52.194 aceptó la llamada
+[10:16:24] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:16:24] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] 📴 10.253.52.194 colgó la llamada
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 2520
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:17:35] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:18:03] WARNING   p2p_chat › [NODE] ❌ Conexión de 10.253.52.194:5000 cerrada
+[10:18:03] WARNING   p2p_chat › ================================================================================
+[10:18:03] WARNING   p2p_chat › [CTRL] ❌ PEER DESCONECTADO
+[10:18:03] WARNING   p2p_chat › ================================================================================
+[10:18:03] WARNING   p2p_chat › [CTRL] Username: 10.253.52.194
+[10:18:03] WARNING   p2p_chat › [CTRL] Peer ID: aefd4f98-a593-45...
+[10:18:03] WARNING   p2p_chat › ================================================================================
+[10:19:44] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — esteban:5000
+[10:19:44] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[10:19:45] INFO      p2p_chat › ================================================================================
+[10:19:45] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[10:19:45] INFO      p2p_chat › ================================================================================
+[10:19:45] INFO      p2p_chat › [CTRL] Usuario: esteban
+[10:19:45] INFO      p2p_chat › [CTRL] Peer ID: b33003b3-bb8a-47...
+[10:19:45] INFO      p2p_chat › [CTRL] IP Local: 10.253.63.153
+[10:19:45] INFO      p2p_chat › [CTRL] Puerto: 5000
+[10:19:45] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[10:19:45] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[10:19:45] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: esteban
+[10:19:45] INFO      p2p_chat › [NODE]    • Peer ID: b33003b3-bb8a-47...
+[10:19:45] INFO      p2p_chat › [NODE]    • IP Local: 10.253.63.153
+[10:19:45] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[10:19:45] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[10:19:45] INFO      p2p_chat › ================================================================================
+[10:19:45] INFO      p2p_chat › Aplicación lista
+[10:20:43] INFO      p2p_chat › ================================================================================
+[10:20:43] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[10:20:43] INFO      p2p_chat › ================================================================================
+[10:20:43] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[10:20:43] INFO      p2p_chat › [CTRL]    → Destino: 10.253.52.194:5000
+[10:20:43] INFO      p2p_chat › 
+[10:20:43] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 10.253.52.194:5000
+[10:20:43] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[10:20:43] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://10.253.52.194:5000
+[10:20:43] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[10:20:43] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://10.253.52.194:5000
+[10:20:43] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[10:20:43] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[10:20:43] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[10:20:43] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 10.253.52.194:5000...
+[10:20:43] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 10.253.52.194
+[10:20:43] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:20:43] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:20:43] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:20:43] INFO      p2p_chat › [NODE]    → Creando nuevo peer 4a947a99-1999-4a44-a412-d9223f3992bd
+[10:20:43] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 10.253.52.194 está listo para comunicación
+[10:20:43] INFO      p2p_chat › ================================================================================
+[10:20:43] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:20:43] INFO      p2p_chat › ================================================================================
+[10:20:43] INFO      p2p_chat › [CTRL] Username: 10.253.52.194
+[10:20:43] INFO      p2p_chat › [CTRL] Peer ID: 4a947a99-1999-4a...
+[10:20:43] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.52.194:0
+[10:20:43] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:20:43] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:20:43] INFO      p2p_chat › ================================================================================
+[10:20:50] INFO      p2p_chat › ================================================================================
+[10:20:50] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → 10.253.52.194
+[10:20:50] INFO      p2p_chat › ================================================================================
+[10:20:50] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → 10.253.52.194
+[10:20:50] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:20:50] INFO      p2p_chat › ================================================================================
+[10:20:50] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:20:50] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:20:50] INFO      p2p_chat › ================================================================================
+[10:20:51] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:20:51] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:20:51] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:20:51] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:20:51] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:20:52] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:20:54] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:20:54] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:20:54] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:20:54] INFO      p2p_chat › [VIDEOCALL] ✅ 10.253.52.194 aceptó la llamada
+[10:20:54] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:20:57] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 📴 Colgando videollamada con 4a947a99-1999-4a44-a412-d9223f3992bd
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_end → 10.253.52.194
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 1525
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 3040
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:22:31] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:22:31] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:22:31] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:22:31] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:24:27] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 10.253.2.110:40608
+[10:24:27] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 10.253.2.110...
+[10:24:27] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de Kevin (10.253.2.110)
+[10:24:27] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:24:27] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:24:27] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:24:27] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[10:24:27] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con Kevin
+[10:24:27] INFO      p2p_chat › ================================================================================
+[10:24:27] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:24:27] INFO      p2p_chat › ================================================================================
+[10:24:27] INFO      p2p_chat › [CTRL] Username: Kevin
+[10:24:27] INFO      p2p_chat › [CTRL] Peer ID: 8188f4fe-baad-45...
+[10:24:27] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.2.110:5000
+[10:24:27] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:24:27] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:24:27] INFO      p2p_chat › ================================================================================
+[10:24:48] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de 10.253.52.194
+[10:24:53] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:24:53] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:24:53] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:24:53] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:24:53] INFO      p2p_chat › ================================================================================
+[10:24:53] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA de 10.253.52.194
+[10:24:53] INFO      p2p_chat › ================================================================================
+[10:24:53] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_answer → 10.253.52.194
+[10:24:53] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:24:53] INFO      p2p_chat › ================================================================================
+[10:24:53] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:24:53] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:24:53] INFO      p2p_chat › ================================================================================
+[10:24:54] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:24:54] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:24:54] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:24:54] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:24:54] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:24:55] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:24:57] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:24:57] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:24:57] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:24:57] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 📴 Colgando videollamada con 4a947a99-1999-4a44-a412-d9223f3992bd
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_end → 10.253.52.194
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 256
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:25:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 527
+[10:25:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:25:14] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:25:14] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:25:19] WARNING   p2p_chat › [NODE] ❌ Conexión de 10.253.52.194:5000 cerrada
+[10:25:19] WARNING   p2p_chat › ================================================================================
+[10:25:19] WARNING   p2p_chat › [CTRL] ❌ PEER DESCONECTADO
+[10:25:19] WARNING   p2p_chat › ================================================================================
+[10:25:19] WARNING   p2p_chat › [CTRL] Username: 10.253.52.194
+[10:25:19] WARNING   p2p_chat › [CTRL] Peer ID: 4a947a99-1999-4a...
+[10:25:19] WARNING   p2p_chat › ================================================================================
+[10:25:29] WARNING   p2p_chat › [SERVER] ❌ Desconexión con error de 10.253.2.110: no close frame received or sent
+[10:26:37] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 10.253.2.110:38936
+[10:26:37] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 10.253.2.110...
+[10:26:37] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de Kevin (10.253.2.110)
+[10:26:37] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:26:37] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:26:37] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:26:37] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[10:26:37] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con Kevin
+[10:26:37] INFO      p2p_chat › ================================================================================
+[10:26:37] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:26:37] INFO      p2p_chat › ================================================================================
+[10:26:37] INFO      p2p_chat › [CTRL] Username: Kevin
+[10:26:37] INFO      p2p_chat › [CTRL] Peer ID: 7686b998-5f69-49...
+[10:26:37] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.2.110:5000
+[10:26:37] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:26:37] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:26:37] INFO      p2p_chat › ================================================================================
+[10:27:23] INFO      p2p_chat › Iniciando P2P Chat v1.2.2 — esteban:5000
+[10:27:23] INFO      p2p_chat › [DB] Conectado a p2p_chat.db
+[10:27:23] INFO      p2p_chat › ================================================================================
+[10:27:23] INFO      p2p_chat › 🚀 INICIANDO APLICACIÓN P2P
+[10:27:23] INFO      p2p_chat › ================================================================================
+[10:27:23] INFO      p2p_chat › [CTRL] Usuario: esteban
+[10:27:23] INFO      p2p_chat › [CTRL] Peer ID: e3888f1a-4c19-4f...
+[10:27:23] INFO      p2p_chat › [CTRL] IP Local: 10.253.63.153
+[10:27:23] INFO      p2p_chat › [CTRL] Puerto: 5000
+[10:27:23] INFO      p2p_chat › [CTRL] ⏳ Iniciando servidor WebSocket...
+[10:27:23] INFO      p2p_chat › [SERVER] 🎧 Servidor WebSocket escuchando en ws://0.0.0.0:5000
+[10:27:23] INFO      p2p_chat › [NODE] 🚀 Nodo iniciado: esteban
+[10:27:23] INFO      p2p_chat › [NODE]    • Peer ID: e3888f1a-4c19-4f...
+[10:27:23] INFO      p2p_chat › [NODE]    • IP Local: 10.253.63.153
+[10:27:23] INFO      p2p_chat › [NODE]    • Puerto: 5000
+[10:27:23] INFO      p2p_chat › [CTRL] ✅ Servidor WebSocket iniciado correctamente
+[10:27:23] INFO      p2p_chat › ================================================================================
+[10:27:23] INFO      p2p_chat › Aplicación lista
+[10:27:29] INFO      p2p_chat › ================================================================================
+[10:27:29] INFO      p2p_chat › [CTRL] 🔗 INICIANDO CONEXIÓN A PEER
+[10:27:29] INFO      p2p_chat › ================================================================================
+[10:27:29] INFO      p2p_chat › [CTRL] [FASE 0/3] Validación de parámetros completada ✓
+[10:27:29] INFO      p2p_chat › [CTRL]    → Destino: 10.253.52.194:5000
+[10:27:29] INFO      p2p_chat › 
+[10:27:29] INFO      p2p_chat › [NODE] 🔗 [FASE 2/3] Iniciando handshake HELLO con 10.253.52.194:5000
+[10:27:29] INFO      p2p_chat › [NODE]    → Generando par de claves ECC (SECP256R1)...
+[10:27:29] INFO      p2p_chat › [CLIENT] 🔗 [FASE 1/3] Iniciando conexión WebSocket a ws://10.253.52.194:5000
+[10:27:29] INFO      p2p_chat › [CLIENT]    → Intento 1/3: Resolviendo DNS y conectando...
+[10:27:29] INFO      p2p_chat › [CLIENT] ✅ [FASE 1/3] WebSocket conectado a ws://10.253.52.194:5000
+[10:27:29] INFO      p2p_chat › [NODE]    → Enviando mensaje HELLO con clave pública...
+[10:27:29] INFO      p2p_chat › [NODE]    → HELLO enviado, esperando HELLO_ACK...
+[10:27:29] INFO      p2p_chat › [CTRL] ✅ Conexión completada
+[10:27:29] INFO      p2p_chat › [NODE]    Escuchando mensajes desde 10.253.52.194:5000...
+[10:27:29] INFO      p2p_chat › [NODE] 📨 Recibido HELLO_ACK de 10.253.52.194
+[10:27:29] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:27:29] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:27:29] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:27:29] INFO      p2p_chat › [NODE]    → Creando nuevo peer b29bc43b-969c-4464-8b3d-4e61653ec765
+[10:27:29] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] 10.253.52.194 está listo para comunicación
+[10:27:29] INFO      p2p_chat › ================================================================================
+[10:27:29] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:27:29] INFO      p2p_chat › ================================================================================
+[10:27:29] INFO      p2p_chat › [CTRL] Username: 10.253.52.194
+[10:27:29] INFO      p2p_chat › [CTRL] Peer ID: b29bc43b-969c-44...
+[10:27:29] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.52.194:0
+[10:27:29] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:27:29] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:27:29] INFO      p2p_chat › ================================================================================
+[10:29:24] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 10.253.2.110:57856
+[10:29:24] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 10.253.2.110...
+[10:29:24] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de Kevin (10.253.2.110)
+[10:29:24] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:29:24] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:29:24] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:29:24] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[10:29:24] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con Kevin
+[10:29:24] INFO      p2p_chat › ================================================================================
+[10:29:24] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:29:24] INFO      p2p_chat › ================================================================================
+[10:29:24] INFO      p2p_chat › [CTRL] Username: Kevin
+[10:29:24] INFO      p2p_chat › [CTRL] Peer ID: 7686b998-5f69-49...
+[10:29:24] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.2.110:5000
+[10:29:24] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:29:24] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:29:24] INFO      p2p_chat › ================================================================================
+[10:47:20] INFO      p2p_chat › ================================================================================
+[10:47:20] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → Kevin
+[10:47:20] INFO      p2p_chat › ================================================================================
+[10:47:20] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → Kevin
+[10:47:20] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con Kevin
+[10:47:21] INFO      p2p_chat › ================================================================================
+[10:47:21] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]    Peer: Kevin (10.253.2.110:5000)
+[10:47:21] INFO      p2p_chat › ================================================================================
+[10:47:21] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:47:21] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:47:21] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:47:21] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:47:22] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:47:23] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:47:25] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:47:25] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:47:25] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:47:25] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 📴 Colgando videollamada con 7686b998-5f69-491c-9534-d425c8c33908
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 497
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 982
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_end → Kevin
+[10:47:56] WARNING   p2p_chat › [SERVER] ❌ Desconexión con error de 10.253.2.110: no close frame received or sent
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:47:56] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:48:52] INFO      p2p_chat › [SERVER] 🔗 Conexión WebSocket entrante desde 10.253.2.110:58244
+[10:48:52] INFO      p2p_chat › [SERVER]    Escuchando mensajes de 10.253.2.110...
+[10:48:52] INFO      p2p_chat › [NODE] 📨 Recibido HELLO de Kevin (10.253.2.110)
+[10:48:52] INFO      p2p_chat › [NODE]    → Recibida clave pública ECC del peer
+[10:48:52] INFO      p2p_chat › [CRYPTO] Sesión establecida correctamente
+[10:48:52] INFO      p2p_chat › [NODE]    ✅ Secreto compartido derivado exitosamente
+[10:48:52] INFO      p2p_chat › [NODE]    → Enviando HELLO_ACK con nuestra clave pública...
+[10:48:52] INFO      p2p_chat › [NODE] ✅ [HANDSHAKE COMPLETADO] Conexión lista con Kevin
+[10:48:52] INFO      p2p_chat › ================================================================================
+[10:48:52] INFO      p2p_chat › [CTRL] ✅ PEER CONECTADO
+[10:48:52] INFO      p2p_chat › ================================================================================
+[10:48:52] INFO      p2p_chat › [CTRL] Username: Kevin
+[10:48:52] INFO      p2p_chat › [CTRL] Peer ID: b3ed9c5b-9e7a-48...
+[10:48:52] INFO      p2p_chat › [CTRL] IP/Puerto: 10.253.2.110:5000
+[10:48:52] INFO      p2p_chat › [CTRL] Estado: ConnectionState.READY
+[10:48:52] INFO      p2p_chat › [CTRL] 🏠 Cargado historial messajes
+[10:48:52] INFO      p2p_chat › ================================================================================
+[10:49:09] INFO      p2p_chat › ================================================================================
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → Kevin
+[10:49:09] INFO      p2p_chat › ================================================================================
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → Kevin
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con Kevin
+[10:49:09] INFO      p2p_chat › ================================================================================
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]    Peer: Kevin (10.253.2.110:5000)
+[10:49:09] INFO      p2p_chat › ================================================================================
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:49:09] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:49:10] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:49:10] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:49:12] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:49:12] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:49:12] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:49:12] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:49:15] INFO      p2p_chat › [VIDEOCALL] ✅ Kevin aceptó la llamada
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] 📴 Kevin colgó la llamada
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 423
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 842
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:49:39] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:49:49] INFO      p2p_chat › [VIDEOCALL] 📨 Oferta recibida de Kevin
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:49:51] INFO      p2p_chat › ================================================================================
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] 📞 ACEPTANDO VIDEOLLAMADA de Kevin
+[10:49:51] INFO      p2p_chat › ================================================================================
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_answer → Kevin
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con Kevin
+[10:49:51] INFO      p2p_chat › ================================================================================
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]    Peer: Kevin (10.253.2.110:5000)
+[10:49:51] INFO      p2p_chat › ================================================================================
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:49:51] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:49:52] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:49:53] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:49:53] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:49:53] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:49:54] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo video H.264...
+[10:50:17] INFO      p2p_chat › ================================================================================
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] 🎥 INICIANDO VIDEOLLAMADA → 10.253.52.194
+[10:50:17] INFO      p2p_chat › ================================================================================
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] 📤 Señal enviada: videocall_offer → 10.253.52.194
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] ✅ Sesión iniciada con 10.253.52.194
+[10:50:17] INFO      p2p_chat › ================================================================================
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] 🎥🎤 INICIANDO VIDEOLLAMADA
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]    Peer: 10.253.52.194 (10.253.52.194:0)
+[10:50:17] INFO      p2p_chat › ================================================================================
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] Dispositivos de audio disponibles:
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [0] Asignador de sonido Microsoft - Input (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [1] Microphone Array (Realtek(R) Au (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [2] Mezcla estÃ©reo (Realtek(R) Audi (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [3] Asignador de sonido Microsoft - Output (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [4] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [5] Controlador primario de captura de sonido (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [6] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [7] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [8] Controlador primario de sonido (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [9] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [10] Speaker (Realtek(R) Audio) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [11] Mezcla estÃ©reo (Realtek(R) Audio) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [12] Microphone Array (Realtek(R) Audio) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [13] Speakers 1 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [14] Speakers 2 (Realtek HD Audio output with HAP) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [15] Altavoz de PC (Realtek HD Audio output with HAP) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [16] Headphones (Realtek HD Audio 2nd output) (in:0 out:2)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [17] Varios micrÃ³fonos (Realtek HD Audio Mic input) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [18] Mic in at front panel (black) (Mic in at front panel (black)) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [19] Mezcla estÃ©reo (Realtek HD Audio Stereo input) (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [20] Output (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:0 out:1)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [21] Input (@System32\drivers\bthhfenum.sys,#4;%1 Hands-Free HF Audio%0
+;(TECNO CAMON 30S Pro)) (in:1 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL]   [22] Input () (in:2 out:0)
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] Dispositivo entrada default: 1
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] Dispositivo salida default:  4
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] ✅ Micrófono abierto
+[10:50:17] INFO      p2p_chat › [VIDEOCALL] ✅ Altavoz abierto
+[10:50:18] INFO      p2p_chat › [VIDEOCALL] Cámara encontrada en índice 0 (backend: 700)
+[10:50:19] INFO      p2p_chat › [VIDEOCALL] Cámara: 320x240 @ 20 FPS
+[10:50:19] INFO      p2p_chat › [VIDEOCALL] ✅ Transmitiendo audio PCM 16 kHz...
+[10:50:19] INFO      p2p_chat › [VIDEOCALL] ✅ Reproductor de audio listo
+[10:50:35] INFO      p2p_chat › [VIDEOCALL] ✅ 10.253.52.194 aceptó la llamada
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 📴 10.253.52.194 colgó la llamada
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] ⏹️  Deteniendo videollamada...
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] ✅ Recursos liberados
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🔚 Sesión de videollamada terminada
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 503
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 548
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Audio TX detenido | Chunks: 1495
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Video TX detenido | Frames: 962
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] 🛑 Reproductor detenido
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] ✅ Decoder video listo — recibiendo
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] INFO      p2p_chat › [VIDEOCALL] Todos los loops terminados
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:02] ERROR     p2p_chat › [VIDEOCALL] ❌ Error decode video: [Errno 1094995529] Invalid data found when processing input: 'avcodec_send_packet()'
+[10:51:14] INFO      p2p_chat › [VIDEOCALL] 📴 Kevin colgó la llamada
+[11:02:11] WARNING   p2p_chat › [NODE] ❌ Conexión de 10.253.52.194:5000 cerrada
+[11:02:11] WARNING   p2p_chat › ================================================================================
+[11:02:11] WARNING   p2p_chat › [CTRL] ❌ PEER DESCONECTADO
+[11:02:11] WARNING   p2p_chat › ================================================================================
+[11:02:11] WARNING   p2p_chat › [CTRL] Username: 10.253.52.194
+[11:02:11] WARNING   p2p_chat › [CTRL] Peer ID: b29bc43b-969c-44...
+[11:02:11] WARNING   p2p_chat › ================================================================================
